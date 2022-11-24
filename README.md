@@ -4,8 +4,8 @@
 npm i,
 npm run dev
 
--react js hooks
--folder structure
+*react js hooks
+*folder structure
 -tailwind css
 -swiper js
 -react js packages (ex:react-modal)
