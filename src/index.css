@@ -1,0 +1,68 @@
+/* Inria serif */
+@import url("https://fonts.googleapis.com/css2?family=Inria+Serif:wght@700&display=swap");
+/* Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+/* Paprika */
+@import url("https://fonts.googleapis.com/css2?family=Paprika&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  span {
+    @apply text-dark_primary;
+  }
+  h1 {
+    @apply font-Poppins lg:text-6xl text-3xl font-extrabold;
+  }
+  h2 {
+    @apply font-Inria text-5xl font-bold;
+  }
+  h3 {
+    @apply font-Paprika text-5xl;
+  }
+  h4 {
+    @apply md:text-4xl text-3xl !leading-relaxed font-Paprika;
+  }
+  h6 {
+    @apply font-Paprika font-bold text-[#253D57] leading-8;
+  }
+
+  p {
+    @apply font-Poppins text-[0.95rem];
+  }
+  button {
+    @apply font-Poppins;
+  }
+  input,
+  textarea {
+    @apply bg-transparent outline-none font-Poppins;
+  }
+}
+
+@layer utilities {
+  .btn {
+    @apply py-2 px-9 border-2 rounded-md
+     border-dark_primary rounded-br-3xl font-medium;
+  }
+  .title {
+    @apply md:text-3xl text-2xl;
+  }
+  .subtitle {
+    @apply text-gray;
+  }
+}
+.swiper-pagination-bullet {
+  @apply w-3 h-3 bg-dark_primary;
+}
