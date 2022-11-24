@@ -4,7 +4,7 @@
 npm i,
 npm run dev
 
-*react js hooks
+**react js hooks
 *folder structure
 -tailwind css
 -swiper js
