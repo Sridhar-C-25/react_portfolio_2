@@ -1,9 +1,10 @@
 # React_portfolio_2_startup
 #Vite + React + tailwind
 
-npm i,
-npm run dev
++ npm i
++ npm run dev
 
+# You Learn:
 + react js hooks
 + folder structure
 + tailwind css
