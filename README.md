@@ -4,14 +4,14 @@
 npm i,
 npm run dev
 
-**react js hooks
-*folder structure
--tailwind css
--swiper js
--react js packages (ex:react-modal)
--email js
--aos scroll animation
--and more....
++ react js hooks
++ folder structure
++ tailwind css
++ swiper js
++ react js packages (ex:react-modal)
++ email js
++ aos scroll animation
++ and more....
 
 
 
