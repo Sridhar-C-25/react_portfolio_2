@@ -1,5 +1,5 @@
 # react_portfolio_2
-#Vite + React + tailwind
+# Vite + React + tailwind
 
 + npm i
 + npm run dev
@@ -16,7 +16,7 @@
 + and more....
 
 # youtube video link
-https://youtu.be/YpFK4hUZ-NM
+[Watch now](https://youtu.be/YpFK4hUZ-NM)
 
 # live preview link
 https://codeaprogram-portfolio.web.app/
