@@ -4,8 +4,10 @@
 # React Portfolio
 ### Vite + React + tailwind
 
-+ npm i
-+ npm run dev
+```bash 
+npm i
+npm run dev
+```
 
 ## You Learn:
 + react js hooks
