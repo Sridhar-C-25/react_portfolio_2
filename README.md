@@ -8,9 +8,6 @@
 npm i
 npm run dev
 ```
-```javascript
-console.log('hello')
-```   
 ## You Learn:
 + react js hooks
 + folder structure
