@@ -354,7 +354,7 @@ export const content = {
   fr: {
     nav,
     hero: {
-      title: "Élève ingénieur en Logiciels et Systèmes Intelligents",
+      title: "Élève ingénieur en LSI",
       firstName: "SOHAIB",
       LastName: "MANAH",
       btnText: "En savoir plus sur moi",
