@@ -159,7 +159,7 @@ export const content = {
       hero_content: [
         {
           count: "1+",
-          text: "Years of Experience in Web development And software development",
+          text: "Year of Experience in Web development And software development",
         },
         {
           count: "5+",
@@ -250,7 +250,7 @@ export const content = {
       service_content: [
         {
           title: "Web Development",
-          para: "As a web developer with 2+ years of experience, I have worked on a variety of projects, from small personal websites to medium web applications. I have experience with both front-end and back-end development, and I am comfortable working with a variety of technologies and frameworks.",
+          para: "As a web developer with 1+ year of experience, I have worked on a variety of projects, from small personal websites to medium web applications. I have experience with both front-end and back-end development, and I am comfortable working with a variety of technologies and frameworks.",
           logo: services_logo1,
         },
         {
@@ -362,7 +362,7 @@ export const content = {
       hero_content: [
         {
           count: "1+",
-          text: "Années d'expérience en développement Web et en développement de logiciels",
+          text: "An d'expérience en développement Web et en développement de logiciels",
         },
         {
           count: "5+",
@@ -453,7 +453,7 @@ export const content = {
       service_content: [
         {
           title: "Développement web",
-          para: "En tant que développeur Web avec plus de 2 ans d'expérience, j'ai travaillé sur une variété de projets, des petits sites Web personnels aux applications Web moyennes. J'ai de l'expérience en développement front end et back end, et je suis à l'aise de travailler avec une variété de technologies.",
+          para: "En tant que développeur Web avec plus de 1 an d'expérience, j'ai travaillé sur une variété de projets, des petits sites Web personnels aux applications Web moyennes. J'ai de l'expérience en développement front end et back end, et je suis à l'aise de travailler avec une variété de technologies.",
           logo: services_logo1,
         },
         {

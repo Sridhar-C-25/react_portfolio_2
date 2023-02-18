@@ -26,9 +26,9 @@ const App = () => {
   const [lang, setLang] = useState(supportedLangs.includes(path) ? path : "en");
   const changeLangHandler = (country) => {
     const url = new URL(window.location);
+    setLang(() => country);
     url.pathname = url.pathname.replace(lang, country);
     window.history.pushState({}, "", url);
-    setLang(() => country);
   };
   return (
     <div className="">

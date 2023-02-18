@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 function LanguageSwitcher({ lang, onChange }) {
   const supportedLang = ["en", "fr"];
+  console.log(lang);
+  const [language, setLangugae] = useState(lang);
   return (
     <>
       <select
@@ -19,11 +21,11 @@ function LanguageSwitcher({ lang, onChange }) {
       "
         aria-label="Default select example"
       >
-        <option defaultValue value={lang === "en" ? "en" : "fr"}>
-          {lang === "en" ? "🇺🇸" : "🇫🇷"}
+        <option value={language === "en" ? "en" : "fr"}>
+          {language === "en" ? "🇺🇸" : "🇫🇷"}
         </option>
-        <option value={lang === "en" ? "fr" : "en"}>
-          {lang === "en" ? "🇫🇷" : "🇺🇸"}
+        <option value={language === "en" ? "fr" : "en"}>
+          {language === "en" ? "🇫🇷" : "🇺🇸"}
         </option>
       </select>
     </>
