@@ -9,8 +9,8 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper";
 import { useState } from "react";
 
-const Testimonials = () => {
-  const { Testimonials } = content;
+const Testimonials = ({ lang }) => {
+  const { Testimonials } = content[lang];
   const [activeIndex, setActiveIndex] = useState(0);
   return (
     <section>

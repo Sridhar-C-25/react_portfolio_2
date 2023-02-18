@@ -3,8 +3,8 @@ import { content } from "../Content";
 import emailjs from "@emailjs/browser";
 import toast, { Toaster } from "react-hot-toast";
 
-const Contact = () => {
-  const { Contact } = content;
+const Contact = ({lang}) => {
+  const { Contact } = content[lang];
   const form = useRef();
 
   // Sending Email
@@ -13,7 +13,10 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-      'YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY'
+        "YOUR_SERVICE_ID",
+        "YOUR_TEMPLATE_ID",
+        form.current,
+        "YOUR_PUBLIC_KEY"
       )
       .then(
         (result) => {

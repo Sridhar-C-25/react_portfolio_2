@@ -3,8 +3,8 @@ import { content } from "../Content";
 import { HiMenuAlt2 } from "react-icons/hi";
 import { createElement } from "react";
 
-const Navbar = () => {
-  const { nav } = content;
+const Navbar = ({ lang }) => {
+  const { nav } = content[lang];
   const [showMenu, setShowMenu] = useState(false);
   const [active, setActive] = useState(0);
 
@@ -23,6 +23,7 @@ const Navbar = () => {
       >
         {nav.map((item, i) => (
           <a
+            key={i}
             href={item.link}
             onClick={() => setActive(i)}
             className={`text-xl p-2.5 rounded-full sm:cursor-pointer 

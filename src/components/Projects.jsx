@@ -8,8 +8,8 @@ import "swiper/css/pagination";
 
 import { Pagination } from "swiper";
 
-const Projects = () => {
-  const { Projects } = content;
+const Projects = ({ lang }) => {
+  const { Projects } = content[lang];
   return (
     <section className="bg-bg_light_primary" id="projects">
       <div className="md:container px-5 pt-14 min-h-screen flex flex-col justify-between">

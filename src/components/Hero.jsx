@@ -1,8 +1,8 @@
 // import content
 import { useEffect } from "react";
 import { content } from "../Content";
-const Hero = () => {
-  const { hero } = content;
+const Hero = ({ lang }) => {
+  const { hero } = content[lang];
 
   return (
     <section id="home" className="overflow-hidden">
@@ -12,18 +12,23 @@ const Hero = () => {
           data-aos-delay="1200"
           className="absolute h-full md:w-4/12 w-8/12 top-0 right-0 bg-primaryLinear bottom-0 -z-10"
         >
-          <h1 className="rotate-90 absolute top-[30%] right-[-15%] text-[#EAF2FA]">
+          <h2 className="rotate-90 absolute top-[30%] right-[-15%] text-[#EAF2FA]">
             {hero.firstName}{" "}
             <span className="text-dark_primary">{hero.LastName}</span>
-          </h1>
+          </h2>
         </div>
 
         {/* first col */}
         <div className="pb-16 px-6 pt-5" data-aos="fade-down">
-          <h2>{hero.title}</h2>
+          <h4>{hero.title}</h4>
+          {/* <div className="mt-5">
+            <p>{hero.description}</p>
+          </div> */}
           <br />
           <div className="flex justify-end">
-            <button className="btn">{hero.btnText}</button>
+            <button className="btn">
+              <a href="#aboutme"> {hero.btnText}</a>
+            </button>
           </div>
           <div className="flex flex-col gap-10 mt-10">
             {hero.hero_content.map((content, i) => (

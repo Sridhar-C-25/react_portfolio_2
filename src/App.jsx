@@ -5,9 +5,9 @@ import Skills from "./components/Skills";
 import Service from "./components/Services";
 import Projects from "./components/Projects";
 import Testimonials from "./components/Testimonials";
-import Hireme from "./components/Hireme";
+import Aboutme from "./components/Aboutme";
 import Contact from "./components/Contact";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 // Animation package
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -20,16 +20,19 @@ const App = () => {
       disable: "mobile",
     });
   }, []);
+  const supportedLangs = ["en", "fr"];
+  const path = window.location.pathname.split("/")[1];
+  const [lang, setLang] = useState(supportedLangs.includes(path) ? path : "en");
   return (
     <div className="">
-      <Navbar />
-      <Hero />
-      <Skills />
-      <Service />
-      <Projects />
-      <Testimonials />
-      <Hireme />
-      <Contact />
+      <Navbar lang={lang} />
+      <Hero lang={lang} />
+      <Aboutme lang={lang} />
+      <Skills lang={lang} />
+      <Service lang={lang} />
+      <Projects lang={lang} />
+      {/* <Testimonials lang={lang} /> */}
+      <Contact lang={lang} />
       <footer className="p-3 text-center">
         <h6 className="mb-3">JOHN ALEX</h6>
         <p>codeaprogram © All CopyRights Reserved 2022</p>
