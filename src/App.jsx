@@ -24,9 +24,15 @@ const App = () => {
   const supportedLangs = ["en", "fr"];
   const path = window.location.pathname.split("/")[1];
   const [lang, setLang] = useState(supportedLangs.includes(path) ? path : "en");
+  const changeLangHandler = (country) => {
+    const url = new URL(window.location);
+    url.pathname = url.pathname.replace(lang, country);
+    window.history.pushState({}, "", url);
+    setLang(() => country);
+  };
   return (
     <div className="">
-      <Navbar lang={lang} />
+      <Navbar lang={lang} changeLangHandler={changeLangHandler} />
       <Hero lang={lang} />
       <Aboutme lang={lang} />
       <Skills lang={lang} />
