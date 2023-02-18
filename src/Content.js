@@ -23,24 +23,30 @@ import services_logo3 from "./assets/images/Services/logo3.png";
 import project1 from "./assets/images/Projects/img1.png";
 import project2 from "./assets/images/Projects/img2.png";
 import project3 from "./assets/images/Projects/img3.png";
+import project4 from "./assets/images/Projects/img4.png";
+import project5 from "./assets/images/Projects/img5.png";
+import project6 from "./assets/images/Projects/img6.png";
 import person_project from "./assets/images/Projects/person.png";
 
-import avatar1 from "./assets/images/Testimonials/avatar1.png";
-import avatar2 from "./assets/images/Testimonials/avatar2.png";
-import avatar3 from "./assets/images/Testimonials/avatar3.png";
-import avatar4 from "./assets/images/Testimonials/avatar4.png";
+// import avatar1 from "./assets/images/Testimonials/avatar1.png";
+// import avatar2 from "./assets/images/Testimonials/avatar2.png";
+// import avatar3 from "./assets/images/Testimonials/avatar3.png";
+// import avatar4 from "./assets/images/Testimonials/avatar4.png";
 
 import Hireme_person from "./assets/images/Hireme/person.png";
 import Hireme_person2 from "./assets/images/Hireme/person2.png";
 
 // import icons from react-icons
 import { GrMail } from "react-icons/gr";
-import { MdCall } from "react-icons/md";
+import { GiSkills } from "react-icons/gi";
+import { MdOutlinePermContactCalendar, MdCall } from "react-icons/md";
 import { BsInstagram } from "react-icons/bs";
 import { TbSmartHome } from "react-icons/tb";
 import { BiUser } from "react-icons/bi";
+import { AiFillLinkedin, AiFillTwitterCircle } from "react-icons/ai";
 import { RiServiceLine, RiProjectorLine } from "react-icons/ri";
-import { MdOutlinePermContactCalendar } from "react-icons/md";
+// import { MdOutlinePermContactCalendar } from "react-icons";
+import { AiFillGithub } from "react-icons/ai";
 
 export const content = {
   en: {
@@ -50,8 +56,12 @@ export const content = {
         icon: TbSmartHome,
       },
       {
-        link: "#skills",
+        link: "#aboutme",
         icon: BiUser,
+      },
+      {
+        link: "#skills",
+        icon: GiSkills,
       },
       {
         link: "#services",
@@ -68,15 +78,13 @@ export const content = {
     ],
     hero: {
       title: "Software Engineering student",
-      description:
-        "Hello Dear,I am a software Engineering student in UAE University at FSTT ,specialty LSI (software and intelligent systems) and a MERN stack developer ,\n I have worked on several projects and contribute in some small projects.\n I am currently , I am looking for an internship for the next Summer In Mern Stack Devlopement. ",
       firstName: "SOHAIB",
       LastName: "MANAH",
       btnText: "Explore more about Me",
       image: Hero_person,
       hero_content: [
         {
-          count: "1+",
+          count: "2+",
           text: "Years of Experinse in Web development And software development",
         },
         {
@@ -168,17 +176,17 @@ export const content = {
       service_content: [
         {
           title: "Web Development",
-          para: "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document elying on mean",
+          para: "As a web developer with 2+ years of experience, I have worked on a variety of projects, from small personal websites to medium web applications. I have experience with both front-end and back-end development, and I am comfortable working with a variety of technologies and frameworks.",
           logo: services_logo1,
         },
         {
-          title: "ui / ux DESIGNING",
-          para: "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document elying on mean",
+          title: "MongoDB developer | DBA",
+          para: "keeping your data safe and secure and persistent  is my priority and I can help you to do that with my experience in this field",
           logo: services_logo2,
         },
         {
-          title: "PhotoShop Editing",
-          para: "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document elying on mean",
+          title: "Data modeling & Prototyping",
+          para: "This is the most important part and crucial step in any project development.And with my experience in this field I can help you to make your project a success",
           logo: services_logo3,
         },
       ],
@@ -189,49 +197,67 @@ export const content = {
       image: person_project,
       project_content: [
         {
-          title: "Gym Website",
+          title: "Club Website",
+          link: "https://itgeeks.social/",
           image: project1,
         },
         {
-          title: "Social Media web",
+          title: "Multiform Registration page",
           image: project2,
+          link: "https://registration.itgeeks.social/",
         },
         {
-          title: "Creative Website",
+          title: "Recipe App(Hackathon)",
+          link: "https://rich-lime-piglet-tam.cyclic.app/#5ed6604591c37cdc054bcf74",
           image: project3,
         },
-      ],
-    },
-    Testimonials: {
-      title: "Testimonials",
-      subtitle: "MY CLIENT REVIEWS",
-      testimonials_content: [
         {
-          review:
-            "“In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstra”",
-          img: avatar1,
-          name: "JOHN DOE",
+          title: "Natours (tourism website)",
+          link: "https://sohaibman.github.io/Natours.github.io/",
+          image: project4,
         },
         {
-          review:
-            "“In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstra”",
-          img: avatar2,
-          name: "Tom Alex",
+          title: "meal delivered",
+          link: "https://sohaibman.github.io/Omifood.github.io/",
+          image: project5,
         },
         {
-          review:
-            "“In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstra”",
-          img: avatar3,
-          name: "Johnny",
-        },
-        {
-          review:
-            "“In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstra”",
-          img: avatar4,
-          name: "ROBBIN",
+          title: "Bankist (bank website for learning purpose)",
+          link: "https://sohaibman.github.io/Bankist.github.io/",
+          image: project6,
         },
       ],
     },
+    // Testimonials: {
+    //   title: "Testimonials",
+    //   subtitle: "MY CLIENT REVIEWS",
+    //   testimonials_content: [
+    //     {
+    //       review:
+    //         "“In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstra”",
+    //       img: avatar1,
+    //       name: "JOHN DOE",
+    //     },
+    //     {
+    //       review:
+    //         "“In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstra”",
+    //       img: avatar2,
+    //       name: "Tom Alex",
+    //     },
+    //     {
+    //       review:
+    //         "“In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstra”",
+    //       img: avatar3,
+    //       name: "Johnny",
+    //     },
+    //     {
+    //       review:
+    //         "“In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstra”",
+    //       img: avatar4,
+    //       name: "ROBBIN",
+    //     },
+    //   ],
+    // },
     Aboutme: {
       title: "About Me",
       subtitle: "Hello Dear,This is a brief introduction about me",
@@ -241,28 +267,35 @@ export const content = {
       btnText: "learn more about my skills",
     },
     Contact: {
-      title: "Contect Me",
-      subtitle: "GET IN TOUCH",
+      title: "Contact Me",
+      subtitle: "LET'S GET IN TOUCH",
       social_media: [
         {
-          text: "codeaprogram@gmail.com",
+          text: "souhaibemanah@gmail.com",
           icon: GrMail,
-          link: "mailto:codeaprogram@gmail.com",
+          link: "mailto:souhaibemanah@gmail.com",
         },
         {
-          text: "+91 1234 56778",
-          icon: MdCall,
-          link: "https://wa.me/1234567890",
+          text: "sohaib manah",
+          icon: AiFillLinkedin,
+          link: "https://www.linkedin.com/in/sohaibmanah/",
         },
         {
-          text: "codeaprogram",
+          text: "sohaibMan",
+          icon: AiFillGithub,
+          link: "https://github.com/sohaibMan",
+        },
+        {
+          text: "sohaib_manah",
           icon: BsInstagram,
-          link: "https://www.instagram.com/codeaprogram/",
+          link: "https://www.instagram.com/sohaib_manah/",
+        },
+        {
+          text: "sohaib_manah",
+          icon: AiFillTwitterCircle,
+          link: "https://twitter.com/sohaib_manah",
         },
       ],
-    },
-    Footer: {
-      text: "All © Copy Right Reserved 2022",
     },
   },
 };

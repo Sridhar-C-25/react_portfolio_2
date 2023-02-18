@@ -3,7 +3,7 @@ import { content } from "../Content";
 import emailjs from "@emailjs/browser";
 import toast, { Toaster } from "react-hot-toast";
 
-const Contact = ({lang}) => {
+const Contact = ({ lang }) => {
   const { Contact } = content[lang];
   const form = useRef();
 
@@ -13,10 +13,10 @@ const Contact = ({lang}) => {
 
     emailjs
       .sendForm(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
+        "service_sibmgx4",
+        "template_vmerluo",
         form.current,
-        "YOUR_PUBLIC_KEY"
+        "v4ZuU1D2AXKh08adE"
       )
       .then(
         (result) => {
@@ -34,7 +34,7 @@ const Contact = ({lang}) => {
   };
 
   return (
-    <section className="bg-dark_primary text-white" id="contact">
+    <section className="bg-dark_primary text-white h-screen" id="contact">
       <Toaster />
       <div className="md:container px-5 py-14">
         <h2 className="title !text-white" data-aos="fade-down">
