@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 
-import { Pagination } from "swiper";
+import { Autoplay, Pagination } from "swiper";
 
 const Projects = ({ lang }) => {
   const { Projects } = content[lang];
@@ -35,7 +35,8 @@ const Projects = ({ lang }) => {
             }}
             data-aos="fade-left"
             spaceBetween={20}
-            modules={[Pagination]}
+            autoplay={{ delay: 5000 }}
+            modules={[Pagination, Autoplay]}
             className="rounded-3xl pb-16 max-w-xs drop-shadow-primary self-start"
           >
             {Projects.project_content.map((content, i) => (

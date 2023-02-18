@@ -11,6 +11,7 @@ import { useEffect, useState } from "react";
 // Animation package
 import Aos from "aos";
 import "aos/dist/aos.css";
+import Certifications from "./components/Certifications";
 
 const App = () => {
   useEffect(() => {
@@ -29,6 +30,7 @@ const App = () => {
       <Hero lang={lang} />
       <Aboutme lang={lang} />
       <Skills lang={lang} />
+      <Certifications lang={lang} />
       <Service lang={lang} />
       <Projects lang={lang} />
       {/* <Testimonials lang={lang} /> */}
