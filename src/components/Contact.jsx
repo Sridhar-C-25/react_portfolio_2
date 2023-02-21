@@ -34,7 +34,7 @@ const Contact = ({ lang }) => {
   };
 
   return (
-    <section className="bg-dark_primary text-white h-screen" id="contact">
+    <section className="bg-dark_primary text-white h-full" id="contact">
       <Toaster />
       <div className="md:container px-5 py-14">
         <h2 className="title !text-white" data-aos="fade-down">

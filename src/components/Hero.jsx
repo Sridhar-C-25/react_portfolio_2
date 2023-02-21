@@ -12,14 +12,18 @@ const Hero = ({ lang }) => {
           data-aos-delay="1200"
           className="absolute h-full md:w-4/12 w-8/12 top-0 right-0 bg-primaryLinear bottom-0 -z-10"
         >
-          <h3 className="rotate-90 absolute top-[30%] right-[-25%] text-[#EAF2FA]">
+          {/* <h3 className="rotate-90 absolute top-[30%] right-[-25%] text-[#EAF2FA]">
             {hero.firstName}{" "}
             <span className="text-dark_primary">{hero.LastName}</span>
-          </h3>
+          </h3> */}
         </div>
 
         {/* first col */}
         <div className="pb-16 px-6 pt-5" data-aos="fade-down">
+          <h3 className="text-center text-[#1c7ed6]">
+            {hero.firstName}{" "}
+            <span className="text-dark_primary">{hero.LastName}</span>
+          </h3>
           <h4>{hero.title}</h4>
           <br />
           <div className="flex justify-end">
