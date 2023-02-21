@@ -33,7 +33,7 @@ import project3 from "./assets/images/Projects/img3.png";
 import project4 from "./assets/images/Projects/img4.png";
 import project5 from "./assets/images/Projects/img5.png";
 import project6 from "./assets/images/Projects/img6.png";
-import person_project from "./assets/images/Projects/person.png";
+// import person_project from "./assets/images/Projects/person.png";
 
 // import avatar1 from "./assets/images/Testimonials/avatar1.png";
 // import avatar2 from "./assets/images/Testimonials/avatar2.png";
@@ -268,7 +268,6 @@ export const content = {
     Projects: {
       title: "Projects",
       subtitle: "MY CREATION",
-      image: person_project,
       project_content: [
         {
           title: "Club Website",
@@ -471,7 +470,6 @@ export const content = {
     Projects: {
       title: "Projects",
       subtitle: "Ma création",
-      image: person_project,
       project_content: [
         {
           title: "Club Website",
