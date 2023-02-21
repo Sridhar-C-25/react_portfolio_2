@@ -41,7 +41,7 @@ import person_project from "./assets/images/Projects/person.png";
 // import avatar4 from "./assets/images/Testimonials/avatar4.png";
 
 import Hireme_person from "./assets/images/Hireme/person.png";
-import Hireme_person2 from "./assets/images/Hireme/person2.png";
+// import Hireme_person2 from "./assets/images/Hireme/person2.png";
 
 // import icons from react-icons
 import { GrMail } from "react-icons/gr";
@@ -336,7 +336,7 @@ export const content = {
       title: "About Me",
       subtitle: "Hello Dear,This is a brief introduction about me",
       image1: Hireme_person,
-      image2: Hireme_person2,
+      image2: Hireme_person,
       para: "I am a software Engineering student in UAE University at FSTT ,specialty LSI (software and intelligent systems) and a MERN stack developer , \nI have worked on several projects and contribute in some small projects.\n I am looking for an internship for the next Summer.or a freelance job ",
       btnText: "learn more about my skills",
     },
@@ -539,7 +539,7 @@ export const content = {
       title: "A propos de moi",
       subtitle: "Bonjour Cher,Ceci est une brève introduction sur moi",
       image1: Hireme_person,
-      image2: Hireme_person2,
+      image2: Hireme_person,
       para: "J'étudie à l'Université uae (Université Abdelmalek Essaadi), à la FSTT (Faculté des Sciences et Techniques de Tanger) en tant qu'un étudiant en Génie Informatique spécialité LSI (logiciel et système intelligent), \n et  Je suis un MERN développeur, j'ai travaillé sur plusieurs projets et contribué à quelques petits projets.\n et je cherche un stage pour l'été prochain",
       btnText: "En savoir plus sur mes compétences",
     },
