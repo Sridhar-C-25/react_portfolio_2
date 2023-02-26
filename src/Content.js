@@ -450,6 +450,11 @@ export const content = {
           para: "J'aime travailler en équipe et je suis un bon communicateur",
           logo: teamwork,
         },
+        {
+          name: "Python",
+          para: "avec la Théorie des graphes",
+          logo: python,
+        },
       ],
     },
     services: {
