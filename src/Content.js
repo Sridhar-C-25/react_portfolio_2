@@ -15,6 +15,7 @@ import java from "./assets/images/Skills/java.png";
 import uml from "./assets/images/Skills/uml.png";
 import typescript from "./assets/images/Skills/typescript.png";
 import teamwork from "./assets/images/Skills/teamwork.png";
+import python from "./assets/images/Skills/python.png";
 
 import services_logo1 from "./assets/images/Services/logo1.png";
 import services_logo2 from "./assets/images/Services/logo2.png";
@@ -241,6 +242,11 @@ export const content = {
           name: "teamwork | communication",
           para: "I like to work in a team and I am a good communicator",
           logo: teamwork,
+        },
+        {
+          name: "Python",
+          para: "in Graph theory",
+          logo: python,
         },
       ],
     },
