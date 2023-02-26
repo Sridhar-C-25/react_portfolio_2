@@ -446,7 +446,7 @@ export const content = {
           logo: typescript,
         },
         {
-          name: "teamwork | communication",
+          name: "travail en équipe | La communication",
           para: "J'aime travailler en équipe et je suis un bon communicateur",
           logo: teamwork,
         },
