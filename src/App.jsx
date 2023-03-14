@@ -7,12 +7,13 @@ import Projects from "./components/Projects";
 // import Testimonials from "./components/Testimonials";
 import Aboutme from "./components/Aboutme";
 import Contact from "./components/Contact";
-import { useEffect, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 // Animation package
 import Aos from "aos";
 import "aos/dist/aos.css";
 import Certifications from "./components/Certifications";
 
+const context = createContext();
 const App = () => {
   useEffect(() => {
     Aos.init({
@@ -31,18 +32,18 @@ const App = () => {
     window.history.pushState({}, "", url);
   };
   return (
-    <div className="">
-      <Navbar lang={lang} changeLangHandler={changeLangHandler} />
-      <Hero lang={lang} />
-      <Aboutme lang={lang} />
-      <Skills lang={lang} />
-      <Certifications lang={lang} />
-      <Service lang={lang} />
-      <Projects lang={lang} />
-      {/* <Testimonials lang={lang} /> */}
-      <Contact lang={lang} />
-    </div>
+    <context.Provider value={lang}>
+      <Navbar changeLangHandler={changeLangHandler} />
+      <Hero />
+      <Aboutme />
+      <Skills />
+      <Certifications />
+      <Service />
+      <Projects />
+      {/* <Testimonials /> */}
+      <Contact />
+    </context.Provider>
   );
 };
-
+export { context };
 export default App;

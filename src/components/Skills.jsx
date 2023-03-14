@@ -1,8 +1,11 @@
 // import content
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { context } from "../App";
 import { content } from "../Content";
 
-const Skills = ({ lang }) => {
+const Skills = () => {
+  const lang = useContext(context);
+
   const { skills } = content[lang];
 
   return (

@@ -1,6 +1,9 @@
+import { useContext } from "react";
+import { context } from "../App";
 import { content } from "../Content";
 
-const Services = ({ lang }) => {
+const Services = () => {
+  const lang = useContext(context);
   const { services } = content[lang];
   return (
     <section id="services">

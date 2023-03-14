@@ -8,8 +8,12 @@ import "swiper/css/pagination";
 
 import { Pagination } from "swiper";
 import { Autoplay } from "swiper";
+import { context } from "../App";
+import { useContext } from "react";
 
-const Certifications = ({ lang }) => {
+const Certifications = () => {
+  const lang = useContext(context);
+
   const { Certifications } = content[lang];
   return (
     <section className="bg-bg_light_primary" id="certifications">

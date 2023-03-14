@@ -57,7 +57,7 @@ import { RiServiceLine, RiProjectorLine } from "react-icons/ri";
 import { AiFillGithub } from "react-icons/ai";
 import { TbCertificate } from "react-icons/tb";
 
-const nav = [
+const Nav = [
   {
     link: "#home",
     icon: TbSmartHome,
@@ -150,7 +150,7 @@ const cert_content = [
 
 export const content = {
   en: {
-    nav,
+    Nav,
     hero: {
       title: "Software Engineering student",
       firstName: "SOHAIB",
@@ -357,7 +357,7 @@ export const content = {
     },
   },
   fr: {
-    nav,
+    Nav,
     hero: {
       title: "Élève ingénieur en LSI",
       firstName: "SOHAIB",

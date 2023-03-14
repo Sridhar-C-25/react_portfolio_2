@@ -1,9 +1,12 @@
-import { createElement, useRef } from "react";
+import { createElement, useContext, useRef } from "react";
 import { content } from "../Content";
 import emailjs from "@emailjs/browser";
 import toast, { Toaster } from "react-hot-toast";
+import { context } from "../App";
 
-const Contact = ({ lang }) => {
+const Contact = () => {
+  const lang = useContext(context);
+
   const { Contact } = content[lang];
   const form = useRef();
 

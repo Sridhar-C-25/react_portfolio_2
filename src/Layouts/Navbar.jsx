@@ -1,11 +1,13 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { content } from "../Content";
 import { HiMenuAlt2 } from "react-icons/hi";
 import { createElement } from "react";
 import LanguageSwitcher from "../components/LanguageSwitcher";
+import { context } from "../App";
 
-const Navbar = ({ lang, changeLangHandler }) => {
-  const { nav } = content[lang];
+const Navbar = ({ changeLangHandler }) => {
+  const lang = useContext(context);
+  const { Nav } = content[lang];
   const [showMenu, setShowMenu] = useState(false);
   const [active, setActive] = useState(0);
 
@@ -25,7 +27,7 @@ const Navbar = ({ lang, changeLangHandler }) => {
           showMenu ? "bottom-10" : "bottom-[-100%]"
         }`}
       >
-        {nav.map((item, i) => (
+        {Nav.map((item, i) => (
           <a
             key={i}
             href={item.link}

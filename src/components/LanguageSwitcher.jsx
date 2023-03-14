@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 function LanguageSwitcher({ lang, onChange }) {
   const supportedLang = ["en", "fr"];
-  console.log(lang);
+  // console.log(lang);
   const [language, setLangugae] = useState(lang);
   return (
     <>

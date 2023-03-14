@@ -1,6 +1,10 @@
+import { useContext } from "react";
+import { context } from "../App";
 import { content } from "../Content";
 
-const Aboutme = ({ lang }) => {
+const Aboutme = () => {
+  const lang = useContext(context);
+
   const { Aboutme } = content[lang];
 
   return (

@@ -1,7 +1,9 @@
 // import content
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
+import { context } from "../App";
 import { content } from "../Content";
-const Hero = ({ lang }) => {
+const Hero = () => {
+  const lang = useContext(context);
   const { hero } = content[lang];
 
   return (

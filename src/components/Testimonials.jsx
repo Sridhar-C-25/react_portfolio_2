@@ -7,9 +7,11 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 import { Pagination } from "swiper";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { context } from "../App";
 
-const Testimonials = ({ lang }) => {
+const Testimonials = () => {
+  const lang = useContext(context);
   const { Testimonials } = content[lang];
   const [activeIndex, setActiveIndex] = useState(0);
   return (
