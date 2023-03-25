@@ -1,29 +1,29 @@
 // import images
 import Hero_person from "./assets/images/Hero/person.png";
 
-import figma from "./assets/images/Skills/figma.png";
-import sketch from "./assets/images/Skills/sketch.png";
-import ps from "./assets/images/Skills/ps.png";
+// import figma from "./assets/images/Skills/figma.png";
+// import sketch from "./assets/images/Skills/sketch.png";
+// import ps from "./assets/images/Skills/ps.png";
 import reactjs from "./assets/images/Skills/react.png";
-import nodejs from "./assets/images/Skills/node.png";
-import python from "./assets/images/Skills/python.png";
+// import nodejs from "./assets/images/Skills/node.png";
+// import python from "./assets/images/Skills/python.png";
 
 import services_logo1 from "./assets/images/Services/logo1.png";
-import services_logo2 from "./assets/images/Services/logo2.png";
-import services_logo3 from "./assets/images/Services/logo3.png";
+// import services_logo2 from "./assets/images/Services/logo2.png";
+// import services_logo3 from "./assets/images/Services/logo3.png";
 
-import project1 from "./assets/images/projects/img1.png";
-import project2 from "./assets/images/projects/img2.png";
-import project3 from "./assets/images/projects/img3.png";
-import person_project from "./assets/images/projects/person.png";
+import project1 from "../src/assets/images/Projects/img1.png";
+import project2 from "../src/assets/images/Projects/img2.png";
+import project3 from "../src/assets/images/Projects/img3.png";
+import person_project from "../src/assets/images/Projects/person.png";
 
-import avatar1 from "./assets/images/Testimonials/avatar1.png";
-import avatar2 from "./assets/images/Testimonials/avatar2.png";
-import avatar3 from "./assets/images/Testimonials/avatar3.png";
-import avatar4 from "./assets/images/Testimonials/avatar4.png";
+// import avatar1 from "./assets/images/Testimonials/avatar1.png";
+// import avatar2 from "./assets/images/Testimonials/avatar2.png";
+// import avatar3 from "./assets/images/Testimonials/avatar3.png";
+// import avatar4 from "./assets/images/Testimonials/avatar4.png";
 
-import Hireme_person from "./assets/images/Hireme/person.png";
-import Hireme_person2 from "./assets/images/Hireme/person2.png";
+// import Hireme_person from "./assets/images/Hireme/person.png";
+// import Hireme_person2 from "./assets/images/Hireme/person2.png";
 
 // import icons from react-icons
 import { GrMail } from "react-icons/gr";
@@ -218,7 +218,8 @@ export const content = {
         logo: services_logo1,
       },
       {
-        title: "FullStack WEB/Android Developer - System Analysis - Infrastructure - Leader",
+        title:
+          "FullStack WEB/Android Developer - System Analysis - Infrastructure - Leader",
         year: "2018 - 2022",
         para: "Xplora Gamma Jaya",
         logo: services_logo1,
