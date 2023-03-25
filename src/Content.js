@@ -1,34 +1,34 @@
 // import images
 import Hero_person from "./assets/images/Hero/person.png";
 
-import figma from "./assets/images/Skills/figma.png";
-import sketch from "./assets/images/Skills/sketch.png";
-import ps from "./assets/images/Skills/ps.png";
+// import figma from "./assets/images/Skills/figma.png";
+// import sketch from "./assets/images/Skills/sketch.png";
+// import ps from "./assets/images/Skills/ps.png";
 import reactjs from "./assets/images/Skills/react.png";
-import nodejs from "./assets/images/Skills/node.png";
-import python from "./assets/images/Skills/python.png";
+// import nodejs from "./assets/images/Skills/node.png";
+// import python from "./assets/images/Skills/python.png";
 
 import services_logo1 from "./assets/images/Services/logo1.png";
-import services_logo2 from "./assets/images/Services/logo2.png";
-import services_logo3 from "./assets/images/Services/logo3.png";
+// import services_logo2 from "./assets/images/Services/logo2.png";
+// import services_logo3 from "./assets/images/Services/logo3.png";
 
-import project1 from "./assets/images/projects/img1.png";
-import project2 from "./assets/images/projects/img2.png";
-import project3 from "./assets/images/projects/img3.png";
-import person_project from "./assets/images/projects/person.png";
+import project1 from "../src/assets/images/Projects/img1.png";
+import project2 from "../src/assets/images/Projects/img2.png";
+import project3 from "../src/assets/images/Projects/img3.png";
+import person_project from "../src/assets/images/Projects/person.png";
 
-import avatar1 from "./assets/images/Testimonials/avatar1.png";
-import avatar2 from "./assets/images/Testimonials/avatar2.png";
-import avatar3 from "./assets/images/Testimonials/avatar3.png";
-import avatar4 from "./assets/images/Testimonials/avatar4.png";
+// import avatar1 from "./assets/images/Testimonials/avatar1.png";
+// import avatar2 from "./assets/images/Testimonials/avatar2.png";
+// import avatar3 from "./assets/images/Testimonials/avatar3.png";
+// import avatar4 from "./assets/images/Testimonials/avatar4.png";
 
-import Hireme_person from "./assets/images/Hireme/person.png";
-import Hireme_person2 from "./assets/images/Hireme/person2.png";
+// import Hireme_person from "./assets/images/Hireme/person.png";
+// import Hireme_person2 from "./assets/images/Hireme/person2.png";
 
 // import icons from react-icons
 import { GrMail } from "react-icons/gr";
 import { MdArrowForward, MdCall } from "react-icons/md";
-import { BsInstagram } from "react-icons/bs";
+import { GoMarkGithub } from "react-icons/go";
 import { TbSmartHome } from "react-icons/tb";
 import { BiUser } from "react-icons/bi";
 import { RiServiceLine, RiProjectorLine } from "react-icons/ri";
@@ -58,14 +58,14 @@ export const content = {
     },
   ],
   hero: {
-    title: "Web Developer",
-    firstName: "JOHN",
-    LastName: "ALEX",
-    btnText: "Hire Me",
+    title: "FullStack Developer",
+    firstName: "Bagus",
+    LastName: "Kurniawan",
+    btnText: "Resume",
     image: Hero_person,
     hero_content: [
       {
-        count: "8+",
+        count: "10+",
         text: "Years of Experinse in Web development",
       },
       {
@@ -76,141 +76,203 @@ export const content = {
   },
   skills: {
     title: "Skills",
-    subtitle: "MY TOP SKILLS",
-    skills_content: [
+    data: [
       {
-        name: "Figma",
-        para: "Lorem ipsum text  dummy",
-        logo: figma,
+        category: "Code",
+        content: [
+          {
+            name: "PHP",
+            para: 2010,
+            logo: "https://www.php.net/images/logos/new-php-logo.svg",
+          },
+          {
+            name: "Javscript",
+            para: 2010,
+            logo: "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png?20120221235433",
+          },
+          {
+            name: "Laravel",
+            para: 2015,
+            logo: "https://cdn.worldvectorlogo.com/logos/laravel-2.svg",
+          },
+          {
+            name: "React js",
+            para: 2018,
+            logo: reactjs,
+          },
+          {
+            name: "Express js",
+            para: 2020,
+            logo: "https://i0.wp.com/compositecode.blog/wp-content/uploads/2018/07/1200px-node-js_logo.png?resize=863%2C528&ssl=1",
+          },
+        ],
       },
       {
-        name: "Node js",
-        para: "Lorem ipsum text  dummy",
-        logo: nodejs,
+        category: "Database",
+        content: [
+          {
+            name: "MySQL",
+            para: 2010,
+            logo: "https://www.mysql.com/common/logos/logo-mysql-170x115.png",
+          },
+          {
+            name: "PostgreSQL",
+            para: 2012,
+            logo: "https://wiki.postgresql.org/images/thumb/a/a4/PostgreSQL_logo.3colors.svg/540px-PostgreSQL_logo.3colors.svg.png",
+          },
+          {
+            name: "SQL Server",
+            para: 2016,
+            logo: "https://www.svgrepo.com/show/303229/microsoft-sql-server-logo.svg",
+          },
+          {
+            name: "MongoDB",
+            para: 2020,
+            logo: "https://upload.wikimedia.org/wikipedia/commons/9/93/MongoDB_Logo.svg",
+          },
+          {
+            name: "Firebase",
+            para: 2020,
+            logo: "https://upload.wikimedia.org/wikipedia/commons/3/37/Firebase_Logo.svg",
+          },
+        ],
       },
       {
-        name: "Adobe Photoshop",
-        para: "Lorem ipsum text  dummy",
-        logo: ps,
+        category: "Others",
+        content: [
+          {
+            name: "Docker",
+            para: 2021,
+            logo: "https://upload.wikimedia.org/wikipedia/commons/4/4e/Docker_%28container_engine%29_logo.svg",
+          },
+          {
+            name: "Version Control",
+            para: 2018,
+            logo: "https://upload.wikimedia.org/wikipedia/commons/e/e0/Git-logo.svg",
+          },
+          {
+            name: "Microservices",
+            para: 2018,
+            logo: "http://jpmorgenthal.com/wp-content/uploads/2021/01/Microservices.png",
+          },
+          {
+            name: "Mikrotik",
+            para: 2014,
+            logo: "https://upload.wikimedia.org/wikipedia/commons/3/37/MikroTik_logo.svg",
+          },
+          {
+            name: "Server",
+            para: 2013,
+            logo: "https://previews.123rf.com/images/bestvectorstock/bestvectorstock1808/bestvectorstock180813879/107224375-server-vector-icon-isolated-on-transparent-background-server-logo-concept.jpg",
+          },
+          {
+            name: "Technician Harware/Software",
+            para: 2008,
+            logo: "https://upload.wikimedia.org/wikipedia/commons/9/9a/Wiki-tech-logo.svg",
+          },
+        ],
       },
       {
-        name: "React js",
-        para: "Lorem ipsum text  dummy",
-        logo: reactjs,
-      },
-      {
-        name: "Sketch",
-        para: "Lorem ipsum text  dummy",
-        logo: sketch,
-      },
-      {
-        name: "Python",
-        para: "Lorem ipsum text  dummy",
-        logo: python,
+        category: "Operating System",
+        content: [
+          {
+            name: "Mac OS",
+            para: 2016,
+            logo: "https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg",
+          },
+          {
+            name: "Linux",
+            para: 2009,
+            logo: "https://upload.wikimedia.org/wikipedia/commons/8/8d/Linux_Logo.jpg",
+          },
+          {
+            name: "Windows",
+            para: 2004,
+            logo: "https://upload.wikimedia.org/wikipedia/commons/8/87/Windows_logo_-_2021.svg",
+          },
+        ],
       },
     ],
     icon: MdArrowForward,
   },
   services: {
-    title: "Services",
-    subtitle: "WHAT I OFFER",
+    title: "Work Experience",
+    subtitle: "",
     service_content: [
       {
-        title: "Web Development",
-        para: "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document elying on mean",
+        title: "Backend Developer",
+        year: "2022 - 2023",
+        para: "Digdaya Olah Teknologi",
         logo: services_logo1,
       },
       {
-        title: "ui / ux DESIGNING",
-        para: "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document elying on mean",
-        logo: services_logo2,
+        title: "FullStack WEB/Android Developer - System Analysis - Leader",
+        year: "2020 - 2023",
+        para: "Antardata Cakrawala Teknologi",
+        logo: services_logo1,
       },
       {
-        title: "PhotoShop Editing",
-        para: "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document elying on mean",
-        logo: services_logo3,
+        title: "FullStack Developer - System Analysis - Leader",
+        year: "2020 - 2022",
+        para: "Epsilon Multisinergi",
+        logo: services_logo1,
+      },
+      {
+        title:
+          "FullStack WEB/Android Developer - System Analysis - Infrastructure - Leader",
+        year: "2018 - 2022",
+        para: "Xplora Gamma Jaya",
+        logo: services_logo1,
+      },
+      {
+        title: "FullStack WEB/Android Developer",
+        year: "2016 - 2018",
+        para: "Aslamindo Eltama Raya",
+        logo: services_logo1,
       },
     ],
   },
   Projects: {
-    title: "Projects",
-    subtitle: "MY CREATION",
+    title: "Latest Projects",
+    subtitle: "",
     image: person_project,
     project_content: [
       {
-        title: "Gym Website",
+        title: "Triputra Energi Megatara",
         image: project1,
       },
       {
-        title: "Social Media web",
+        title: "RSD Soebandi",
         image: project2,
       },
       {
-        title: "Creative Website",
+        title: "Administrasi Hukum Umum",
         image: project3,
       },
     ],
   },
-  Testimonials: {
-    title: "Testimonials",
-    subtitle: "MY CLIENT REVIEWS",
-    testimonials_content: [
-      {
-        review:
-          "“In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstra”",
-        img: avatar1,
-        name: "JOHN DOE",
-      },
-      {
-        review:
-          "“In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstra”",
-        img: avatar2,
-        name: "Tom Alex",
-      },
-      {
-        review:
-          "“In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstra”",
-        img: avatar3,
-        name: "Johnny",
-      },
-      {
-        review:
-          "“In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstra”",
-        img: avatar4,
-        name: "ROBBIN",
-      },
-    ],
-  },
-  Hireme: {
-    title: "Hire Me",
-    subtitle: "FOR YOUR PROJECTS",
-    image1: Hireme_person,
-    image2: Hireme_person2,
-    para: "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document elying on mean",
-    btnText: "Hire Me",
-  },
   Contact: {
-    title: "Contect Me",
-    subtitle: "GET IN TOUCH",
+    title: "Contact Me",
+    subtitle: "",
     social_media: [
       {
-        text: "codeaprogram@gmail.com",
+        text: "bagusyulikurniawan@gmail.com",
         icon: GrMail,
-        link: "mailto:codeaprogram@gmail.com",
+        link: "mailto:bagusyulikurniawan@gmail.com",
       },
       {
-        text: "+91 1234 56778",
+        text: "+6285746400500",
         icon: MdCall,
-        link: "https://wa.me/1234567890",
+        link: "https://wa.me/6285746400500",
       },
       {
-        text: "codeaprogram",
-        icon: BsInstagram,
-        link: "https://www.instagram.com/codeaprogram/",
+        text: "github",
+        icon: GoMarkGithub,
+        link: "https://github.com/starmoozie",
       },
     ],
   },
   Footer: {
-    text: "All © Copy Right Reserved 2022",
+    text: "All © Copy Right Reserved 2023",
   },
 };
