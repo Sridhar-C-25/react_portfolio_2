@@ -1,30 +1,3 @@
-// import images
-import Hero_person from "./assets/images/Hero/person.png";
-
-import figma from "./assets/images/Skills/figma.png";
-import sketch from "./assets/images/Skills/sketch.png";
-import ps from "./assets/images/Skills/ps.png";
-import reactjs from "./assets/images/Skills/react.png";
-import nodejs from "./assets/images/Skills/node.png";
-import python from "./assets/images/Skills/python.png";
-
-import services_logo1 from "./assets/images/Services/logo1.png";
-import services_logo2 from "./assets/images/Services/logo2.png";
-import services_logo3 from "./assets/images/Services/logo3.png";
-
-import project1 from "./assets/images/projects/img1.png";
-import project2 from "./assets/images/projects/img2.png";
-import project3 from "./assets/images/projects/img3.png";
-import person_project from "./assets/images/projects/person.png";
-
-import avatar1 from "./assets/images/Testimonials/avatar1.png";
-import avatar2 from "./assets/images/Testimonials/avatar2.png";
-import avatar3 from "./assets/images/Testimonials/avatar3.png";
-import avatar4 from "./assets/images/Testimonials/avatar4.png";
-
-import Hireme_person from "./assets/images/Hireme/person.png";
-import Hireme_person2 from "./assets/images/Hireme/person2.png";
-
 // import icons from react-icons
 import { GrMail } from "react-icons/gr";
 import { MdArrowForward, MdCall } from "react-icons/md";
@@ -62,7 +35,7 @@ export const content = {
     firstName: "JOHN",
     LastName: "ALEX",
     btnText: "Hire Me",
-    image: Hero_person,
+    image: "/images/Hero/person.png",
     hero_content: [
       {
         count: "8+",
@@ -81,32 +54,62 @@ export const content = {
       {
         name: "Figma",
         para: "Lorem ipsum text  dummy",
-        logo: figma,
+        logo: "/images/Skills/figma.png",
+        point1: "Figma1",
+        point2: "Figma2",
+        point3: "Figma3",
+        point4: "Figma4",
+        point5: "Figma5"
       },
       {
         name: "Node js",
         para: "Lorem ipsum text  dummy",
-        logo: nodejs,
+        logo: "/images/Skills/node.png",
+        point1: "Nodejs1",
+        point2: "Nodejs2",
+        point3: "Nodejs3",
+        point4: "Nodejs4",
+        point5: "Nodejs5"
       },
       {
         name: "Adobe Photoshop",
         para: "Lorem ipsum text  dummy",
-        logo: ps,
+        logo: "/images/Skills/ps.png",
+        point1: "Photoshop1",
+        point2: "Photoshop2",
+        point3: "Photoshop3",
+        point4: "Photoshop4",
+        point5: "Photoshop5"
       },
       {
         name: "React js",
         para: "Lorem ipsum text  dummy",
-        logo: reactjs,
+        logo: "/images/Skills/react.png",
+        point1: "Reactjs1",
+        point2: "Reactjs2",
+        point3: "Reactjs3",
+        point4: "Reactjs4",
+        point5: "Reactjs5"
       },
       {
         name: "Sketch",
         para: "Lorem ipsum text  dummy",
-        logo: sketch,
+        logo: "/images/Skills/sketch.png",
+        point1: "Skecth1",
+        point2: "Skecth2",
+        point3: "Skecth3",
+        point4: "Skecth4",
+        point5: "Skecth5"
       },
       {
         name: "Python",
         para: "Lorem ipsum text  dummy",
-        logo: python,
+        logo: "/images/Skills/python.png",
+        point1: "Python1",
+        point2: "Python2",
+        point3: "Python3",
+        point4: "Python4",
+        point5: "Python5"
       },
     ],
     icon: MdArrowForward,
@@ -118,36 +121,36 @@ export const content = {
       {
         title: "Web Development",
         para: "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document elying on mean",
-        logo: services_logo1,
+        logo: "/images/Services/logo1.png",
       },
       {
         title: "ui / ux DESIGNING",
         para: "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document elying on mean",
-        logo: services_logo2,
+        logo: "/images/Services/logo2.png",
       },
       {
         title: "PhotoShop Editing",
         para: "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document elying on mean",
-        logo: services_logo3,
+        logo: "/images/Services/logo3.png",
       },
     ],
   },
   Projects: {
     title: "Projects",
     subtitle: "MY CREATION",
-    image: person_project,
+    image: "/images/projects/person.png",
     project_content: [
       {
         title: "Gym Website",
-        image: project1,
+        image: "/images/projects/img1.png",
       },
       {
         title: "Social Media web",
-        image: project2,
+        image: "/images/projects/img2.png",
       },
       {
         title: "Creative Website",
-        image: project3,
+        image: "/images/projects/img3.png",
       },
     ],
   },
@@ -158,25 +161,25 @@ export const content = {
       {
         review:
           "“In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstra”",
-        img: avatar1,
+        img: "/images/Testimonials/avatar1.png",
         name: "JOHN DOE",
       },
       {
         review:
           "“In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstra”",
-        img: avatar2,
+        img: "/images/Testimonials/avatar2.png",
         name: "Tom Alex",
       },
       {
         review:
           "“In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstra”",
-        img: avatar3,
+        img: "/images/Testimonials/avatar3.png",
         name: "Johnny",
       },
       {
         review:
           "“In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstra”",
-        img: avatar4,
+        img: "/images/Testimonials/avatar4.png",
         name: "ROBBIN",
       },
     ],
@@ -184,8 +187,8 @@ export const content = {
   Hireme: {
     title: "Hire Me",
     subtitle: "FOR YOUR PROJECTS",
-    image1: Hireme_person,
-    image2: Hireme_person2,
+    image1: "/assets/images/Hireme/person.png",
+    image2: "/images/Hireme/person2.png",
     para: "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document elying on mean",
     btnText: "Hire Me",
   },
