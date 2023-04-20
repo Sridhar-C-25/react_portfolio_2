@@ -55,31 +55,61 @@ export const content = {
         name: "Figma",
         para: "Lorem ipsum text  dummy",
         logo: "/images/Skills/figma.png",
+        point1: "Figma1",
+        point2: "Figma2",
+        point3: "Figma3",
+        point4: "Figma4",
+        point5: "Figma5"
       },
       {
         name: "Node js",
         para: "Lorem ipsum text  dummy",
         logo: "/images/Skills/node.png",
+        point1: "Nodejs1",
+        point2: "Nodejs2",
+        point3: "Nodejs3",
+        point4: "Nodejs4",
+        point5: "Nodejs5"
       },
       {
         name: "Adobe Photoshop",
         para: "Lorem ipsum text  dummy",
         logo: "/images/Skills/ps.png",
+        point1: "Photoshop1",
+        point2: "Photoshop2",
+        point3: "Photoshop3",
+        point4: "Photoshop4",
+        point5: "Photoshop5"
       },
       {
         name: "React js",
         para: "Lorem ipsum text  dummy",
         logo: "/images/Skills/react.png",
+        point1: "Reactjs1",
+        point2: "Reactjs2",
+        point3: "Reactjs3",
+        point4: "Reactjs4",
+        point5: "Reactjs5"
       },
       {
         name: "Sketch",
         para: "Lorem ipsum text  dummy",
         logo: "/images/Skills/sketch.png",
+        point1: "Skecth1",
+        point2: "Skecth2",
+        point3: "Skecth3",
+        point4: "Skecth4",
+        point5: "Skecth5"
       },
       {
         name: "Python",
         para: "Lorem ipsum text  dummy",
         logo: "/images/Skills/python.png",
+        point1: "Python1",
+        point2: "Python2",
+        point3: "Python3",
+        point4: "Python4",
+        point5: "Python5"
       },
     ],
     icon: MdArrowForward,
