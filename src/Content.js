@@ -59,18 +59,18 @@ export const content = {
   ],
   hero: {
     title: "Web Developer",
-    firstName: "JOHN",
-    LastName: "ALEX",
+    firstName: "MUSTAFA",
+    LastName: "IPEKCI",
     btnText: "Hire Me",
     image: Hero_person,
     hero_content: [
       {
-        count: "8+",
-        text: "Years of Experinse in Web development",
+        count: "4+",
+        text: "Years of Experinse in Software Development",
       },
       {
-        count: "20+",
-        text: "Projects Worked in my career",
+        count: "5+",
+        text: "LAnguages Under the Belt",
       },
     ],
   },
