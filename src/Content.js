@@ -152,14 +152,14 @@ export const content = {
     ],
   },
   Testimonials: {
-    title: "Testimonials",
-    subtitle: "MY CLIENT REVIEWS",
+    title: "Hobbies",
+    subtitle: "MY HOBBIES",
     testimonials_content: [
       {
         review:
-          "“In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstra”",
-        img: avatar1,
-        name: "JOHN DOE",
+          "“I have a big interest in hands on work and creating things for people, giving me insight on UX and UI as I have to conform to the standards of my customer!”",
+        /*img: avatar1,*/
+        name: "Woodworking",
       },
       {
         review:
