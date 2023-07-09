@@ -27,7 +27,6 @@ const App = () => {
       <Skills />
       <Service />
       <Projects />
-      <Testimonials />
       <Hireme />
       <Contact />
       <footer className="p-3 text-center">
