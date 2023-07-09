@@ -70,7 +70,7 @@ export const content = {
       },
       {
         count: "5+",
-        text: "LAnguages Under the Belt",
+        text: "Languages Under the Belt",
       },
     ],
   },
@@ -80,7 +80,7 @@ export const content = {
     skills_content: [
       {
         name: "Figma",
-        para: "Lorem ipsum text  dummy",
+        para: "Mastered one of the biggest tools of Web Design",
         logo: figma,
       },
       {
@@ -95,7 +95,7 @@ export const content = {
       },
       {
         name: "React js",
-        para: "Lorem ipsum text  dummy",
+        para: "Strong grasp on staple of designing Web Applications",
         logo: reactjs,
       },
       {
@@ -105,7 +105,7 @@ export const content = {
       },
       {
         name: "Python",
-        para: "Lorem ipsum text  dummy",
+        para: "Over 5 years of experience in Python",
         logo: python,
       },
     ],
