@@ -66,7 +66,7 @@ export const content = {
     hero_content: [
       {
         count: "4+",
-        text: "Years of Experinse in Software Development",
+        text: "Years of Experience in Software Development",
       },
       {
         count: "5+",
@@ -85,12 +85,12 @@ export const content = {
       },
       {
         name: "Node js",
-        para: "Lorem ipsum text  dummy",
+        para: "Accompanying Front-End Web Development with Back-End",
         logo: nodejs,
       },
       {
-        name: "Adobe Photoshop",
-        para: "Lorem ipsum text  dummy",
+        name: "ChatGPT",
+        para: "Evolving with AI and using all my resources effectively",
         logo: ps,
       },
       {
@@ -99,8 +99,8 @@ export const content = {
         logo: reactjs,
       },
       {
-        name: "Sketch",
-        para: "Lorem ipsum text  dummy",
+        name: "Javascript",
+        para: "Conquered the true language of Web Design",
         logo: sketch,
       },
       {
@@ -111,7 +111,7 @@ export const content = {
     ],
     icon: MdArrowForward,
   },
-  services: {
+  /*services: {
     title: "Services",
     subtitle: "WHAT I OFFER",
     service_content: [
@@ -121,7 +121,7 @@ export const content = {
         logo: services_logo1,
       },
       {
-        title: "ui / ux DESIGNING",
+        title: "UI / UX DESIGNING",
         para: "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document elying on mean",
         logo: services_logo2,
       },
@@ -131,7 +131,7 @@ export const content = {
         logo: services_logo3,
       },
     ],
-  },
+  },*/
   Projects: {
     title: "Projects",
     subtitle: "MY CREATION",
@@ -153,13 +153,13 @@ export const content = {
   },
   Testimonials: {
     title: "Hobbies",
-    subtitle: "MY HOBBIES",
+    subtitle: "AND RELEVANCE",
     testimonials_content: [
       {
-        review:
-          "“I have a big interest in hands on work and creating things for people, giving me insight on UX and UI as I have to conform to the standards of my customer!”",
-        /*img: avatar1,*/
         name: "Woodworking",
+        review:
+          "I have a big interest in hands on work and creating things for people, giving me insight on UX and UI as I have to conform to the standards of my customer!",
+        /*img: avatar1,*/
       },
       {
         review:

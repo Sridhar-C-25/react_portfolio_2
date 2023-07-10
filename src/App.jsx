@@ -25,10 +25,10 @@ const App = () => {
       <Navbar />
       <Hero />
       <Skills />
-      <Service />
+
       <Projects />
-      <Hireme />
       <Testimonials />
+      <Hireme />
       <Contact />
       <footer className="p-3 text-center">
         <h6 className="mb-3">JOHN ALEX</h6>
