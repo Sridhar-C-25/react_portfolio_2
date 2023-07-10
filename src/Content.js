@@ -3,7 +3,7 @@ import Hero_person from "./assets/images/Hero/person.png";
 
 import figma from "./assets/images/Skills/figma.png";
 import javascript from "./assets/images/Skills/javascript.png";
-import ps from "./assets/images/Skills/ps.png";
+import html from "./assets/images/Skills/html.png";
 import reactjs from "./assets/images/Skills/react.png";
 import nodejs from "./assets/images/Skills/node.png";
 import python from "./assets/images/Skills/python.png";
@@ -89,9 +89,9 @@ export const content = {
         logo: nodejs,
       },
       {
-        name: "ChatGPT",
-        para: "Evolving with AI and using all my resources effectively",
-        logo: ps,
+        name: "HTML",
+        para: "Using one of the center blocks of Front-End Development",
+        logo: html,
       },
       {
         name: "React js",
