@@ -2,7 +2,7 @@
 import Hero_person from "./assets/images/Hero/person.png";
 
 import figma from "./assets/images/Skills/figma.png";
-import sketch from "./assets/images/Skills/sketch.png";
+import javascript from "./assets/images/Skills/javascript.png";
 import ps from "./assets/images/Skills/ps.png";
 import reactjs from "./assets/images/Skills/react.png";
 import nodejs from "./assets/images/Skills/node.png";
@@ -101,7 +101,7 @@ export const content = {
       {
         name: "Javascript",
         para: "Conquered the true language of Web Design",
-        logo: sketch,
+        logo: javascript,
       },
       {
         name: "Python",
