@@ -95,7 +95,7 @@ export const content = {
       },
       {
         name: "React js",
-        para: "Strong grasp on staple of designing Web Applications",
+        para: "Strong grasp on the staple of designing Web Applications",
         logo: reactjs,
       },
       {
@@ -111,7 +111,7 @@ export const content = {
     ],
     icon: MdArrowForward,
   },
-  /*services: {
+  services: {
     title: "Services",
     subtitle: "WHAT I OFFER",
     service_content: [
@@ -131,7 +131,7 @@ export const content = {
         logo: services_logo3,
       },
     ],
-  },*/
+  },
   Projects: {
     title: "Projects",
     subtitle: "MY CREATION",
@@ -194,19 +194,19 @@ export const content = {
     subtitle: "GET IN TOUCH",
     social_media: [
       {
-        text: "codeaprogram@gmail.com",
+        text: "mripekci@gmail.com",
         icon: GrMail,
-        link: "mailto:codeaprogram@gmail.com",
+        link: "mailto:mripekci@gmail.com",
       },
       {
-        text: "+91 1234 56778",
+        text: "+01 408 338 8954",
         icon: MdCall,
-        link: "https://wa.me/1234567890",
+        link: "https://wa.me/4083388954",
       },
       {
-        text: "codeaprogram",
+        text: "LinkedIn: Mustafa Ipekci",
         icon: BsInstagram,
-        link: "https://www.instagram.com/codeaprogram/",
+        link: "https://www.linkedin.com/in/mustafa-ipekci-96a98925b/",
       },
     ],
   },
