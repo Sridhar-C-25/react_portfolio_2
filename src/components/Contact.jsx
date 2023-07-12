@@ -13,7 +13,7 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-      service_g18x4cr, template_boapery, form.current, _UUH2TcJnPGaMH5Kp
+      'service_g18x4cr', 'template_boapery', form.current, '_UUH2TcJnPGaMH5Kp'
       )
       .then(
         (result) => {
