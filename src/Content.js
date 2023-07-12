@@ -28,7 +28,7 @@ import Hireme_person2 from "./assets/images/Hireme/person2.png";
 // import icons from react-icons
 import { GrMail } from "react-icons/gr";
 import { MdArrowForward, MdCall } from "react-icons/md";
-import { BsInstagram } from "react-icons/bs";
+import { BsInstagram, BsLinkedin } from "react-icons/bs";
 import { TbSmartHome } from "react-icons/tb";
 import { BiUser } from "react-icons/bi";
 import { RiServiceLine, RiProjectorLine } from "react-icons/ri";
@@ -151,6 +151,7 @@ export const content = {
       },
     ],
   },
+  /*
   Testimonials: {
     title: "Hobbies",
     subtitle: "AND RELEVANCE",
@@ -159,7 +160,7 @@ export const content = {
         name: "Woodworking",
         review:
           "I have a big interest in hands on work and creating things for people, giving me insight on UX and UI as I have to conform to the standards of my customer!",
-        /*img: avatar1,*/
+        img: avatar1,
       },
       {
         review:
@@ -181,6 +182,7 @@ export const content = {
       },
     ],
   },
+  */
   Hireme: {
     title: "Hire Me",
     subtitle: "FOR YOUR PROJECTS",
@@ -199,13 +201,13 @@ export const content = {
         link: "mailto:mripekci@gmail.com",
       },
       {
-        text: "+01 408 338 8954",
+        text: "408 338 8954",
         icon: MdCall,
         link: "https://wa.me/4083388954",
       },
       {
         text: "LinkedIn: Mustafa Ipekci",
-        icon: BsInstagram,
+        icon: BsLinkedin,
         link: "https://www.linkedin.com/in/mustafa-ipekci-96a98925b/",
       },
     ],
