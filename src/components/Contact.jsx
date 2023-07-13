@@ -21,7 +21,7 @@ const Contact = () => {
           // Clear all input field values
           form.current.reset();
           // Success toast message
-          toast.success("Email send Successfully");
+          toast.success("Email Departed");
         },
         (error) => {
           console.log(error.text);
@@ -58,7 +58,7 @@ const Contact = () => {
             />
             <input
               type="email"
-              name="user_email"
+              name="from_email"
               pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$"
               placeholder="Email Id"
               required

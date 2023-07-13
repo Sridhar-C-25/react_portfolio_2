@@ -65,11 +65,11 @@ export const content = {
     image: Hero_person,
     hero_content: [
       {
-        count: "4+",
+        count: "2+",
         text: "Years of Experience in Software Development",
       },
       {
-        count: "5+",
+        count: "4+",
         text: "Languages Under the Belt",
       },
     ],
