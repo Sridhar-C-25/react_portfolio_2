@@ -58,9 +58,8 @@ const Contact = () => {
             />
             <input
               type="email"
-              name="from_email"
-              id="from_email"
-              pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$"
+              name="reply_to"
+              id="reply_to"
               placeholder="Email"
               required
               className="border border-slate-600 p-3 rounded"
