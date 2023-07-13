@@ -58,8 +58,8 @@ const Contact = () => {
             />
             <input
               type="email"
-              name="reply_to"
-              id="reply_to"
+              name="reply_to, from_email"
+              id="reply_to, from_email"
               placeholder="Email"
               required
               className="border border-slate-600 p-3 rounded"
