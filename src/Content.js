@@ -27,7 +27,7 @@ import Hireme_person2 from "./assets/images/Hireme/person2.png";
 
 // import icons from react-icons
 import { GrMail } from "react-icons/gr";
-import { MdArrowForward, MdCall } from "react-icons/md";
+import { MdCall } from "react-icons/md";
 import { BsInstagram, BsLinkedin } from "react-icons/bs";
 import { TbSmartHome } from "react-icons/tb";
 import { BiUser } from "react-icons/bi";
@@ -109,7 +109,7 @@ export const content = {
         logo: python,
       },
     ],
-    icon: MdArrowForward,
+
   },
   services: {
     title: "Services",
