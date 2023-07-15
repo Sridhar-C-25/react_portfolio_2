@@ -109,7 +109,6 @@ export const content = {
         logo: python,
       },
     ],
-    icon: MdArrowForward
 
   },
   services: {
