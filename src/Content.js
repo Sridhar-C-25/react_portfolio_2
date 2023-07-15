@@ -84,7 +84,7 @@ export const content = {
         logo: figma,
       },
       {
-        name: "Node js",
+        name: "Node.js",
         para: "Accompanying Front-End Web Development with Back-End",
         logo: nodejs,
       },
@@ -94,7 +94,7 @@ export const content = {
         logo: html,
       },
       {
-        name: "React js",
+        name: "React",
         para: "Strong grasp on the staple of designing Web Applications",
         logo: reactjs,
       },
@@ -109,7 +109,7 @@ export const content = {
         logo: python,
       },
     ],
-    icon: MdArrowForward,
+    /*icon: MdArrowForward,*/
   },
   services: {
     title: "Services",

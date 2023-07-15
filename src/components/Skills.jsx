@@ -1,7 +1,6 @@
-// import content
-import { createElement, useState } from "react";
+/*import { createElement, useState } from "react";
 import { content } from "../Content";
-// import modal package
+
 import Modal from "react-modal";
 
 const customStyles = {
@@ -36,7 +35,7 @@ const Skills = () => {
 
   return (
     <section className="min-h-fit bg-bg_light_primary" id="skills">
-      {/* modal */}
+      {}
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
@@ -67,7 +66,7 @@ const Skills = () => {
         </div>
       </Modal>
 
-      {/* content */}
+      {}
       <div className="md:container px-5  py-14">
         <h2 className="title" data-aos="fade-down">
           {skills.title}
@@ -82,7 +81,7 @@ const Skills = () => {
               key={i}
               data-aos="fade-up"
               data-aos-delay={i * 400}
-              className="bg-white sm:cursor-pointer 
+              className="bg-white sm:cursor-pointer
                relative group w-full flex items-center
                 gap-5 p-5 max-w-sm rounded-md border-2 border-slate-200"
             >
@@ -114,4 +113,4 @@ const Skills = () => {
   );
 };
 
-export default Skills;
+export default Skills;*/
