@@ -109,7 +109,7 @@ export const content = {
         logo: python,
       },
     ],
-    /*icon: MdArrowForward,*/
+    icon: MdArrowForward,
   },
   services: {
     title: "Services",
