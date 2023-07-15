@@ -1,3 +1,3 @@
-import skills from "./src/Content.js"
+import skills from "./Content.js"
 
 export default Skills
