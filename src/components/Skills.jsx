@@ -1,4 +1,4 @@
-/*import { createElement, useState } from "react";
+import { createElement, useState } from "react";
 import { content } from "../Content";
 
 import Modal from "react-modal";
@@ -113,4 +113,4 @@ const Skills = () => {
   );
 };
 
-export default Skills;*/
+export default Skills;
