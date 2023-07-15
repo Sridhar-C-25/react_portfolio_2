@@ -6,7 +6,7 @@ import Projects from "./components/Projects";
 import Testimonials from "./components/Testimonials";
 import Hireme from "./components/Hireme";
 import Contact from "./components/Contact";
-import Skills from "./src/Content"
+import Skills from "./components/Skills"
 import { useEffect } from "react";
 // Animation package
 import Aos from "aos";
