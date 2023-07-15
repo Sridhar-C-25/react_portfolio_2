@@ -1,5 +1,5 @@
 import { createElement, useState } from "react";
-import {content} from "../Content";
+import {content} from "../content";
 
 const customStyles = {
     content: {
