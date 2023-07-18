@@ -1,8 +1,8 @@
 import React from 'react';
 import { content } from "/src/Content";
-import WoodworkingLogo from "/src/assets/images/Services/woodworking-logo.svg";
-import AIEvolutionLogo from "/src/assets/images/Services/ai-evolution-logo.svg";
-import ExerciseLogo from "/src/assets/images/Services/exercise-logo.svg";
+import { ReactComponent as WoodworkingLogo } from "/src/assets/images/Services/woodworking-logo.svg";
+import { ReactComponent as AIEvolutionLogo } from "/src/assets/images/Services/ai-evolution-logo.svg";
+import { ReactComponent as ExerciseLogo } from "/src/assets/images/Services/exercise-logo.svg";
 
 const Services = () => {
   const { services } = content;
@@ -10,7 +10,7 @@ const Services = () => {
   function getLogo(logoName) {
     switch (logoName) {
       case "WoodworkingLogo":
-        return WoodworkingLogo;
+        return <WoodworkingLogo />;
       case "AIEvolutionLogo":
         return <AIEvolutionLogo />;
       case "ExerciseLogo":
