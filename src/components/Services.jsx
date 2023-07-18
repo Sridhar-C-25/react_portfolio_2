@@ -1,11 +1,24 @@
 import React from 'react';
 import { content } from "../Content";
-import { ReactComponent as WoodworkingLogo } from '/src/assets/images/Services/woodworking-logo.svg';
-import { ReactComponent as AIEvolutionLogo } from '/src/assets/images/Services/ai-evolution-logo.svg';
-import { ReactComponent as ExerciseLogo } from '/src/assets/images/Services/exercise-logo.svg';
+import WoodworkingLogo from '/src/assets/images/Services/woodworking-logo.svg';
+import AIEvolutionLogo from '/src/assets/images/Services/ai-evolution-logo.svg';
+import ExerciseLogo from '/src/assets/images/Services/exercise-logo.svg';
 
 const Services = () => {
   const { services } = content;
+
+  function getLogo(logoName) {
+    switch (logoName) {
+      case "WoodworkingLogo":
+        return <WoodworkingLogo />;
+      case "AIEvolutionLogo":
+        return <AIEvolutionLogo />;
+      case "ExerciseLogo":
+        return <ExerciseLogo />;
+      default:
+        return null;
+    }
+  }
 
   return (
     <section id="services">
@@ -25,20 +38,7 @@ const Services = () => {
               data-aos-delay={i * 600}
               className="min-w-[14rem] duration-300 cursor-pointer border-2 border-slate-200 rounded-xl text-center bg-bg_light_primary p-6 flex-1 group-hover:blur-sm hover:!blur-none"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="mx-auto"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                {content.logo}
-              </svg>
+              {getLogo(content.logo)}
               <h6 className="my-3">{content.title}</h6>
               <p className="leading-7">{content.para}</p>
             </div>
