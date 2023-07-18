@@ -8,19 +8,14 @@ import reactjs from "./assets/images/Skills/react.png";
 import nodejs from "./assets/images/Skills/node.png";
 import python from "./assets/images/Skills/python.png";
 
-import services_logo1 from "./assets/images/Services/logo1.png";
-import services_logo2 from "./assets/images/Services/logo2.png";
-import services_logo3 from "./assets/images/Services/logo3.png";
+import WoodworkingLogo from './assets/images/Services/woodworking-logo.svg';
+import AIEvolutionLogo from './assets/images/Services/ai-evolution-logo.svg';
+import ExerciseLogo from './assets/images/Services/exercise-logo.svg';
 
 import project1 from "./assets/images/projects/img1.png";
 import project2 from "./assets/images/projects/img2.png";
 import project3 from "./assets/images/projects/img3.png";
 import person_project from "./assets/images/projects/person.png";
-
-import avatar1 from "./assets/images/Testimonials/avatar1.png";
-import avatar2 from "./assets/images/Testimonials/avatar2.png";
-import avatar3 from "./assets/images/Testimonials/avatar3.png";
-import avatar4 from "./assets/images/Testimonials/avatar4.png";
 
 import Hireme_person from "./assets/images/Hireme/person.png";
 import Hireme_person2 from "./assets/images/Hireme/person2.png";
@@ -112,23 +107,23 @@ export const content = {
 
   },
   services: {
-    title: "Services",
-    subtitle: "WHAT I OFFER",
+    title: "Hobbies",
+    subtitle: "AND INTERESTS",
     service_content: [
       {
         title: "Woodworking",
-        para: "I have a big interest in hands on work and creating things for people, giving me insight on UX and UI as I have to conform to the standards of my customer!",
-        logo: services_logo1,
+        para: "I have a big interest in hands-on work and creating things for people, giving me insight into UX and UI as I have to conform to the standards of my customer.",
+        logo: WoodworkingLogo,
       },
       {
-        title: "UI / UX DESIGNING",
-        para: "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document elying on mean",
-        logo: services_logo2,
+        title: "AI Evolution",
+        para: "In order to keep up with the ever-evolving software world, and indulge in my nerdy interests, I keep up with the growth of AI in the new Modern World",
+        logo: AIEvolutionLogo,
       },
       {
-        title: "PhotoShop Editing",
-        para: "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document elying on mean",
-        logo: services_logo3,
+        title: "Exercise",
+        para: "I have dedicated myself to the gym for the past 6 years, and I believe no matter what consistency and persistence yield results!",
+        logo: ExerciseLogo,
       },
     ],
   },
@@ -151,38 +146,7 @@ export const content = {
       },
     ],
   },
-  /*
-  Testimonials: {
-    title: "Hobbies",
-    subtitle: "AND RELEVANCE",
-    testimonials_content: [
-      {
-        name: "Woodworking",
-        review:
-          "I have a big interest in hands on work and creating things for people, giving me insight on UX and UI as I have to conform to the standards of my customer!",
-        img: avatar1,
-      },
-      {
-        review:
-          "“In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstra”",
-        img: avatar2,
-        name: "Tom Alex",
-      },
-      {
-        review:
-          "“In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstra”",
-        img: avatar3,
-        name: "Johnny",
-      },
-      {
-        review:
-          "“In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstra”",
-        img: avatar4,
-        name: "ROBBIN",
-      },
-    ],
-  },
-  */
+
   Hireme: {
     title: "Hire Me",
     subtitle: "FOR YOUR PROJECTS",
