@@ -1,5 +1,5 @@
 // import images
-import Hero_person from "./src/assets/images/Hero/person.png";
+import Hero_person from "/src/assets/images/Hero/person.png";
 
 import figma from "./src/assets/images/Skills/figma.png";
 import javascript from "./src/assets/images/Skills/javascript.png";
