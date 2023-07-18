@@ -9,11 +9,11 @@ const Services = () => {
 
   function getLogo(logoName) {
     switch (logoName) {
-      case 'WoodworkingLogo':
+      case "WoodworkingLogo":
         return WoodworkingLogo;
-      case 'AIEvolutionLogo':
+      case "AIEvolutionLogo":
         return AIEvolutionLogo;
-      case 'ExerciseLogo':
+      case "ExerciseLogo":
         return ExerciseLogo;
       default:
         return null;
@@ -38,10 +38,7 @@ const Services = () => {
               data-aos-delay={i * 600}
               className="min-w-[14rem] duration-300 cursor-pointer border-2 border-slate-200 rounded-xl text-center bg-bg_light_primary p-6 flex-1 group-hover:blur-sm hover:!blur-none"
             >
-              <object data={getLogo(content.logo)} type="image/svg+xml" className="mx-auto">
-                {/* Fallback content in case the SVG doesn't load */}
-                <img src={getLogo(content.logo)} alt="..." className="mx-auto" />
-              </object>
+              <img src={getLogo(content.logo)} alt="..." className="mx-auto" />
               <h6 className="my-3">{content.title}</h6>
               <p className="leading-7">{content.para}</p>
             </div>
