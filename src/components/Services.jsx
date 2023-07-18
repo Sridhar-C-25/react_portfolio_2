@@ -1,5 +1,5 @@
 import React from 'react';
-import { content } from "Content";
+import { content } from "/src/Content";
 import WoodworkingLogo from "/src/assets/images/Services/woodworking-logo.svg";
 import AIEvolutionLogo from "/src/assets/images/Services/ai-evolution-logo.svg";
 import ExerciseLogo from "/src/assets/images/Services/exercise-logo.svg";
