@@ -1,8 +1,8 @@
 import React from 'react';
 import { content } from "/src/Content";
-import  WoodworkingLogo  from "/src/assets/images/Services/woodworking-logo.svg";
-import  AIEvolutionLogo from "/src/assets/images/Services/ai-evolution-logo.svg";
-import  ExerciseLogo from "/src/assets/images/Services/exercise-logo.svg";
+import woodworkingLogo from "../assets/images/Services/woodworking-logo.svg";
+import aiEvolutionLogo from "../assets/images/Services/ai-evolution-logo.svg";
+import exerciseLogo from "../assets/images/Services/exercise-logo.svg";
 
 const Services = () => {
   const { services } = content;
@@ -10,11 +10,11 @@ const Services = () => {
   function getLogo(logoName) {
     switch (logoName) {
       case "WoodworkingLogo":
-        return <WoodworkingLogo />;
+        return woodworkingLogo;
       case "AIEvolutionLogo":
-        return <AIEvolutionLogo />;
+        return aiEvolutionLogo;
       case "ExerciseLogo":
-        return <ExerciseLogo />;
+        return exerciseLogo;
       default:
         return null;
     }
@@ -38,7 +38,12 @@ const Services = () => {
               data-aos-delay={i * 600}
               className="min-w-[14rem] duration-300 cursor-pointer border-2 border-slate-200 rounded-xl text-center bg-bg_light_primary p-6 flex-1 group-hover:blur-sm hover:!blur-none"
             >
-              {getLogo(content.logo)}
+              {/* Add the <img> element here */}
+              <img
+                src={getLogo(content.logo)}
+                alt={`Logo for ${content.title}`}
+                className="mx-auto h-24"
+              />
               <h6 className="my-3">{content.title}</h6>
               <p className="leading-7">{content.para}</p>
             </div>

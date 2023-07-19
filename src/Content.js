@@ -100,7 +100,7 @@ export const content = {
       },
       {
         name: "Python",
-        para: "Over 5 years of experience in Python",
+        para: "Over 2 years of experience in Python",
         logo: python,
       },
     ],
