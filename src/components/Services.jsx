@@ -10,11 +10,11 @@ const Services = () => {
   function getLogo(logoName) {
     switch (logoName) {
       case "WoodworkingLogo":
-        return woodworkingLogo;
+        return <img src={woodworkingLogo} alt="Woodworking Logo" />;
       case "AIEvolutionLogo":
-        return aiEvolutionLogo;
+        return <img src={aiEvolutionLogo} alt="AI Evolution Logo" />;
       case "ExerciseLogo":
-        return exerciseLogo;
+        return <img src={exerciseLogo} alt="Exercise Logo" />;
       default:
         return null;
     }
@@ -38,11 +38,7 @@ const Services = () => {
               data-aos-delay={i * 600}
               className="min-w-[14rem] duration-300 cursor-pointer border-2 border-slate-200 rounded-xl text-center bg-bg_light_primary p-6 flex-1 pointer-events-none"
             >
-              <img
-                src={getLogo(content.logo)}
-                alt={`Logo for ${content.title}`}
-                className="mx-auto h-24"
-              />
+              {getLogo(content.logo)}
               <h6 className="my-3">{content.title}</h6>
               <p className="leading-7">{content.para}</p>
             </div>
