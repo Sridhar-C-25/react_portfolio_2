@@ -1,33 +1,16 @@
-// import images
-import Hero_person from "/src/assets/images/Hero/person.png";
+import React from 'react';
+import { GrMail } from 'react-icons/gr';
+import { MdArrowForward, MdCall } from 'react-icons/md';
+import { BsInstagram, BsLinkedin } from 'react-icons/bs';
+import { TbSmartHome } from 'react-icons/tb';
+import { BiUser } from 'react-icons/bi';
+import { RiServiceLine, RiProjectorLine } from 'react-icons/ri';
+import { MdOutlinePermContactCalendar } from 'react-icons/md';
 
-import figma from "/src/assets/images/Skills/figma.png";
-import javascript from "/src/assets/images/Skills/javascript.png";
-import html from "/src/assets/images/Skills/html.png";
-import reactjs from "/src/assets/images/Skills/react.png";
-import nodejs from "/src/assets/images/Skills/node.png";
-import python from "/src/assets/images/Skills/python.png";
-
+// Import SVG logos as components
 import WoodworkingLogo from '/src/assets/images/Services/woodworking-logo.svg';
 import AIEvolutionLogo from '/src/assets/images/Services/ai-evolution-logo.svg';
 import ExerciseLogo from '/src/assets/images/Services/exercise-logo.svg';
-
-import project1 from "/src/assets/images/projects/img1.png";
-import project2 from "/src/assets/images/projects/img2.png";
-import project3 from "/src/assets/images/projects/img3.png";
-import person_project from "/src/assets/images/projects/person.png";
-
-import Hireme_person from "/src/assets/images/Hireme/person.png";
-import Hireme_person2 from "/src/assets/images/Hireme/person2.png";
-
-// import icons from react-icons
-import { GrMail } from "react-icons/gr";
-import { MdArrowForward, MdCall } from "react-icons/md";
-import { BsInstagram, BsLinkedin } from "react-icons/bs";
-import { TbSmartHome } from "react-icons/tb";
-import { BiUser } from "react-icons/bi";
-import { RiServiceLine, RiProjectorLine } from "react-icons/ri";
-import { MdOutlinePermContactCalendar } from "react-icons/md";
 
 export const content = {
   nav: [
@@ -113,17 +96,17 @@ export const content = {
       {
         title: "Woodworking",
         para: "I have a big interest in hands-on work and creating things for people, giving me insight into UX and UI as I have to conform to the standards of my customer.",
-        logo: WoodworkingLogo,
+        logo: <WoodworkingLogo />,
       },
       {
         title: "AI Evolution",
         para: "In order to keep up with the ever-evolving software world, and indulge in my nerdy interests, I keep up with the growth of AI in the new Modern World",
-        logo: AIEvolutionLogo,
+        logo: <AIEvolutionLogo />,
       },
       {
         title: "Exercise",
         para: "I have dedicated myself to the gym for the past 6 years, and I believe no matter what consistency and persistence yield results!",
-        logo: ExerciseLogo,
+        logo: <ExerciseLogo />,
       },
     ],
   },
