@@ -1,17 +1,33 @@
-import React from 'react';
-import { GrMail } from 'react-icons/gr';
-import { MdArrowForward, MdCall } from 'react-icons/md';
-import { BsInstagram, BsLinkedin } from 'react-icons/bs';
-import { TbSmartHome } from 'react-icons/tb';
-import { BiUser } from 'react-icons/bi';
-import { RiServiceLine, RiProjectorLine } from 'react-icons/ri';
-import { MdOutlinePermContactCalendar } from 'react-icons/md';
+// import images
+import Hero_person from "./assets/images/Hero/person.png";
 
-// Import SVG logos as components
-import WoodworkingLogo from '/src/assets/images/Services/woodworking-logo.svg';
-import AIEvolutionLogo from '/src/assets/images/Services/ai-evolution-logo.svg';
-import ExerciseLogo from '/src/assets/images/Services/exercise-logo.svg';
+import figma from "./assets/images/Skills/figma.png";
+import javascript from "./assets/images/Skills/javascript.png";
+import html from "./assets/images/Skills/html.png";
+import reactjs from "./assets/images/Skills/react.png";
+import nodejs from "./assets/images/Skills/node.png";
+import python from "./assets/images/Skills/python.png";
 
+import WoodworkingLogo from "../assets/images/Services/woodworking-logo.svg";
+import AIEvolutionLogo from "../assets/images/Services/ai-evolution-logo.svg";
+import ExerciseLogo from "../assets/images/Services/exercise-logo.svg";
+
+import project1 from "./assets/images/projects/img1.png";
+import project2 from "./assets/images/projects/img2.png";
+import project3 from "./assets/images/projects/img3.png";
+import person_project from "./assets/images/projects/person.png";
+
+import Hireme_person from "./assets/images/Hireme/person.png";
+import Hireme_person2 from "./assets/images/Hireme/person2.png";
+
+// import icons from react-icons
+import { GrMail } from "react-icons/gr";
+import { MdArrowForward, MdCall } from "react-icons/md";
+import { BsInstagram, BsLinkedin } from "react-icons/bs";
+import { TbSmartHome } from "react-icons/tb";
+import { BiUser } from "react-icons/bi";
+import { RiServiceLine, RiProjectorLine } from "react-icons/ri";
+import { MdOutlinePermContactCalendar } from "react-icons/md";
 
 export const content = {
   nav: [
