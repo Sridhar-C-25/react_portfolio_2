@@ -10,11 +10,14 @@ const Services = () => {
   function getLogo(logoName) {
     switch (logoName) {
       case "WoodworkingLogo":
-        return <WoodworkingLogo />;
+        //return <WoodworkingLogo />;
+        logo: WoodworkingLogo
       case "AIEvolutionLogo":
-        return <AIEvolutionLogo />;
+        //return <AIEvolutionLogo />;
+        logo: AIEvolutionLogo
       case "ExerciseLogo":
-        return <ExerciseLogo />;
+        //return <ExerciseLogo />;
+        logo: ExerciseLogo
       default:
         return null;
     }
