@@ -1,24 +1,24 @@
 // import images
-import Hero_person from "./assets/images/Hero/person.png";
+import Hero_person from "/src/assets/images/Hero/person.png";
 
-import figma from "./assets/images/Skills/figma.png";
-import javascript from "./assets/images/Skills/javascript.png";
-import html from "./assets/images/Skills/html.png";
-import reactjs from "./assets/images/Skills/react.png";
-import nodejs from "./assets/images/Skills/node.png";
-import python from "./assets/images/Skills/python.png";
+import figma from "/src/assets/images/Skills/figma.png";
+import javascript from "/src/assets/images/Skills/javascript.png";
+import html from "/src/assets/images/Skills/html.png";
+import reactjs from "/src/assets/images/Skills/react.png";
+import nodejs from "/src/assets/images/Skills/node.png";
+import python from "/src/assets/images/Skills/python.png";
 
-import WoodworkingLogo from "../assets/images/Services/woodworking-logo.svg";
-import AIEvolutionLogo from "../assets/images/Services/ai-evolution-logo.svg";
-import ExerciseLogo from "../assets/images/Services/exercise-logo.svg";
+import WoodworkingLogo from "/src/assets/images/Services/woodworking-logo.svg";
+import AIEvolutionLogo from "/src/assets/images/Services/ai-evolution-logo.svg";
+import ExerciseLogo from "/src/assets/images/Services/exercise-logo.svg";
 
-import project1 from "./assets/images/projects/img1.png";
-import project2 from "./assets/images/projects/img2.png";
-import project3 from "./assets/images/projects/img3.png";
-import person_project from "./assets/images/projects/person.png";
+import project1 from "/src/assets/images/projects/img1.png";
+import project2 from "/src/assets/images/projects/img2.png";
+import project3 from "/src/assets/images/projects/img3.png";
+import person_project from "/src/assets/images/projects/person.png";
 
-import Hireme_person from "./assets/images/Hireme/person.png";
-import Hireme_person2 from "./assets/images/Hireme/person2.png";
+import Hireme_person from "/src/assets/images/Hireme/person.png";
+import Hireme_person2 from "/src/assets/images/Hireme/person2.png";
 
 // import icons from react-icons
 import { GrMail } from "react-icons/gr";
