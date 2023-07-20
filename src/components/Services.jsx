@@ -1,5 +1,8 @@
 import React from 'react';
-import { content } from "../content";
+import { content } from "../Content";
+import WoodworkingLogo from "../assets/images/Services/woodworking-logo.svg";
+import AIEvolutionLogo from "../assets/images/Services/ai-evolution-logo.svg";
+import ExerciseLogo from "../assets/images/Services/exercise-logo.svg";
 
 const Services = () => {
   const { services } = content;
@@ -7,11 +10,11 @@ const Services = () => {
   function getLogo(logoName) {
     switch (logoName) {
       case "WoodworkingLogo":
-        return <img src={require("../assets/images/Services/woodworking-logo.svg").default} alt="Woodworking Logo" />;
+        return <WoodworkingLogo />;
       case "AIEvolutionLogo":
-        return <img src={require("../assets/images/Services/ai-evolution-logo.svg").default} alt="AI Evolution Logo" />;
+        return <AIEvolutionLogo />;
       case "ExerciseLogo":
-        return <img src={require("../assets/images/Services/exercise-logo.svg").default} alt="Exercise Logo" />;
+        return <ExerciseLogo />;
       default:
         return null;
     }
@@ -27,13 +30,13 @@ const Services = () => {
           {services.subtitle}
         </h4>
         <br />
-        <div className="flex gap-5 justify-between flex-wrap">
+        <div className="flex gap-5 justify-between flex-wrap group">
           {services.service_content.map((content, i) => (
             <div
               key={i}
               data-aos="fade-up"
               data-aos-delay={i * 600}
-              className="min-w-[14rem] duration-300 cursor-pointer border-2 border-slate-200 rounded-xl text-center bg-bg_light_primary p-6 flex-1 pointer-events-none"
+              className="min-w-[14rem] duration-300 cursor-pointer border-2 border-slate-200 rounded-xl text-center bg-bg_light_primary p-6 flex-1 group-hover:blur-sm hover:!blur-none"
             >
               {getLogo(content.logo)}
               <h6 className="my-3">{content.title}</h6>
