@@ -113,17 +113,17 @@ export const content = {
       {
         title: "Woodworking",
         para: "I have a big interest in hands-on work and creating things for people, giving me insight on UX and UI as I have to conform to the standards of my customers.",
-        logo: "WoodworkingLogo",
+        //logo: "WoodworkingLogo",
       },
       {
         title: "AI Evolution",
         para: "In order to keep up with the ever-evolving software world, and indulge in my nerdy interests, I keep up with the growth of AI in the new Modern World",
-        logo: "AIEvolutionLogo",
+        //logo: "AIEvolutionLogo",
       },
       {
         title: "Exercise",
         para: "I have dedicated myself to the gym for the past 6 years, and I believe no matter what consistency and persistence yield results!",
-        logo: "ExerciseLogo",
+        //logo: "ExerciseLogo",
       },
     ],
   },
