@@ -47,10 +47,11 @@ export const content = {
       link: "#projects",
       icon: RiProjectorLine,
     },
-    {
-      link: "#contact",
-      icon: MdOutlinePermContactCalendar,
-    },
+    // Remove the following entry for the "Hire Me" button
+    // {
+    //   link: "#contact",
+    //   icon: MdOutlinePermContactCalendar,
+    // },
   ],
   hero: {
     title: "Web Developer",
@@ -112,17 +113,14 @@ export const content = {
       {
         title: "Woodworking",
         para: "I have a big interest in hands-on work and creating things for people, giving me insight on UX and UI as I have to conform to the standards of my customers.",
-
       },
       {
         title: "AI Evolution",
         para: "In order to keep up with the ever-evolving software world, and indulge in my nerdy interests, I keep up with the growth of AI in the new Modern World",
-
       },
       {
         title: "Exercise",
         para: "I have dedicated myself to the gym for the past 6 years, and I believe no matter what consistency and persistence yield results!",
-
       },
     ],
   },
@@ -146,6 +144,13 @@ export const content = {
     ],
   },
 
+  Hireme: {
+    title: "Hire Me",
+    subtitle: "FOR YOUR PROJECTS",
+    image1: Hireme_person,
+    image2: Hireme_person2,
+    para: "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document elying on mean",
+  },
   Contact: {
     title: "Contect Me",
     subtitle: "GET IN TOUCH",
