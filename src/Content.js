@@ -150,6 +150,7 @@ export const content = {
     image1: Hireme_person,
     image2: Hireme_person2,
     para: "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document elying on mean",
+    btnText: "Hire Me", // Add the text for the "Hire Me" button here
   },
   Contact: {
     title: "Contect Me",
