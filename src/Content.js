@@ -56,7 +56,6 @@ export const content = {
     title: "Web Developer",
     firstName: "MUSTAFA",
     LastName: "IPEKCI",
-    btnText: "Hire Me",
     image: Hero_person,
     hero_content: [
       {
@@ -147,14 +146,6 @@ export const content = {
     ],
   },
 
-  Hireme: {
-    title: "Hire Me",
-    subtitle: "FOR YOUR PROJECTS",
-    image1: Hireme_person,
-    image2: Hireme_person2,
-    para: "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document elying on mean",
-    btnText: "Hire Me",
-  },
   Contact: {
     title: "Contect Me",
     subtitle: "GET IN TOUCH",
