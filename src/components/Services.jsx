@@ -7,21 +7,11 @@ import ExerciseLogo from "/src/assets/images/Services/exercise-logo.svg";
 const Services = () => {
   const { services } = content;
 
-  function getLogo(logoName) {
-    switch (logoName) {
-      case "WoodworkingLogo":
-        //return <WoodworkingLogo />;
-        logo: WoodworkingLogo
-      case "AIEvolutionLogo":
-        //return <AIEvolutionLogo />;
-        logo: AIEvolutionLogo
-      case "ExerciseLogo":
-        //return <ExerciseLogo />;
-        logo: ExerciseLogo
-      default:
-        return null;
-    }
-  }
+  const logosMap = {
+    WoodworkingLogo: <WoodworkingLogo />,
+    AIEvolutionLogo: <AIEvolutionLogo />,
+    ExerciseLogo: <ExerciseLogo />,
+  };
 
   return (
     <section id="services">
@@ -40,9 +30,8 @@ const Services = () => {
               data-aos="fade-up"
               data-aos-delay={i * 600}
               className="min-w-[14rem] duration-300 cursor-pointer border-2 border-slate-200 rounded-xl text-center bg-bg_light_primary p-6 flex-1 group-hover:blur-none hover:!cursor-default"
-              // Remove the "blur-sm" class on hover and change cursor behavior
             >
-              {getLogo(content.logo)}
+              {logosMap[content.logo]}
               <h6 className="my-3">{content.title}</h6>
               <p className="leading-7">{content.para}</p>
             </div>
