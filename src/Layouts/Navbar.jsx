@@ -18,7 +18,7 @@ const Navbar = () => {
       </div>
       {showMenu && (
         <nav
-          className={`fixed top-20 left-1/2 transform -translate-x-1/2 z-[999] flex flex-col items-center gap-5 bg-slate-200/60 px-6 py-3 backdrop-blur-md rounded-full text-dark_primary duration-300`}
+          className={`fixed top-14 right-2 z-[999] flex flex-col items-center gap-5 bg-slate-200/60 px-6 py-3 backdrop-blur-md rounded-full text-dark_primary duration-300`}
         >
           {nav.map((item, i) => (
             <a
