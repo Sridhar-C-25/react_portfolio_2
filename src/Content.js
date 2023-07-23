@@ -47,7 +47,7 @@ export const content = {
       link: "#projects",
       icon: RiProjectorLine,
     },
-    // Remove the following entry for the "Hire Me" button
+    // Remove the following entry for the "Hire Me" button at the top
     // {
     //   link: "#contact",
     //   icon: MdOutlinePermContactCalendar,
