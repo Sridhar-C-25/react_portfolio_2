@@ -47,11 +47,6 @@ export const content = {
       link: "#projects",
       icon: RiProjectorLine,
     },
-    // Remove the following entry for the "Hire Me" button at the top
-    // {
-    //   link: "#contact",
-    //   icon: MdOutlinePermContactCalendar,
-    // },
   ],
   hero: {
     title: "Web Developer",
@@ -65,7 +60,7 @@ export const content = {
       },
       {
         count: "4+",
-        text: "Languages Under the Belt",
+        text: "Coding Languages Under the Belt",
       },
     ],
   },
@@ -100,7 +95,7 @@ export const content = {
       },
       {
         name: "Python",
-        para: "Over 5 years of experience in Python",
+        para: "Over 1 years of experience in Python",
         logo: python,
       },
     ],
