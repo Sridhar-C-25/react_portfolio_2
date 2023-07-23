@@ -1,17 +1,11 @@
 import React from 'react';
-import { content } from "../Content";
-import { ReactComponent as WoodworkingLogo } from "/src/assets/images/Services/woodworking-logo.svg";
-import { ReactComponent as AIEvolutionLogo } from "/src/assets/images/Services/ai-evolution-logo.svg";
-import { ReactComponent as ExerciseLogo } from "/src/assets/images/Services/exercise-logo.svg";
+import { content } from "/src/Content";
+import WoodworkingLogo from "/src/assets/images/Services/woodworking-logo.svg";
+import AIEvolutionLogo from "/src/assets/images/Services/ai-evolution-logo.svg";
+import ExerciseLogo from "/src/assets/images/Services/exercise-logo.svg";
 
 const Services = () => {
   const { services } = content;
-
-  const logosMap = {
-    WoodworkingLogo: WoodworkingLogo,
-    AIEvolutionLogo: AIEvolutionLogo,
-    ExerciseLogo: ExerciseLogo,
-  };
 
   return (
     <section id="services">
@@ -31,7 +25,9 @@ const Services = () => {
               data-aos-delay={i * 600}
               className="min-w-[14rem] duration-300 cursor-pointer border-2 border-slate-200 rounded-xl text-center bg-bg_light_primary p-6 flex-1 group-hover:blur-none hover:!cursor-default"
             >
-              {React.createElement(logosMap[content.logo])}
+              {content.logo === "WoodworkingLogo" && <img src={WoodworkingLogo} alt="Woodworking" />}
+              {content.logo === "AIEvolutionLogo" && <img src={AIEvolutionLogo} alt="AI Evolution" />}
+              {content.logo === "ExerciseLogo" && <img src={ExerciseLogo} alt="Exercise" />}
               <h6 className="my-3">{content.title}</h6>
               <p className="leading-7">{content.para}</p>
             </div>
