@@ -20,24 +20,24 @@ const Navbar = () => {
       >
         <HiMenuAlt2 size={34} />
       </div>
-      <nav
-        className={`fixed bottom-0 left-0 z-[999] flex flex-col items-center gap-5 bg-slate-200/60 px-6 py-3 backdrop-blur-md rounded-t-xl text-dark_primary duration-300 ${
-          showMenu ? "h-40 opacity-100" : "h-0 opacity-0"
-        }`}
-      >
-        {nav.map((item, i) => (
-          <a
-            key={i}
-            href={item.link}
-            onClick={() => setActive(i)}
-            className={`text-xl p-2.5 rounded-full sm:cursor-pointer ${
-              i === active && "bg-dark_primary text-white"
-            }`}
-          >
-            {createElement(item.icon)}
-          </a>
-        ))}
-      </nav>
+      {showMenu && (
+        <nav
+          className={`fixed top-20 left-10 z-[999] flex flex-col items-center gap-5 bg-slate-200/60 px-6 py-3 backdrop-blur-md rounded-md text-dark_primary duration-300`}
+        >
+          {nav.map((item, i) => (
+            <a
+              key={i}
+              href={item.link}
+              onClick={() => setActive(i)}
+              className={`text-xl p-2.5 rounded-full sm:cursor-pointer ${
+                i === active && "bg-dark_primary text-white"
+              }`}
+            >
+              {createElement(item.icon)}
+            </a>
+          ))}
+        </nav>
+      )}
     </div>
   );
 };
