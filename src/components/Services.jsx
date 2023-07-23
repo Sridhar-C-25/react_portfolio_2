@@ -1,20 +1,16 @@
 import React from 'react';
 import { content } from "../Content";
+import { ReactComponent as WoodworkingLogo } from "/src/assets/images/Services/woodworking-logo.svg";
+import { ReactComponent as AIEvolutionLogo } from "/src/assets/images/Services/ai-evolution-logo.svg";
+import { ReactComponent as ExerciseLogo } from "/src/assets/images/Services/exercise-logo.svg";
 
 const Services = () => {
   const { services } = content;
 
-  const getLogo = (logoName) => {
-    switch (logoName) {
-      case "WoodworkingLogo":
-        return require("/src/assets/images/Services/woodworking-logo.svg").default;
-      case "AIEvolutionLogo":
-        return require("/src/assets/images/Services/ai-evolution-logo.svg").default;
-      case "ExerciseLogo":
-        return require("/src/assets/images/Services/exercise-logo.svg").default;
-      default:
-        return null;
-    }
+  const logosMap = {
+    WoodworkingLogo: WoodworkingLogo,
+    AIEvolutionLogo: AIEvolutionLogo,
+    ExerciseLogo: ExerciseLogo,
   };
 
   return (
@@ -35,11 +31,7 @@ const Services = () => {
               data-aos-delay={i * 600}
               className="min-w-[14rem] duration-300 cursor-pointer border-2 border-slate-200 rounded-xl text-center bg-bg_light_primary p-6 flex-1 group-hover:blur-none hover:!cursor-default"
             >
-              <img
-                src={getLogo(content.logo)}
-                alt={content.title}
-                className="w-12 h-12 mx-auto mb-4"
-              />
+              {React.createElement(logosMap[content.logo])}
               <h6 className="my-3">{content.title}</h6>
               <p className="leading-7">{content.para}</p>
             </div>
