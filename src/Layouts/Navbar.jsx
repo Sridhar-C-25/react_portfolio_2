@@ -27,14 +27,14 @@ const Navbar = () => {
         </div>
         {showMenu && (
           <div
-            className="fixed inset-0 bg-transparent backdrop-blur-md"
+            className="fixed inset-0 bg-transparent"
             onClick={handleMenuToggle}
           />
         )}
         <nav
           className={`${
             showMenu
-              ? "absolute transform top-16 -translate-x-1/2 left-1/2 z-[999] opacity-100"
+              ? "absolute transform top-12 -translate-x-1/2 left-1/2 z-[999] opacity-100"
               : "opacity-0 pointer-events-none"
           } flex flex-col items-center gap-5 bg-slate-200/60 px-6 py-3 backdrop-blur-md rounded-md text-dark_primary duration-300 transition-opacity`}
         >
