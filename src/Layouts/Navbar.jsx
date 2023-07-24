@@ -8,6 +8,11 @@ const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [active, setActive] = useState(0);
 
+  const handleMenuClick = (index) => {
+    setActive(index);
+    setShowMenu(false);
+  };
+
   return (
     <div className="w-full flex justify-left fixed pl-4 pt-4">
       <div className="relative">
@@ -25,7 +30,7 @@ const Navbar = () => {
         )}
         {showMenu && (
           <nav
-            className={`absolute top-full left-1/2 transform -translate-x-1/2 z-[999] flex flex-col items-center gap-5 bg-slate-200/60 px-6 py-3 backdrop-blur-md rounded-md text-dark_primary duration-300 ${
+            className={`absolute top-full left-1/2 transform -translate-x-1/2 z-[999] flex flex-col items-center gap-5 bg-slate-200/60 px-6 py-3 backdrop-blur-md rounded-md text-dark_primary duration-300 transition-all ${
               showMenu ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"
             }`}
           >
@@ -33,10 +38,7 @@ const Navbar = () => {
               <a
                 key={i}
                 href={item.link}
-                onClick={() => {
-                  setActive(i);
-                  setShowMenu(false);
-                }}
+                onClick={() => handleMenuClick(i)}
                 className={`text-xl p-2.5 rounded-full sm:cursor-pointer ${
                   i === active && "bg-dark_primary text-white"
                 }`}
