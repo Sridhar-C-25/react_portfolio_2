@@ -9,7 +9,7 @@ const Navbar = () => {
   const [active, setActive] = useState(0);
 
   return (
-    <div className="w-full flex justify-left fixed">
+    <div className="w-full flex justify-left fixed pl-4 pt-4">
       <div
         className="sm:cursor-pointer z-[999] rounded-lg bg-white/40 p-2"
         onClick={() => setShowMenu(!showMenu)}
