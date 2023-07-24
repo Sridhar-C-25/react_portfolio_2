@@ -10,28 +10,33 @@ const Navbar = () => {
 
   const handleMenuClick = (index) => {
     setActive(index);
-    setShowMenu(!showMenu); // Toggle the menu on and off
+  };
+
+  const handleMenuToggle = () => {
+    setShowMenu(!showMenu);
   };
 
   return (
-    <div className="w-full flex justify-left fixed pl-4 pt-4">
+    <div className="fixed top-4 left-4 z-[999]">
       <div className="relative">
         <div
           className="sm:cursor-pointer z-[999] rounded-lg bg-white/40 p-2"
-          onClick={() => setShowMenu(!showMenu)} // Toggle the menu on and off
+          onClick={handleMenuToggle}
         >
           <HiMenuAlt2 size={34} />
         </div>
         {showMenu && (
           <div
             className="fixed inset-0 bg-transparent backdrop-blur-md"
-            onClick={() => setShowMenu(false)} // Close the menu when clicked outside
+            onClick={handleMenuToggle}
           />
         )}
         <nav
           className={`${
-            showMenu ? "absolute top-full left-1/2 transform -translate-x-1/2 z-[999] opacity-100 translate-y-0" : "opacity-0 translate-y-3 pointer-events-none"
-          } flex flex-col items-center gap-5 bg-slate-200/60 px-6 py-3 backdrop-blur-md rounded-md text-dark_primary duration-300 transition-all`}
+            showMenu
+              ? "absolute transform top-16 -translate-x-1/2 left-1/2 z-[999] opacity-100"
+              : "opacity-0 pointer-events-none"
+          } flex flex-col items-center gap-5 bg-slate-200/60 px-6 py-3 backdrop-blur-md rounded-md text-dark_primary duration-300 transition-opacity`}
         >
           {nav.map((item, i) => (
             <a
