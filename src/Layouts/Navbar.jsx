@@ -10,7 +10,7 @@ const Navbar = () => {
 
   const handleMenuClick = (index) => {
     setActive(index);
-    setShowMenu(false);
+    setShowMenu(!showMenu); // Toggle the menu on and off
   };
 
   return (
@@ -18,36 +18,34 @@ const Navbar = () => {
       <div className="relative">
         <div
           className="sm:cursor-pointer z-[999] rounded-lg bg-white/40 p-2"
-          onClick={() => setShowMenu(!showMenu)}
+          onClick={() => setShowMenu(!showMenu)} // Toggle the menu on and off
         >
           <HiMenuAlt2 size={34} />
         </div>
         {showMenu && (
           <div
             className="fixed inset-0 bg-transparent backdrop-blur-md"
-            onClick={() => setShowMenu(false)}
+            onClick={() => setShowMenu(false)} // Close the menu when clicked outside
           />
         )}
-        {showMenu && (
-          <nav
-            className={`absolute top-full left-1/2 transform -translate-x-1/2 z-[999] flex flex-col items-center gap-5 bg-slate-200/60 px-6 py-3 backdrop-blur-md rounded-md text-dark_primary duration-300 transition-all ${
-              showMenu ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"
-            }`}
-          >
-            {nav.map((item, i) => (
-              <a
-                key={i}
-                href={item.link}
-                onClick={() => handleMenuClick(i)}
-                className={`text-xl p-2.5 rounded-full sm:cursor-pointer ${
-                  i === active && "bg-dark_primary text-white"
-                }`}
-              >
-                {createElement(item.icon)}
-              </a>
-            ))}
-          </nav>
-        )}
+        <nav
+          className={`${
+            showMenu ? "absolute top-full left-1/2 transform -translate-x-1/2 z-[999] opacity-100 translate-y-0" : "opacity-0 translate-y-3 pointer-events-none"
+          } flex flex-col items-center gap-5 bg-slate-200/60 px-6 py-3 backdrop-blur-md rounded-md text-dark_primary duration-300 transition-all`}
+        >
+          {nav.map((item, i) => (
+            <a
+              key={i}
+              href={item.link}
+              onClick={() => handleMenuClick(i)}
+              className={`text-xl p-2.5 rounded-full sm:cursor-pointer ${
+                i === active && "bg-dark_primary text-white"
+              }`}
+            >
+              {createElement(item.icon)}
+            </a>
+          ))}
+        </nav>
       </div>
     </div>
   );
