@@ -17,16 +17,18 @@ const Navbar = () => {
   };
 
   return (
-    <div className="fixed top-4 right-4 z-[999]">
+    <div className="fixed top-4 left-4 z-[999]">
       <div className="relative">
-        <div
-          className={`sm:cursor-pointer z-[999] rounded-lg p-2 bg-white/50 flex items-center gap-2 transition-all ${
-            showMenu ? "w-24" : "w-12"
-          }`}
-          onClick={handleMenuToggle}
-          style={{ pointerEvents: showMenu ? "none" : "auto" }}
-        >
-          <HiMenuAlt2 size={34} />
+        <div className="flex items-center">
+          <div
+            className={`sm:cursor-pointer z-[999] rounded-lg p-2 bg-white/50 transition-all ${
+              showMenu ? "w-24 mr-4" : "w-12"
+            }`}
+            onClick={handleMenuToggle}
+            style={{ pointerEvents: showMenu ? "none" : "auto" }}
+          >
+            <HiMenuAlt2 size={34} />
+          </div>
           {showMenu &&
             nav.map((item, i) => (
               <a
