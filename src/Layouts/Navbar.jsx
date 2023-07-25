@@ -35,10 +35,7 @@ const Navbar = () => {
                 <a
                   key={i}
                   href={item.link}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleMenuClick(i);
-                  }}
+                  onClick={() => handleMenuClick(i)}
                   className={`text-xl p-2.5 rounded-full sm:cursor-pointer ${
                     i === active && "bg-dark_primary text-white"
                   }`}
