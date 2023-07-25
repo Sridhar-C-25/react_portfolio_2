@@ -20,17 +20,15 @@ const Navbar = () => {
     <div className="fixed top-4 left-4 z-[999]">
       <div className="relative">
         <div
-          className={`sm:cursor-pointer z-[999] rounded-lg p-2 ${
-            showMenu ? "" : "bg-transparent"
-          }`}
+          className={`sm:cursor-pointer z-[999] rounded-lg p-2 bg-white/50`}
           onClick={handleMenuToggle}
-          style={{ pointerEvents: showMenu ? "none" : "auto" }} // Disable pointer events on the icon when the menu is active
+          style={{ pointerEvents: showMenu ? "none" : "auto" }}
         >
           <HiMenuAlt2 size={34} />
         </div>
         {showMenu && (
           <div
-            className="fixed inset-0 bg-transparent"
+            className="fixed inset-0 bg-white/50"
             onClick={handleMenuToggle}
           />
         )}
@@ -40,6 +38,7 @@ const Navbar = () => {
               ? "absolute top-12 left-1/2 -translate-x-1/2 z-[999] opacity-100"
               : "opacity-0 pointer-events-none"
           } flex flex-col items-center gap-5 px-6 py-3 rounded-md text-dark_primary`}
+          style={{ background: "rgba(255, 255, 255, 0.5)" }}
         >
           {nav.map((item, i) => (
             <a
