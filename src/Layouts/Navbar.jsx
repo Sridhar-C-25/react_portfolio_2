@@ -21,35 +21,33 @@ const Navbar = () => {
       <div className="relative">
         <div className="flex items-center">
           <div
-            className={`sm:cursor-pointer z-[999] rounded-lg p-2 bg-white/50 transition-all ${
-              showMenu ? "w-24 mr-4" : "w-12"
+            className={`sm:cursor-pointer z-[999] rounded-lg p-2 transition-all ${
+              showMenu ? "w-24 mr-4 bg-white/50" : "w-12"
             }`}
             onClick={handleMenuToggle}
-            style={{ pointerEvents: showMenu ? "none" : "auto" }}
           >
             <HiMenuAlt2 size={34} />
           </div>
+          {showMenu &&
+            <div className="absolute top-8 right-0 z-[999] flex flex-col gap-2 p-2 rounded-lg bg-white/50">
+              {nav.map((item, i) => (
+                <a
+                  key={i}
+                  href={item.link}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleMenuClick(i);
+                  }}
+                  className={`text-xl p-2.5 rounded-full sm:cursor-pointer ${
+                    i === active && "bg-dark_primary text-white"
+                  }`}
+                >
+                  {createElement(item.icon)}
+                </a>
+              ))}
+            </div>
+          }
         </div>
-        {showMenu && (
-          <div className="fixed top-4 right-12 z-[999] flex flex-col gap-2 p-2 rounded-lg bg-white/50">
-            {nav.map((item, i) => (
-              <a
-                key={i}
-                href={item.link}
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleMenuClick(i);
-                  setShowMenu(false);
-                }}
-                className={`text-xl p-2.5 rounded-full sm:cursor-pointer ${
-                  i === active && "bg-dark_primary text-white"
-                }`}
-              >
-                {createElement(item.icon)}
-              </a>
-            ))}
-          </div>
-        )}
         {showMenu && (
           <div
             className="fixed inset-0"
