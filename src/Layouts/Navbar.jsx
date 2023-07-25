@@ -21,7 +21,7 @@ const Navbar = () => {
       <div className="relative">
         <div
           className={`sm:cursor-pointer z-[999] rounded-lg p-2 ${
-            showMenu ? "bg-white/40" : "" // Remove background styling when the menu is not active
+            showMenu ? "bg-white/40" : "bg-transparent"
           }`}
           onClick={handleMenuToggle}
         >
@@ -36,9 +36,9 @@ const Navbar = () => {
         <nav
           className={`${
             showMenu
-              ? "absolute transform top-12 left-1/2 -translate-x-1/2 z-[999] opacity-100"
+              ? "absolute top-14 left-1/2 -translate-x-1/2 z-[999] opacity-100"
               : "opacity-0 pointer-events-none"
-          } flex flex-col items-center gap-5 bg-slate-200/60 px-6 py-3 backdrop-blur-md rounded-md text-dark_primary duration-300 transition-all`}
+          } flex flex-col items-center gap-5 bg-slate-200/60 px-6 py-3 backdrop-blur-md rounded-md text-dark_primary`}
         >
           {nav.map((item, i) => (
             <a
