@@ -8,53 +8,30 @@ const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [active, setActive] = useState(0);
 
-  const handleMenuClick = (index) => {
-    setActive(index);
-  };
-
-  const handleMenuToggle = () => {
-    setShowMenu(!showMenu);
-  };
-
   return (
-    <div className="fixed top-4 left-4 z-[999]">
-      <div className="relative">
-        <div className="flex items-center">
-          <div
-            className={`sm:cursor-pointer z-[999] rounded-lg p-2 transition-all ${
-              showMenu ? "w-24 mr-4 bg-white/50" : "w-12"
-            }`}
-            onClick={handleMenuToggle}
-          >
-            <HiMenuAlt2 size={34} />
-          </div>
-          {showMenu &&
-            <div className="absolute top-8 right-0 z-[999] flex flex-col gap-2 p-2 rounded-lg bg-white/50">
-              {nav.map((item, i) => (
-                <a
-                  key={i}
-                  href={item.link}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleMenuClick(i);
-                  }}
-                  className={`text-xl p-2.5 rounded-full sm:cursor-pointer ${
-                    i === active && "bg-dark_primary text-white"
-                  }`}
-                >
-                  {createElement(item.icon)}
-                </a>
-              ))}
-            </div>
-          }
-        </div>
-        {showMenu && (
-          <div
-            className="fixed inset-0"
-            onClick={handleMenuToggle}
-          />
-        )}
+    <div className="w-full flex justify-center">
+      <div
+        className="sm:cursor-pointer fixed top-10 left-10 z-[999] rounded-lg bg-white/40 p-2"
+        onClick={() => setShowMenu(!showMenu)}
+      >
+        <HiMenuAlt2 size={34} />
       </div>
+      <nav
+        className={`fixed  z-[999] flex items-center gap-5 bg-slate-200/60 px-6 py-3 backdrop-blur-md rounded-full text-dark_primary duration-300 ${
+          showMenu ? "left-5" : "left-[-50%]"
+        }`}
+      >
+        {nav.map((item, i) => (
+          <a
+            href={item.link}
+            onClick={() => setActive(i)}
+            className={`text-xl p-2.5 rounded-full sm:cursor-pointer
+     ${i === active && "bg-dark_primary text-white"} `}
+          >
+            {createElement(item.icon)}
+          </a>
+        ))}
+      </nav>
     </div>
   );
 };
