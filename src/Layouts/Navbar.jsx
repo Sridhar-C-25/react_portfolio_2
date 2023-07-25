@@ -20,13 +20,26 @@ const Navbar = () => {
     <div className="fixed top-4 left-4 z-[999]">
       <div className="relative">
         <div
-          className={`sm:cursor-pointer z-[999] rounded-lg p-2 bg-white/50 transition-all ${
-            showMenu ? "w-16" : "w-12"
+          className={`sm:cursor-pointer z-[999] rounded-lg p-2 bg-white/50 flex items-center gap-2 transition-all ${
+            showMenu ? "w-24" : "w-12"
           }`}
           onClick={handleMenuToggle}
           style={{ pointerEvents: showMenu ? "none" : "auto" }}
         >
           <HiMenuAlt2 size={34} />
+          {showMenu &&
+            nav.map((item, i) => (
+              <a
+                key={i}
+                href={item.link}
+                onClick={() => handleMenuClick(i)}
+                className={`text-xl p-2.5 rounded-full sm:cursor-pointer ${
+                  i === active && "bg-dark_primary text-white"
+                }`}
+              >
+                {createElement(item.icon)}
+              </a>
+            ))}
         </div>
         {showMenu && (
           <div
@@ -34,27 +47,6 @@ const Navbar = () => {
             onClick={handleMenuToggle}
           />
         )}
-        <nav
-          className={`${
-            showMenu
-              ? "absolute top-4 left-1/2 -translate-x-1/2 z-[999] opacity-100"
-              : "opacity-0 pointer-events-none"
-          } flex items-center gap-5 px-6 py-2 rounded-lg text-dark_primary`}
-          style={{ background: "rgba(255, 255, 255, 0.5)", backdropFilter: "none" }}
-        >
-          {nav.map((item, i) => (
-            <a
-              key={i}
-              href={item.link}
-              onClick={() => handleMenuClick(i)}
-              className={`text-xl p-2.5 rounded-full sm:cursor-pointer ${
-                i === active && "bg-dark_primary text-white"
-              }`}
-            >
-              {createElement(item.icon)}
-            </a>
-          ))}
-        </nav>
       </div>
     </div>
   );
