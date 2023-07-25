@@ -10,6 +10,7 @@ const Navbar = () => {
 
   const handleMenuClick = (index) => {
     setActive(index);
+    setShowMenu(false); // Close the menu when a menu item is clicked
   };
 
   const handleMenuToggle = () => {
@@ -36,7 +37,7 @@ const Navbar = () => {
                   key={i}
                   href={item.link}
                   onClick={(e) => {
-                    /*e.preventDefault();*/
+                    e.preventDefault();
                     handleMenuClick(i);
                   }}
                   className={`text-xl p-2.5 rounded-full sm:cursor-pointer ${
