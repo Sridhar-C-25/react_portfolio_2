@@ -20,7 +20,9 @@ const Navbar = () => {
     <div className="fixed top-4 left-4 z-[999]">
       <div className="relative">
         <div
-          className="sm:cursor-pointer z-[999] rounded-lg bg-white/40 p-2"
+          className={`sm:cursor-pointer z-[999] rounded-lg p-2 ${
+            showMenu ? "bg-white/40" : "bg-transparent"
+          }`}
           onClick={handleMenuToggle}
         >
           <HiMenuAlt2 size={34} />
@@ -34,7 +36,7 @@ const Navbar = () => {
         <nav
           className={`${
             showMenu
-              ? "absolute top-12 left-1/2 -translate-x-1/2 z-[999] opacity-100"
+              ? "absolute top-14 left-4 z-[999] opacity-100"
               : "opacity-0 pointer-events-none"
           } flex flex-col items-center gap-5 bg-slate-200/60 px-6 py-3 backdrop-blur-md rounded-md text-dark_primary duration-300 transition-opacity`}
         >
