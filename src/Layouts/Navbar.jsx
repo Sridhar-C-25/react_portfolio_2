@@ -24,6 +24,7 @@ const Navbar = () => {
             showMenu ? "" : "bg-transparent"
           }`}
           onClick={handleMenuToggle}
+          style={{ pointerEvents: showMenu ? "none" : "auto" }} // Disable pointer events on the icon when the menu is active
         >
           <HiMenuAlt2 size={34} />
         </div>
