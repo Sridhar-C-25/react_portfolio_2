@@ -21,7 +21,7 @@ const Navbar = () => {
       <div className="relative">
         <div
           className={`sm:cursor-pointer z-[999] rounded-lg p-2 ${
-            showMenu ? "bg-white/40" : "bg-transparent"
+            showMenu ? "bg-white/40" : "" // Remove background styling when the menu is not active
           }`}
           onClick={handleMenuToggle}
         >
