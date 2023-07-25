@@ -10,7 +10,6 @@ const Navbar = () => {
 
   const handleMenuClick = (index) => {
     setActive(index);
-    setShowMenu(false); // Close the menu when a menu item is clicked
   };
 
   const handleMenuToggle = () => {
@@ -30,26 +29,27 @@ const Navbar = () => {
           >
             <HiMenuAlt2 size={34} />
           </div>
-          {showMenu &&
-            <div className="flex items-center bg-white/50 p-2 rounded-lg">
-              {nav.map((item, i) => (
-                <a
-                  key={i}
-                  href={item.link}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleMenuClick(i);
-                  }}
-                  className={`text-xl p-2.5 rounded-full sm:cursor-pointer ${
-                    i === active && "bg-dark_primary text-white"
-                  }`}
-                >
-                  {createElement(item.icon)}
-                </a>
-              ))}
-            </div>
-          }
         </div>
+        {showMenu && (
+          <div className="fixed top-4 right-12 z-[999] flex flex-col gap-2 p-2 rounded-lg bg-white/50">
+            {nav.map((item, i) => (
+              <a
+                key={i}
+                href={item.link}
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleMenuClick(i);
+                  setShowMenu(false);
+                }}
+                className={`text-xl p-2.5 rounded-full sm:cursor-pointer ${
+                  i === active && "bg-dark_primary text-white"
+                }`}
+              >
+                {createElement(item.icon)}
+              </a>
+            ))}
+          </div>
+        )}
         {showMenu && (
           <div
             className="fixed inset-0"
