@@ -19,7 +19,7 @@ const Navbar = () => {
         </div>
         {showMenu && (
           <nav
-            className={`fixed top-10 left-20 z-[999] flex items-center gap-5 bg-slate-200/60 px-6 py-3 backdrop-blur-md rounded-full text-dark_primary duration-300`}
+            className={`fixed top-8 right-10 z-[999] flex items-center gap-5 bg-slate-200/60 px-6 py-3 backdrop-blur-md rounded-full text-dark_primary duration-300`}
           >
             {nav.map((item, i) => (
               <a
