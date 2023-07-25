@@ -17,7 +17,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="fixed top-4 left-4 z-[999]">
+    <div className="fixed top-4 right-4 z-[999]">
       <div className="relative">
         <div
           className={`sm:cursor-pointer z-[999] rounded-lg p-2 bg-white/50 flex items-center gap-2 transition-all ${
@@ -32,7 +32,10 @@ const Navbar = () => {
               <a
                 key={i}
                 href={item.link}
-                onClick={() => handleMenuClick(i)}
+                onClick={(e) => {
+                  e.preventDefault(); // Prevent the link from navigating
+                  handleMenuClick(i);
+                }}
                 className={`text-xl p-2.5 rounded-full sm:cursor-pointer ${
                   i === active && "bg-dark_primary text-white"
                 }`}
