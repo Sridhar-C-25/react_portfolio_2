@@ -28,17 +28,17 @@ const Navbar = () => {
         </div>
         {showMenu && (
           <div
-            className="fixed inset-0 bg-white/50"
+            className="fixed inset-0"
             onClick={handleMenuToggle}
           />
         )}
         <nav
           className={`${
             showMenu
-              ? "absolute top-12 left-1/2 -translate-x-1/2 z-[999] opacity-100"
+              ? "absolute top-16 left-1/2 -translate-x-1/2 z-[999] opacity-100"
               : "opacity-0 pointer-events-none"
-          } flex flex-col items-center gap-5 px-6 py-3 rounded-md text-dark_primary`}
-          style={{ background: "rgba(255, 255, 255, 0.5)" }}
+          } flex flex-col items-center gap-5 px-6 py-2 rounded-lg text-dark_primary`}
+          style={{ background: "rgba(255, 255, 255, 0.5)", backdropFilter: "none" }}
         >
           {nav.map((item, i) => (
             <a
