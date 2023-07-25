@@ -29,17 +29,14 @@ const Navbar = () => {
           >
             <HiMenuAlt2 size={34} />
           </div>
-          {showMenu && (
-            <div
-              className="absolute top-0 right-0 bottom-0 bg-white/50 z-[998] flex flex-col items-center justify-center gap-5 px-6 py-2 rounded-lg text-dark_primary"
-              style={{ backdropFilter: "none" }}
-            >
+          {showMenu &&
+            <div className="flex items-center bg-white/50 p-2 rounded-lg">
               {nav.map((item, i) => (
                 <a
                   key={i}
                   href={item.link}
                   onClick={(e) => {
-                    e.preventDefault(); // Prevent the link from navigating
+                    e.preventDefault();
                     handleMenuClick(i);
                   }}
                   className={`text-xl p-2.5 rounded-full sm:cursor-pointer ${
@@ -50,7 +47,7 @@ const Navbar = () => {
                 </a>
               ))}
             </div>
-          )}
+          }
         </div>
         {showMenu && (
           <div
