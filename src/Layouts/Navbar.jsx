@@ -9,7 +9,7 @@ const Navbar = () => {
   const [active, setActive] = useState(0);
 
   return (
-    <div className="w-full flex justify-center">
+    <div className="fixed left-4 top-1/2 transform -translate-y-1/2 z-[999] flex flex-col items-center">
       <div className="relative">
         <div
           className={`sm:cursor-pointer z-[999] rounded-lg bg-white/40 p-2`}
