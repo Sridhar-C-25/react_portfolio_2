@@ -16,15 +16,13 @@ const Navbar = () => {
     setShowMenu(!showMenu);
   };
 
-  const menuStyle = {
-    width: showMenu ? "140px" : "40px", // Adjust the width of the menu background
-  };
-
   return (
     <div className="fixed top-4 left-4 z-[999]">
       <div className="relative">
         <div
-          className={`sm:cursor-pointer z-[999] rounded-lg p-2 bg-white/50`}
+          className={`sm:cursor-pointer z-[999] rounded-lg p-2 bg-white/50 transition-all ${
+            showMenu ? "w-16" : "w-12"
+          }`}
           onClick={handleMenuToggle}
           style={{ pointerEvents: showMenu ? "none" : "auto" }}
         >
@@ -37,12 +35,12 @@ const Navbar = () => {
           />
         )}
         <nav
-          className="absolute top-0 left-0 flex items-center gap-5 px-6 py-2 rounded-lg text-dark_primary"
-          style={{
-            ...menuStyle,
-            background: "rgba(255, 255, 255, 0.5)",
-            backdropFilter: "none",
-          }}
+          className={`${
+            showMenu
+              ? "absolute top-4 left-1/2 -translate-x-1/2 z-[999] opacity-100"
+              : "opacity-0 pointer-events-none"
+          } flex items-center gap-5 px-6 py-2 rounded-lg text-dark_primary`}
+          style={{ background: "rgba(255, 255, 255, 0.5)", backdropFilter: "none" }}
         >
           {nav.map((item, i) => (
             <a
