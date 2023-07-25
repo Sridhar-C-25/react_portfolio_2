@@ -30,21 +30,24 @@ const Navbar = () => {
             <HiMenuAlt2 size={34} />
           </div>
           {showMenu &&
-            nav.map((item, i) => (
-              <a
-                key={i}
-                href={item.link}
-                onClick={(e) => {
-                  e.preventDefault(); // Prevent the link from navigating
-                  handleMenuClick(i);
-                }}
-                className={`text-xl p-2.5 rounded-full sm:cursor-pointer ${
-                  i === active && "bg-dark_primary text-white"
-                }`}
-              >
-                {createElement(item.icon)}
-              </a>
-            ))}
+            <div className="flex">
+              {nav.map((item, i) => (
+                <a
+                  key={i}
+                  href={item.link}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleMenuClick(i);
+                  }}
+                  className={`text-xl p-2.5 rounded-full sm:cursor-pointer ${
+                    i === active && "bg-dark_primary text-white"
+                  }`}
+                >
+                  {createElement(item.icon)}
+                </a>
+              ))}
+            </div>
+          }
         </div>
         {showMenu && (
           <div
