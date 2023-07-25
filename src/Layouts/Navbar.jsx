@@ -12,14 +12,14 @@ const Navbar = () => {
     <div className="w-full flex justify-center">
       <div className="relative">
         <div
-          className={`sm:cursor-pointer fixed top-10 left-10 z-[999] rounded-lg bg-white/40 p-2`}
+          className={`sm:cursor-pointer z-[999] rounded-lg bg-white/40 p-2`}
           onClick={() => setShowMenu(!showMenu)}
         >
           <HiMenuAlt2 size={34} />
         </div>
         {showMenu && (
           <nav
-            className={`fixed top-8 right-10 z-[999] flex items-center gap-5 bg-slate-200/60 px-6 py-3 backdrop-blur-md rounded-full text-dark_primary duration-300`}
+            className={`absolute top-full left-1/2 transform -translate-x-1/2 z-[999] flex flex-col items-center gap-5 bg-slate-200/60 px-6 py-3 backdrop-blur-md rounded-full text-dark_primary duration-300`}
           >
             {nav.map((item, i) => (
               <a
