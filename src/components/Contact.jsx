@@ -12,27 +12,16 @@ const Contact = () => {
         <h4 className="subtitle" data-aos="fade-down">
           {Contact.subtitle}
         </h4>
-        <div className="flex gap-5">
-          <div data-aos="fade-up" className="flex-1">
-            {/* Content on the left (Email Sending Service) removed */}
-          </div>
-          <div className="flex-1 flex items-center gap-5">
-            {/* Contact information on the right (Horizontal List) */}
-            <div className="flex items-center gap-2">
-              <GrMail className="text-white" />
-              <p className="font-Poppins">{Contact.social_media[0].text}</p>
-            </div>
-            <div className="flex items-center gap-2">
-              <MdCall className="text-white" />
-              <p className="font-Poppins">{Contact.social_media[1].text}</p>
-            </div>
-            <div className="flex items-center gap-2">
-              <BsLinkedin className="text-white" />
-              <a className="font-Poppins" href={Contact.social_media[2].link} target="_blank" rel="noopener noreferrer">
+        <div className="flex gap-5" data-aos="fade-up" data-aos-delay="300">
+          <ul className="list-disc font-Poppins">
+            <li>{Contact.social_media[0].text}</li>
+            <li>{Contact.social_media[1].text}</li>
+            <li>
+              <a href={Contact.social_media[2].link} target="_blank" rel="noopener noreferrer">
                 {Contact.social_media[2].text}
               </a>
-            </div>
-          </div>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
