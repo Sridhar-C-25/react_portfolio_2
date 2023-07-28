@@ -143,7 +143,7 @@ export const content = {
     subtitle: "INTO YOUR COMPANY",
     image1: Hireme_person,
     image2: Hireme_person2,
-    para: "As a hard working member of th esoftware world I am a prime candidate for any Front-End Development position that may arise. I will always strive to meet and exceed expectations, fueled by my creative energy!",
+    para: "As a hard working member of the software world I am a prime candidate for any Front-End Development position that may arise. I will always strive to meet and exceed expectations, fueled by my creative energy!",
     btnText: "See my Resume!"
   },
   Contact: {
