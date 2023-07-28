@@ -81,7 +81,7 @@ const Hireme = () => {
             <h2>{Hireme.title}</h2>
             <p>{Hireme.modalDescription}</p>
             {/* Add the download button for the PDF */}
-            <a href="/path/to/your/pdf.pdf" download>
+            <a href="/src/assets/images/Hireme/resume.pdf" download>
               Download PDF
             </a>
             <button onClick={closeModal}>Close</button>
