@@ -84,13 +84,10 @@ const Hireme = () => {
             <iframe
               src="/src/assets/images/Hireme/resume.pdf" // Replace with the actual path
               title="Resume"
-              width="400"
-              height="300"
+              width="800" // Increase the width for better readability
+              height="600" // Increase the height for better readability
+              style={{ border: "none" }} // Remove iframe border for cleaner look
             />
-            {/* Add the download button for the PDF */}
-            <a href="/src/assets/images/Hireme/resume.pdf" download>
-              Download PDF
-            </a>
             <button onClick={closeModal}>Close</button>
           </div>
         </div>
