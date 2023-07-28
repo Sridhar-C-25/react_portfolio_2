@@ -1,14 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { content } from "../Content";
 
 const Hireme = () => {
   const { Hireme } = content;
 
-  // State to manage modal visibility and PDF URL
+  // State to manage modal visibility
   const [modalIsOpen, setModalIsOpen] = useState(false);
-  const [pdfURL, setPdfURL] = useState("/src/assets/images/Hireme/resume.pdf");
 
-  // Function to open the modal and set the PDF URL
+  // Function to open the modal
   const openModal = () => {
     setModalIsOpen(true);
   };
@@ -17,20 +16,6 @@ const Hireme = () => {
   const closeModal = () => {
     setModalIsOpen(false);
   };
-
-  // Event listener to close the modal on clicks outside the modal content
-  useEffect(() => {
-    const handleOutsideClick = (event) => {
-      if (modalIsOpen && !event.target.closest("#hireme-modal-content")) {
-        closeModal();
-      }
-    };
-    document.addEventListener("click", handleOutsideClick);
-
-    return () => {
-      document.removeEventListener("click", handleOutsideClick);
-    };
-  }, [modalIsOpen]);
 
   return (
     <section className="bg-bg_light_primary">
@@ -57,8 +42,7 @@ const Hireme = () => {
           />
           <div
             data-aos="fade-left"
-            className="border-2 border-dark_primary max-w-sm
-            p-6 shadow-sm rounded-xl rounded-br-[8rem] sm:min-w-[22rem]"
+            className="border-2 border-dark_primary max-w-sm p-6 shadow-sm rounded-xl rounded-br-[8rem] sm:min-w-[22rem]"
           >
             <p className="leading-7">{Hireme.para}</p>
             <br />
@@ -83,9 +67,9 @@ const Hireme = () => {
             alignItems: "center",
             backgroundColor: "rgba(0, 0, 0, 0.7)",
           }}
+          onClick={closeModal} // Close the modal when clicking anywhere outside the content
         >
           <div
-            id="hireme-modal-content"
             style={{
               backgroundColor: "white",
               padding: "20px",
@@ -98,13 +82,13 @@ const Hireme = () => {
             <p>{Hireme.modalDescription}</p>
             {/* Display the PDF using iframe */}
             <iframe
-              src={pdfURL}
+              src="/src/assets/images/Hireme/resume.pdf" // Replace with the actual path
               title="Resume"
               width="400"
               height="300"
             />
             {/* Add the download button for the PDF */}
-            <a href={pdfURL} download>
+            <a href="/src/assets/images/Hireme/resume.pdf" download>
               Download PDF
             </a>
             <button onClick={closeModal}>Close</button>
