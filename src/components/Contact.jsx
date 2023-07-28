@@ -1,4 +1,3 @@
-import { createElement } from "react";
 import { content } from "../Content";
 
 const Contact = () => {
@@ -13,27 +12,24 @@ const Contact = () => {
         <h4 className="subtitle" data-aos="fade-down">
           {Contact.subtitle}
         </h4>
-        <br />
-        <div className="flex gap-10 md:flex-row flex-col">
-          <div
-            data-aos="fade-up"
-            className="flex-1 flex flex-col gap-5"
-          >
+        <div
+          className="flex gap-5"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
+          <div className="flex items-center gap-3">
+            <GrMail className="text-white" />
+            <p className="font-Poppins">{Contact.social_media[0].text}</p>
           </div>
-          <div className="flex-1 flex flex-col gap-5">
-            {Contact.social_media.map((content, i) => (
-              <div
-                key={i}
-                data-aos="fade-down"
-                data-aos-delay={i * 430}
-                className="flex items-center gap-2"
-              >
-                <h4 className="text-white">{createElement(content.icon)}</h4>
-                <a className="font-Poppins" href={content.link} target="_blank" rel="noopener noreferrer">
-                  {content.text}
-                </a>
-              </div>
-            ))}
+          <div className="flex items-center gap-3">
+            <MdCall className="text-white" />
+            <p className="font-Poppins">{Contact.social_media[1].text}</p>
+          </div>
+          <div className="flex items-center gap-3">
+            <BsLinkedin className="text-white" />
+            <a className="font-Poppins" href={Contact.social_media[2].link} target="_blank" rel="noopener noreferrer">
+              {Contact.social_media[2].text}
+            </a>
           </div>
         </div>
       </div>
