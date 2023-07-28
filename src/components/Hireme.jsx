@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Modal from "react-modal";
 import { content } from "../Content";
 
 const Hireme = () => {
@@ -56,22 +55,39 @@ const Hireme = () => {
       </div>
 
       {/* Modal for PDF download */}
-      <Modal
-        isOpen={modalIsOpen}
-        onRequestClose={closeModal}
-        className="modal"
-        overlayClassName="modal-overlay"
-      >
-        <div className="modal-content">
-          <h2>{Hireme.title}</h2>
-          <p>{Hireme.modalDescription}</p>
-          {/* Add the download button for the PDF */}
-          <a href="/src/assets/images/Hireme/resume.pdf" download>
-            Download PDF
-          </a>
-          <button onClick={closeModal}>Close</button>
+      {modalIsOpen && (
+        <div
+          style={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            backgroundColor: "rgba(0, 0, 0, 0.7)",
+          }}
+        >
+          <div
+            style={{
+              backgroundColor: "white",
+              padding: "20px",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+            }}
+          >
+            <h2>{Hireme.title}</h2>
+            <p>{Hireme.modalDescription}</p>
+            {/* Add the download button for the PDF */}
+            <a href="/path/to/your/pdf.pdf" download>
+              Download PDF
+            </a>
+            <button onClick={closeModal}>Close</button>
+          </div>
         </div>
-      </Modal>
+      )}
     </section>
   );
 };
