@@ -1,13 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { content } from "../Content";
 
 const Hireme = () => {
   const { Hireme } = content;
 
-  // State to manage modal visibility
+  // State to manage modal visibility and PDF URL
   const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [pdfURL, setPdfURL] = useState("/src/assets/images/Hireme/resume.pdf");
 
-  // Function to open the modal
+  // Function to open the modal and set the PDF URL
   const openModal = () => {
     setModalIsOpen(true);
   };
@@ -16,6 +17,20 @@ const Hireme = () => {
   const closeModal = () => {
     setModalIsOpen(false);
   };
+
+  // Event listener to close the modal on clicks outside the modal content
+  useEffect(() => {
+    const handleOutsideClick = (event) => {
+      if (modalIsOpen && !event.target.closest("#hireme-modal-content")) {
+        closeModal();
+      }
+    };
+    document.addEventListener("click", handleOutsideClick);
+
+    return () => {
+      document.removeEventListener("click", handleOutsideClick);
+    };
+  }, [modalIsOpen]);
 
   return (
     <section className="bg-bg_light_primary">
@@ -70,6 +85,7 @@ const Hireme = () => {
           }}
         >
           <div
+            id="hireme-modal-content"
             style={{
               backgroundColor: "white",
               padding: "20px",
@@ -80,8 +96,15 @@ const Hireme = () => {
           >
             <h2>{Hireme.title}</h2>
             <p>{Hireme.modalDescription}</p>
+            {/* Display the PDF using iframe */}
+            <iframe
+              src={pdfURL}
+              title="Resume"
+              width="400"
+              height="300"
+            />
             {/* Add the download button for the PDF */}
-            <a href="/src/assets/images/Hireme/resume.pdf" download>
+            <a href={pdfURL} download>
               Download PDF
             </a>
             <button onClick={closeModal}>Close</button>

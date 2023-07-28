@@ -140,11 +140,11 @@ export const content = {
 
   Hireme: {
     title: "Hire Me",
-    subtitle: "FOR YOUR PROJECTS",
+    subtitle: "INTO YOUR COMPANY",
     image1: Hireme_person,
     image2: Hireme_person2,
-    para: "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document elying on mean",
-    btnText: "Hire Me", // Add the text for the "Hire Me" button here
+    para: "As a hard working member of th esoftware world I am a prime candidate for any Front-End Development position that may arise. I will always strive to meet and exceed expectations, fueled by my creative energy!",
+    btnText: "See my Resume!"
   },
   Contact: {
     title: "Contect Me",
