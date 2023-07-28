@@ -13,10 +13,10 @@ const Contact = () => {
           {Contact.subtitle}
         </h4>
         <div className="flex gap-5" data-aos="fade-up" data-aos-delay="300">
-          <ul className="list-disc font-Poppins">
-            <li>{Contact.social_media[0].text}</li>
-            <li>{Contact.social_media[1].text}</li>
-            <li>
+          <ul className="list-disc font-Poppins flex gap-4 bg-gray-800 p-4 rounded-md">
+            <li className="border border-white p-2 rounded">{Contact.social_media[0].text}</li>
+            <li className="border border-white p-2 rounded">{Contact.social_media[1].text}</li>
+            <li className="border border-white p-2 rounded">
               <a href={Contact.social_media[2].link} target="_blank" rel="noopener noreferrer">
                 {Contact.social_media[2].text}
               </a>
