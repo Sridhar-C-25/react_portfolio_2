@@ -13,11 +13,20 @@ const Contact = () => {
           {Contact.subtitle}
         </h4>
         <div className="flex gap-5 justify-center" data-aos="fade-up" data-aos-delay="300">
-          <ul className="list-none font-Poppins flex gap-4 bg-dark_primary p-4 rounded-md shadow-md">
-            <li className="bg-dark_primary">{Contact.social_media[0].text}</li>
-            <li className="bg-dark_primary">{Contact.social_media[1].text}</li>
-            <li className="bg-dark_primary">
-              <a href={Contact.social_media[2].link} target="_blank" rel="noopener noreferrer">
+          <ul className="list-none flex gap-4">
+            <li className="bg-gray-800 p-4 rounded-md shadow-md">
+              {Contact.social_media[0].text}
+            </li>
+            <li className="bg-gray-800 p-4 rounded-md shadow-md">
+              {Contact.social_media[1].text}
+            </li>
+            <li className="bg-gray-800 p-4 rounded-md shadow-md">
+              <a
+                className="font-Poppins text-white"
+                href={Contact.social_media[2].link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {Contact.social_media[2].text}
               </a>
             </li>
@@ -29,4 +38,3 @@ const Contact = () => {
 };
 
 export default Contact;
-
