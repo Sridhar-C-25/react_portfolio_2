@@ -13,15 +13,25 @@ const Contact = () => {
           {Contact.subtitle}
         </h4>
         <div className="flex gap-5">
-          <div data-aos="fade-up" className="flex-1 flex flex-col gap-5">
-            <h4 className="text-white">Email:</h4>
-            <p className="font-Poppins">{Contact.social_media[0].text}</p>
-            <h4 className="text-white">Phone:</h4>
-            <p className="font-Poppins">{Contact.social_media[1].text}</p>
-            <h4 className="text-white">LinkedIn:</h4>
-            <a className="font-Poppins" href={Contact.social_media[2].link} target="_blank" rel="noopener noreferrer">
-              {Contact.social_media[2].text}
-            </a>
+          <div data-aos="fade-up" className="flex-1">
+            {/* Content on the left (Email Sending Service) removed */}
+          </div>
+          <div className="flex-1 flex items-center gap-5">
+            {/* Contact information on the right (Horizontal List) */}
+            <div className="flex items-center gap-2">
+              <GrMail className="text-white" />
+              <p className="font-Poppins">{Contact.social_media[0].text}</p>
+            </div>
+            <div className="flex items-center gap-2">
+              <MdCall className="text-white" />
+              <p className="font-Poppins">{Contact.social_media[1].text}</p>
+            </div>
+            <div className="flex items-center gap-2">
+              <BsLinkedin className="text-white" />
+              <a className="font-Poppins" href={Contact.social_media[2].link} target="_blank" rel="noopener noreferrer">
+                {Contact.social_media[2].text}
+              </a>
+            </div>
           </div>
         </div>
       </div>
