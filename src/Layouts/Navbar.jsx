@@ -20,22 +20,23 @@ const Navbar = () => {
         <nav
           className={`${
             showMenu ? "open" : ""
-          } absolute top-0 left-0 w-60 bg-slate-200/60 px-6 py-3 backdrop-blur-md rounded-lg text-dark_primary transform-gpu transition-opacity duration-300 ease-in-out`}
+          } absolute top-full left-1/2 transform -translate-x-1/2 z-[999] flex flex-col items-center gap-5 bg-slate-200/60 px-6 py-3 backdrop-blur-md rounded-full text-dark_primary duration-300 transition-transform`}
         >
-          <div className="flex flex-col gap-5">
-            {nav.map((item, i) => (
-              <a
-                key={i}
-                href={item.link}
-                onClick={() => setActive(i)}
-                className={`text-xl p-2.5 rounded-full sm:cursor-pointer ${
-                  i === active && "bg-dark_primary text-white"
-                } `}
-              >
-                {createElement(item.icon)}
-              </a>
-            ))}
-          </div>
+          {nav.map((item, i) => (
+            <a
+              key={i}
+              href={item.link}
+              onClick={() => {
+                setActive(i);
+                setShowMenu(false); // Close the menu when an item is clicked
+              }}
+              className={`text-xl p-2.5 rounded-full sm:cursor-pointer ${
+                i === active && "bg-dark_primary text-white"
+              } `}
+            >
+              {createElement(item.icon)}
+            </a>
+          ))}
         </nav>
       </div>
     </div>
