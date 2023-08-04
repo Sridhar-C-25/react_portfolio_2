@@ -12,6 +12,20 @@ const Navbar = () => {
     setShowMenu(!showMenu);
   };
 
+  const menuStyles = {
+    position: "absolute",
+    top: "14rem",
+    left: showMenu ? "0" : "-100%", // Slide-in effect
+    zIndex: "999",
+    width: "40rem",
+    backgroundColor: "rgba(74, 85, 104, 0.6)", // Use your desired background color
+    padding: "6rem",
+    backdropFilter: "blur(5px)",
+    borderRadius: "1rem",
+    color: "#1f2937", // Use your desired text color
+    transition: "left 0.3s ease-in-out",
+  };
+
   return (
     <div className="fixed top-4 left-4 z-[999]">
       <div className="relative">
@@ -21,11 +35,7 @@ const Navbar = () => {
         >
           <HiMenuAlt2 size={34} />
         </div>
-        <nav
-          className={`${
-            showMenu ? "open" : ""
-          } absolute top-14 left-0 z-[999] w-40 transform -translate-x-full sm:left-0 bg-slate-200/60 p-6 backdrop-blur-md rounded-lg text-dark_primary transition-transform duration-300`}
-        >
+        <nav style={menuStyles}>
           {nav.map((item, i) => (
             <a
               key={i}
@@ -34,9 +44,15 @@ const Navbar = () => {
                 setActive(i);
                 setShowMenu(false);
               }}
-              className={`text-xl p-2.5 rounded-full block mb-2 ${
-                i === active ? "bg-dark_primary text-white" : ""
-              } `}
+              style={{
+                fontSize: "2.5rem",
+                padding: "1.5rem",
+                borderRadius: "50%",
+                marginBottom: "1rem",
+                backgroundColor:
+                  i === active ? "#2f855a" : "transparent", // Use your desired active button color
+                color: i === active ? "#ffffff" : "#1f2937", // Use your desired active and inactive text colors
+              }}
             >
               {createElement(item.icon)}
             </a>
