@@ -24,7 +24,7 @@ const Navbar = () => {
         <nav
           className={`${
             showMenu ? "open" : ""
-          } absolute top-14 left-0 z-[999] w-40 transform -translate-x-full sm:transform-none bg-slate-200/60 p-6 backdrop-blur-md rounded-lg text-dark_primary transition-transform duration-300`}
+          } absolute top-14 left-0 z-[999] w-40 transform -translate-x-full sm:translate-x-0 bg-slate-200/60 p-6 backdrop-blur-md rounded-lg text-dark_primary transition-transform duration-300`}
         >
           {nav.map((item, i) => (
             <a
@@ -34,8 +34,8 @@ const Navbar = () => {
                 setActive(i);
                 setShowMenu(false);
               }}
-              className={`text-xl p-2.5 rounded-full sm:cursor-pointer ${
-                i === active && "bg-dark_primary text-white"
+              className={`text-xl p-2.5 rounded-full block sm:text-center sm:mb-2 ${
+                i === active ? "bg-dark_primary text-white" : ""
               } `}
             >
               {createElement(item.icon)}
