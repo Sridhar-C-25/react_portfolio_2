@@ -13,7 +13,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="fixed top-4 left-4 z-[999] flex flex-col items-center">
+    <div className="fixed top-4 left-4 z-[999]">
       <div className="relative">
         <div
           className={`sm:cursor-pointer z-[999] rounded-lg bg-white/40 p-2`}
@@ -24,7 +24,7 @@ const Navbar = () => {
         <nav
           className={`${
             showMenu ? "open" : ""
-          } absolute top-14 left-0 z-[999] w-40 transform -translate-x-full sm:translate-x-0 bg-slate-200/60 p-6 backdrop-blur-md rounded-lg text-dark_primary transition-transform duration-300`}
+          } absolute top-14 left-0 z-[999] w-40 transform -translate-x-full sm:left-0 bg-slate-200/60 p-6 backdrop-blur-md rounded-lg text-dark_primary transition-transform duration-300`}
         >
           {nav.map((item, i) => (
             <a
@@ -34,7 +34,7 @@ const Navbar = () => {
                 setActive(i);
                 setShowMenu(false);
               }}
-              className={`text-xl p-2.5 rounded-full block sm:text-center sm:mb-2 ${
+              className={`text-xl p-2.5 rounded-full block mb-2 ${
                 i === active ? "bg-dark_primary text-white" : ""
               } `}
             >
