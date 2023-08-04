@@ -20,7 +20,7 @@ const Navbar = () => {
         <nav
           className={`${
             showMenu ? "open" : ""
-          } absolute top-0 left-0 w-60 bg-slate-200/60 px-6 py-3 backdrop-blur-md rounded-lg text-dark_primary transform-gpu transition-transform duration-300 ease-in-out`}
+          } absolute top-0 left-0 w-60 bg-slate-200/60 px-6 py-3 backdrop-blur-md rounded-lg text-dark_primary transform-gpu transition-opacity duration-300 ease-in-out`}
         >
           <div className="flex flex-col gap-5">
             {nav.map((item, i) => (
