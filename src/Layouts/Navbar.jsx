@@ -69,7 +69,7 @@ const Navbar = () => {
       </div>
       <nav
         className={`fixed z-[999] flex flex-col items-center bg-slate-200/60 px-6 py-3 backdrop-blur-md rounded-full text-dark_primary duration-300 ${
-          showMenu ? "bottom-10" : "bottom-[-100%]"
+          showMenu ? "top-16" : "-top-full"
         }`}
       >
         {nav.map((item, i) => (
@@ -88,3 +88,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
