@@ -19,7 +19,7 @@ const Navbar = () => {
           className={`sm:cursor-pointer z-[999] rounded-lg bg-white/40 p-2`}
           onClick={toggleMenu}
         >
-          <HiMenuAlt2 size={34} />
+          <HiMenuAlt2 size={15} />
         </div>
         <nav
           className={`${
