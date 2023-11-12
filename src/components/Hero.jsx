@@ -37,16 +37,6 @@ const Hero = () => {
             ))}
           </div>
         </div>
-
-        {/* sec col */}
-        <div className="md:h-[37rem] h-96">
-          <img
-            src={hero.image}
-            data-aos="slide-up"
-            alt="..."
-            className="h-full object-cover"
-          />
-        </div>
       </div>
     </section>
   );
