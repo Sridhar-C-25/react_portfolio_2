@@ -8,9 +8,13 @@ const Hero = () => {
 
   useEffect(() => {
     const canvas = document.getElementById('canvas3d');
-    const app = new Application(canvas);
-    app.load('https://prod.spline.design/HKlfAoUoTv3w35yQ/scene.splinecode');
-  }, []); // Empty dependency array means this effect runs once after the initial render
+    if (canvas) {
+      const app = new Application(canvas);
+      app.load('https://prod.spline.design/HKlfAoUoTv3w35yQ/scene.splinecode');
+    } else {
+      console.error('Canvas element not found!');
+    }
+  }, []);
 
   return (
     <section id="home" className="overflow-hidden">
@@ -20,7 +24,7 @@ const Hero = () => {
           data-aos-delay="1200"
           className="absolute h-full md:w-4/12 w-8/12 top-0 right-0 bg-primaryLinear bottom-0 -z-10"
         >
-          {/* Add any other content here if needed */}
+          {/* Add anything */}
         </div>
 
         {/* first col */}
