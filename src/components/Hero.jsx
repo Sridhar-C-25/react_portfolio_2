@@ -5,16 +5,8 @@ import { Application } from '@splinetool/runtime';
 
 const Hero = () => {
   const { hero } = content;
-
-  useEffect(() => {
-    const canvas = document.getElementById('canvas3d');
-    if (canvas) {
-      const app = new Application(canvas);
-      app.load('https://prod.spline.design/HKlfAoUoTv3w35yQ/scene.splinecode');
-    } else {
-      console.error('Canvas element not found!');
-    }
-  }, []);
+  const canvas = document.getElementById('canvas3d');
+  const app = new Application(canvas);
 
   return (
     <section id="home" className="overflow-hidden">
@@ -25,6 +17,7 @@ const Hero = () => {
           className="absolute h-full md:w-4/12 w-8/12 top-0 right-0 bg-primaryLinear bottom-0 -z-10"
         >
           {/* Add anything */}
+          app.load('https://prod.spline.design/HKlfAoUoTv3w35yQ/scene.splinecode');
         </div>
 
         {/* first col */}
