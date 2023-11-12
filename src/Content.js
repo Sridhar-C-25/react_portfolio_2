@@ -47,8 +47,6 @@ export const content = {
   ],
   hero: {
     title: "Web Developer",
-    firstName: "MUSTAFA",
-    LastName: "IPEKCI",
     hero_content: [
       {
         count: "2+",

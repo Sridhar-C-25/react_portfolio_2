@@ -1,8 +1,13 @@
 // import content
 import { useEffect } from "react";
 import { content } from "../Content";
+import { Application } from '@splinetool/runtime';
+
+
 const Hero = () => {
   const { hero } = content;
+  const canvas = document.getElementById('canvas3d');
+  const app = new Application(canvas);
 
   return (
     <section id="home" className="overflow-hidden">
@@ -12,10 +17,7 @@ const Hero = () => {
           data-aos-delay="1200"
           className="absolute h-full md:w-4/12 w-8/12 top-0 right-0 bg-primaryLinear bottom-0 -z-10"
         >
-          <h1 className="rotate-90 absolute top-[30%] right-[-15%] text-[#EAF2FA]">
-            {hero.firstName}{" "}
-            <span className="text-dark_primary">{hero.LastName}</span>
-          </h1>
+        app.load('https://prod.spline.design/HKlfAoUoTv3w35yQ/scene.splinecode');
         </div>
 
         {/* first col */}
