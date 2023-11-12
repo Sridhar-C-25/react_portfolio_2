@@ -1,12 +1,24 @@
 // import content
-import React, { useEffect } from "react";
+import React, { useRef } from "react";
 import { content } from "../Content";
 import { Application } from '@splinetool/runtime';
 
 const Hero = () => {
   const { hero } = content;
-  const canvas = document.getElementById('canvas3d');
-  const app = new Application(canvas);
+  const canvasRef = useRef(null);
+
+  const initializeSpline = () => {
+    const canvas = canvasRef.current;
+    if (canvas) {
+      const app = new Application(canvas);
+      app.load('https://prod.spline.design/HKlfAoUoTv3w35yQ/scene.splinecode');
+    } else {
+      console.error('Canvas element not found!');
+    }
+  };
+
+  // Call initializeSpline when the component is mounted
+  initializeSpline();
 
   return (
     <section id="home" className="overflow-hidden">
@@ -17,7 +29,6 @@ const Hero = () => {
           className="absolute h-full md:w-4/12 w-8/12 top-0 right-0 bg-primaryLinear bottom-0 -z-10"
         >
           {/* Add anything */}
-          app.load('https://prod.spline.design/HKlfAoUoTv3w35yQ/scene.splinecode');
         </div>
 
         {/* first col */}
@@ -39,6 +50,9 @@ const Hero = () => {
             ))}
           </div>
         </div>
+
+        {/* Add a ref to the canvas element */}
+        <canvas ref={canvasRef} id="canvas3d"></canvas>
       </div>
     </section>
   );
