@@ -13,6 +13,7 @@ const Navbar = () => {
       <div
         className="sm:cursor-pointer fixed top-10 left-10 z-[999] rounded-lg bg-white/40 p-2"
         onClick={() => setShowMenu(!showMenu)}
+        style={{paddingTop: "10px", paddingLeft: "10px"}}
       >
         <HiMenuAlt2 size={34} />
       </div>
@@ -20,7 +21,7 @@ const Navbar = () => {
         className={`fixed z-[999] flex flex-col items-start bg-slate-200/60 px-6 py-3 backdrop-blur-md rounded-full text-dark_primary duration-300 ${
           showMenu ? "top-16" : "-top-full"
         }`}
-        style={{ paddingTop: "10px", paddingLeft: "10px" }}
+        /*style={{ paddingTop: "10px", paddingLeft: "10px" }}*/
       >
         {nav.map((item, i) => (
           <a
