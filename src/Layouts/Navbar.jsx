@@ -60,7 +60,7 @@ const Navbar = () => {
   const [active, setActive] = useState(0);
 
   return (
-    <div className="w-full flex flex-col items-center">
+    <div className="w-full flex flex-col items-left">
       <div
         className="sm:cursor-pointer fixed top-10 left-10 z-[999] rounded-lg bg-white/40 p-2"
         onClick={() => setShowMenu(!showMenu)}
