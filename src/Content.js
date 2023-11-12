@@ -51,7 +51,6 @@ export const content = {
     title: "Web Developer",
     firstName: "MUSTAFA",
     LastName: "IPEKCI",
-    image: Hero_person,
     hero_content: [
       {
         count: "2+",
