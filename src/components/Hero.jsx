@@ -80,11 +80,11 @@ const Hero = () => {
       {/* Spline container */}
       <div
         id="hero-container"
-        className="min-h-screen absolute top-0 left-0 w-full h-full pointer-events-none"
+        className="min-h-screen absolute top-0 left-0 w-full h-full z-0 bg-gray-800"
       ></div>
 
       {/* Content container */}
-      <div className="min-h-screen relative flex md:flex-row flex-col-reverse md:items-end justify-center items-center">
+      <div className="min-h-screen relative flex md:flex-row flex-col-reverse md:items-end justify-center items-center pt-20">
         <div
           data-aos="slide-left"
           data-aos-delay="1200"
