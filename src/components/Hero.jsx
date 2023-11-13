@@ -61,7 +61,7 @@ const Hero = () => {
     script.onload = () => {
       const splineViewer = document.createElement("spline-viewer");
       splineViewer.setAttribute("url", "https://prod.spline.design/HKlfAoUoTv3w35yQ/scene.splinecode");
-      document.getElementById("hero-container").appendChild(splineViewer);
+      document.getElementById("spline-container").appendChild(splineViewer);
     };
     document.body.appendChild(script);
 
@@ -69,7 +69,7 @@ const Hero = () => {
       document.body.removeChild(script);
       const splineViewer = document.querySelector("spline-viewer");
       if (splineViewer) {
-        document.getElementById("hero-container").removeChild(splineViewer);
+        document.getElementById("spline-container").removeChild(splineViewer);
       }
     };
   }, []);
@@ -78,8 +78,8 @@ const Hero = () => {
     <section id="home" className="relative overflow-hidden">
       {/* Spline container */}
       <div
-        id="hero-container"
-        className="min-h-screen absolute top-0 left-0 w-full h-full z-0 "
+        id="spline-container"
+        className="min-h-screen absolute top-0 left-0 w-full h-full z-0"
       ></div>
 
       {/* Content container */}
@@ -87,7 +87,7 @@ const Hero = () => {
         <div
           data-aos="slide-left"
           data-aos-delay="1200"
-          className="absolute h-full md:w-4/12 w-8/12 top-0 right-0 -z-10"
+          className="absolute h-full md:w-4/12 w-8/12 top-0 right-0 -z-10 pointer-events-none"
         >
           <h1 className="rotate-90 absolute top-[30%] right-[-15%] text-[#EAF2FA]">
             {hero.firstName}{" "}
@@ -96,10 +96,10 @@ const Hero = () => {
         </div>
 
         {/* first col */}
-        <div className="pb-0 px-0 pt-0 md:pt-0" data-aos="fade-down">
+        <div className="pb-16 px-6 pt-5" data-aos="fade-down">
           <h2>{hero.title}</h2>
           <br />
-          <div className="flex flex-col gap-10 mt-0">
+          <div className="flex flex-col gap-10 mt-10">
             {hero.hero_content.map((content, i) => (
               <div
                 key={i}
