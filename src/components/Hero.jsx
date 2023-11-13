@@ -1,23 +1,10 @@
-/*
-import React, { useRef } from "react";
+/* import React, { useRef } from "react";
 import { content } from "../Content";
 import { Application } from '@splinetool/runtime';
 
 const Hero = () => {
   const { hero } = content;
   const canvasRef = useRef(null);
-
-  const initializeSpline = () => {
-    const canvas = canvasRef.current;
-    if (canvas) {
-      const app = new Application(canvas);
-      app.load('https://prod.spline.design/HKlfAoUoTv3w35yQ/scene.splinecode');
-    } else {
-      console.error('Canvas element not found!');
-    }
-  };
-
-  initializeSpline();
 
   return (
     <section id="home" className="overflow-hidden">
@@ -58,9 +45,9 @@ const Hero = () => {
 
 export default Hero; */
 
-// import content
-import React from "react";
+import { useEffect } from "react";
 import { content } from "../Content";
+import Spline from '@splinetool/react-spline';
 
 const Hero = () => {
   const { hero } = content;
@@ -68,14 +55,18 @@ const Hero = () => {
   return (
     <section id="home" className="overflow-hidden">
       <div className="min-h-screen relative flex md:flex-row flex-col-reverse md:items-end justify-center items-center">
+        <div>
+          <Spline scene="https://prod.spline.design/HKlfAoUoTv3w35yQ/scene.splinecode" />
+        </div>
         <div
           data-aos="slide-left"
           data-aos-delay="1200"
           className="absolute h-full md:w-4/12 w-8/12 top-0 right-0 bg-primaryLinear bottom-0 -z-10"
         >
-          {/* Add anything */}
-          {/* Inject the spline-viewer script tag */}
-          <div dangerouslySetInnerHTML={{ __html: '<script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.496/build/spline-viewer.js"></script><spline-viewer url="https://prod.spline.design/HKlfAoUoTv3w35yQ/scene.splinecode"></spline-viewer>' }} />
+          <h1 className="rotate-90 absolute top-[30%] right-[-15%] text-[#EAF2FA]">
+            {hero.firstName}{" "}
+            <span className="text-dark_primary">{hero.LastName}</span>
+          </h1>
         </div>
 
         {/* first col */}
