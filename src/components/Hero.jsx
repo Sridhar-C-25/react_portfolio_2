@@ -79,7 +79,7 @@ const Hero = () => {
       {/* Spline container */}
       <div
         id="hero-container"
-        className="min-h-screen absolute top-0 left-0 w-full h-full z-0"
+        className="min-h-screen absolute top-0 left-0 w-full h-full z-0 pointer-events-none"
       ></div>
 
       {/* Content container */}
@@ -87,7 +87,7 @@ const Hero = () => {
         <div
           data-aos="slide-left"
           data-aos-delay="1200"
-          className="absolute h-full md:w-4/12 w-8/12 top-0 right-0 -z-10"
+          className="absolute h-full md:w-4/12 w-8/12 top-0 right-0 -z-10 pointer-events-none"
         >
           <h1 className="rotate-90 absolute top-[30%] right-[-15%] text-[#EAF2FA]">
             {hero.firstName}{" "}
