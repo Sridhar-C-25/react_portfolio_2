@@ -65,7 +65,6 @@ const Hero = () => {
       document.getElementById("hero-container").appendChild(splineViewer);
     };
     document.body.appendChild(script);
-
     return () => {
       document.body.removeChild(script);
       const splineViewer = document.querySelector("spline-viewer");
