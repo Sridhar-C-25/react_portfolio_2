@@ -96,17 +96,17 @@ const Hero = () => {
         </div>
 
         {/* first col */}
-        <div className="pb-16 px-6 pt-40 md:pt-32" data-aos="fade-down">
+        <div className="pb-0 px-0 pt-0 md:pt-0" data-aos="fade-down">
           <h2>{hero.title}</h2>
           <br />
-          <div className="flex flex-col gap-10 mt-10">
+          <div className="flex flex-col gap-10 mt-0">
             {hero.hero_content.map((content, i) => (
               <div
                 key={i}
                 data-aos="fade-down"
                 data-aos-delay={i * 300}
                 className={`flex items-center w-80 gap-5
-            ${i === 1 && " flex-row-reverse text-right"}  `}
+                  ${i === 1 && " flex-row-reverse text-right"}  `}
               >
                 <h3>{content.count}</h3>
                 <p>{content.text}</p>
