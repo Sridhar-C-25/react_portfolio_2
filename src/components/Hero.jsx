@@ -77,10 +77,14 @@ const Hero = () => {
 
   return (
     <section id="home" className="relative overflow-hidden">
+      {/* Spline container */}
       <div
         id="hero-container"
-        className="min-h-screen flex md:flex-row flex-col-reverse md:items-end justify-center items-center"
-      >
+        className="min-h-screen absolute top-0 left-0 w-full h-full pointer-events-none"
+      ></div>
+
+      {/* Content container */}
+      <div className="min-h-screen relative flex md:flex-row flex-col-reverse md:items-end justify-center items-center">
         <div
           data-aos="slide-left"
           data-aos-delay="1200"
@@ -117,4 +121,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
