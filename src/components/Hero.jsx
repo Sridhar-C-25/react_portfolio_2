@@ -54,10 +54,10 @@ const Hero = () => {
 
   return (
     <section id="home" className="overflow-hidden">
+      <div>
+        <Spline scene="https://prod.spline.design/HKlfAoUoTv3w35yQ/scene.splinecode" />
+      </div>
       <div className="min-h-screen relative flex md:flex-row flex-col-reverse md:items-end justify-center items-center">
-        <div>
-          <Spline scene="https://prod.spline.design/HKlfAoUoTv3w35yQ/scene.splinecode" />
-        </div>
         <div
           data-aos="slide-left"
           data-aos-delay="1200"
