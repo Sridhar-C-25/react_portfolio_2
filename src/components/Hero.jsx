@@ -79,7 +79,7 @@ const Hero = () => {
       {/* Spline container */}
       <div
         id="hero-container"
-        className="min-h-screen absolute top-0 left-0 w-full h-full z-0 pointer-events-none"
+        className="min-h-screen absolute top-0 left-0 w-full h-full z-0 "
       ></div>
 
       {/* Content container */}
