@@ -79,11 +79,11 @@ const Hero = () => {
       {/* Spline container */}
       <div
         id="hero-container"
-        className="min-h-screen absolute top-0 left-0 w-full h-full z-0 bg-gray-800"
+        className="min-h-screen absolute top-0 left-0 w-full h-full z-0"
       ></div>
 
       {/* Content container */}
-      <div className="min-h-screen relative flex md:flex-row flex-col-reverse md:items-end justify-center items-center pt-32">
+      <div className="min-h-screen relative flex md:flex-row flex-col-reverse md:items-end justify-center items-center">
         <div
           data-aos="slide-left"
           data-aos-delay="1200"
@@ -96,7 +96,7 @@ const Hero = () => {
         </div>
 
         {/* first col */}
-        <div className="pb-16 px-6 pt-5" data-aos="fade-down">
+        <div className="pb-16 px-6 pt-40 md:pt-32" data-aos="fade-down">
           <h2>{hero.title}</h2>
           <br />
           <div className="flex flex-col gap-10 mt-10">
