@@ -15,13 +15,10 @@ const Hero = () => {
             data-aos-delay="1200"
             className="absolute h-full md:w-4/12 w-8/12 top-0 right-0 bg-primaryLinear bottom-0 -z-10"
           >
-            <h1 className="rotate-90 absolute top-[30%] right-[-15%] text-[#EAF2FA]">
-              {hero.firstName}{" "}
-              <span className="text-dark_primary">{hero.LastName}</span>
-            </h1>
           </div>
 
           <div className="pb-16 px-6 pt-5" data-aos="fade-down">
+            <Spline scene="https://prod.spline.design/HKlfAoUoTv3w35yQ/scene.splinecode" />
             <h2>{hero.title}</h2>
             <br />
             <div className="flex flex-col gap-10 mt-10">
@@ -40,11 +37,6 @@ const Hero = () => {
             </div>
           </div>
         </div>
-      </div>
-
-      <div className="z-0">
-        {/* Your spline project */}
-        <Spline scene="https://prod.spline.design/HKlfAoUoTv3w35yQ/scene.splinecode" />
       </div>
     </section>
   );
