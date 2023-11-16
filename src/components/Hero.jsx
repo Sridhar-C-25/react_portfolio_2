@@ -8,7 +8,6 @@ const Hero = () => {
   return (
     <section id="home" className="relative overflow-hidden">
       <div className="min-h-screen relative flex md:flex-row flex-col-reverse md:items-end justify-center items-center">
-        <h2>{hero.title}</h2>
         <Spline scene="https://prod.spline.design/HKlfAoUoTv3w35yQ/scene.splinecode" className="absolute top-0 left-0 w-full h-full" />
 
         {/* Your text content */}
@@ -17,6 +16,7 @@ const Hero = () => {
           data-aos-delay="1200"
           className="absolute h-full md:w-4/12 w-8/12 top-0 right-0 bg-primaryLinear bottom-0 -z-10"
         >
+          <h2>{hero.title}</h2>
           {/*<h1 className="rotate-90 absolute top-[30%] right-[-15%] text-[#EAF2FA]">
             {hero.firstName}{" "}
             <span className="text-dark_primary">{hero.LastName}</span>
