@@ -8,6 +8,8 @@ const Hero = () => {
   return (
     <section id="home" className="relative overflow-hidden">
       <div className="min-h-screen relative flex md:flex-row flex-col-reverse md:items-end justify-center items-center">
+        <Spline scene="https://prod.spline.design/HKlfAoUoTv3w35yQ/scene.splinecode" className="absolute top-0 left-0 w-full h-full" />
+
         {/* Your text content */}
         <div
           data-aos="slide-left"
@@ -38,9 +40,6 @@ const Hero = () => {
             ))}
           </div>
         </div>
-
-        {/* Your spline project */}
-        <Spline scene="https://prod.spline.design/HKlfAoUoTv3w35yQ/scene.splinecode" className="z-0" />
       </div>
     </section>
   );
