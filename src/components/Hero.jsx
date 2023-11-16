@@ -18,7 +18,6 @@ const Hero = () => {
           </div>
 
           <div className="pb-16 px-6 pt-5" data-aos="fade-down">
-            <Spline scene="https://prod.spline.design/HKlfAoUoTv3w35yQ/scene.splinecode" />
             <h2>{hero.title}</h2>
             <br />
             <div className="flex flex-col gap-10 mt-10">
@@ -37,6 +36,11 @@ const Hero = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="z-0">
+        {/* Your spline project */}
+        <Spline scene="https://prod.spline.design/HKlfAoUoTv3w35yQ/scene.splinecode" />
       </div>
     </section>
   );
