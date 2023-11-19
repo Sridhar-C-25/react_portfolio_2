@@ -18,33 +18,21 @@ const Hireme = () => {
   };
 
   return (
-    <section className="bg-bg_light_primary">
-      <div className="md:container px-5 pt-14">
-        <h2 className="title" data-aos="fade-down">
+    <section className="bg-bg_light_primary flex items-center justify-center h-screen">
+      <div className="container mx-auto px-5 pt-14">
+        <h2 className="title text-center" data-aos="fade-down">
           {Hireme.title}
         </h2>
-        <h4 className="subtitle" data-aos="fade-down">
+        <h4 className="subtitle text-center" data-aos="fade-down">
           {Hireme.subtitle}
         </h4>
         <br />
-        <div className="flex items-center md:flex-row flex-col-reverse">
-          <img
-            src={Hireme.image1}
-            alt="..."
-            data-aos="fade-right"
-            className="max-w-sm md:block hidden"
-          />
-          <img
-            src={Hireme.image2}
-            data-aos="fade-up"
-            alt="..."
-            className="max-w-sm md:hidden"
-          />
+        <div className="flex items-center justify-center">
           <div
             data-aos="fade-left"
-            className="border-2 border-dark_primary max-w-sm p-6 shadow-sm rounded-xl rounded-br-[8rem] sm:min-w-[22rem]"
+            className="border-2 border-dark_primary p-6 shadow-sm rounded-xl md:w-[40rem] sm:w-full"
           >
-            <p className="leading-7">{Hireme.para}</p>
+            <p className="leading-7 text-center">{Hireme.para}</p>
             <br />
             <button className="btn bg-dark_primary text-white" onClick={openModal}>
               {Hireme.btnText}
@@ -56,30 +44,12 @@ const Hireme = () => {
       {/* Modal for PDF download */}
       {modalIsOpen && (
         <div
-          style={{
-            position: "fixed",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            backgroundColor: "rgba(0, 0, 0, 0.7)",
-          }}
+          className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-70"
           onClick={closeModal} // Close the modal when clicking anywhere outside the content
         >
-          <div
-            style={{
-              backgroundColor: "white",
-              padding: "20px",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-            }}
-          >
-            <h2>{Hireme.title}</h2>
-            <p>{Hireme.modalDescription}</p>
+          <div className="bg-white p-8 rounded-xl">
+            <h2 className="text-center">{Hireme.title}</h2>
+            <p className="text-center">{Hireme.modalDescription}</p>
             {/* Display the PDF using iframe */}
             <iframe
               src="/src/assets/images/Hireme/resume.pdf" // Replace with the actual path
@@ -88,7 +58,9 @@ const Hireme = () => {
               height="600" // Increase the height for better readability
               style={{ border: "none" }} // Remove iframe border for cleaner look
             />
-            <button onClick={closeModal}>Close</button>
+            <button className="btn bg-dark_primary text-white" onClick={closeModal}>
+              Close
+            </button>
           </div>
         </div>
       )}
