@@ -18,9 +18,8 @@ const Navbar = () => {
       </div>
       <nav
         className={`fixed z-[999] flex flex-col items-start bg-slate-200/60 px-6 py-3 backdrop-blur-md rounded-full text-dark_primary duration-300 ${
-          showMenu ? "top-16" : "-top-full"
+          showMenu ? "top-30" : "-top-full"
         }`}
-        style={{ paddingTop: "20px", paddingLeft: "200px" }}
       >
         {nav.map((item, i) => (
           <a
