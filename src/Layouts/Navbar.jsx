@@ -20,7 +20,7 @@ const Navbar = () => {
         className={`fixed z-[999] flex flex-col items-start bg-slate-200/60 px-6 py-3 backdrop-blur-md rounded-full text-dark_primary duration-300 ${
           showMenu ? "top-16" : "-top-full"
         }`}
-        style={{ paddingTop: '30px', paddingLeft: '30px' }}
+        style={{ paddingTop: '40px', paddingLeft: '40px' }}
       >
         {nav.map((item, i) => (
           <a
