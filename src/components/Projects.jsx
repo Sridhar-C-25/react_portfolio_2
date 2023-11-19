@@ -66,7 +66,6 @@ const Projects = () => {
         </div>
       </div>
 
-      {/* Modals for each project */}
       {selectedProject !== null && (
         <div
           style={{
@@ -79,11 +78,10 @@ const Projects = () => {
             justifyContent: "center",
             alignItems: "center",
             backgroundColor: "rgba(0, 0, 0, 0.7)",
+            zIndex: 1000,
           }}
           onClick={closeModal}
         >
-          {/* Your modal content here for the selected project */}
-          {/* You can create a unique modal for each project using selectedProject index */}
           <div
             style={{
               backgroundColor: "white",
@@ -91,12 +89,25 @@ const Projects = () => {
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
+              position: "relative",
             }}
+            onClick={(e) => e.stopPropagation()}
           >
             <h2>{Projects.project_content[selectedProject].title}</h2>
             <p>{/* Add content specific to the selected project */}</p>
-            {/* Additional content for the modal */}
-            <button onClick={closeModal}>Close</button>
+            <button
+              onClick={closeModal}
+              style={{
+                position: "absolute",
+                top: "20px",
+                right: "20px",
+                backgroundColor: "transparent",
+                border: "none",
+                cursor: "pointer",
+              }}
+            >
+              <span style={{ fontSize: "24px", fontWeight: "bold" }}>X</span>
+            </button>
           </div>
         </div>
       )}
