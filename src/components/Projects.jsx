@@ -1,15 +1,22 @@
+import { useState } from "react";
 import { content } from "../Content";
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-
 import { Pagination } from "swiper";
 
 const Projects = () => {
   const { Projects } = content;
+  const [selectedProject, setSelectedProject] = useState(null);
+
+  const openModal = (projectIndex) => {
+    setSelectedProject(projectIndex);
+  };
+
+  const closeModal = () => {
+    setSelectedProject(null);
+  };
+
   return (
     <section className="bg-bg_light_primary" id="projects">
       <div className="md:container px-5 pt-14 min-h-screen flex flex-col justify-between">
@@ -46,7 +53,10 @@ const Projects = () => {
                 <img src={content.image} alt="..." />
                 <div className="flex flex-col gap-1 mt-2">
                   <h5 className="font-bold font-Poppins">{content.title}</h5>
-                  <button className="font-bold text-gray self-end">
+                  <button
+                    className="font-bold text-gray self-end"
+                    onClick={() => openModal(i)}
+                  >
                     READ MORE
                   </button>
                 </div>
@@ -55,6 +65,41 @@ const Projects = () => {
           </Swiper>
         </div>
       </div>
+
+      {/* Modals for each project */}
+      {selectedProject !== null && (
+        <div
+          style={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            backgroundColor: "rgba(0, 0, 0, 0.7)",
+          }}
+          onClick={closeModal}
+        >
+          {/* Your modal content here for the selected project */}
+          {/* You can create a unique modal for each project using selectedProject index */}
+          <div
+            style={{
+              backgroundColor: "white",
+              padding: "20px",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+            }}
+          >
+            <h2>{Projects.project_content[selectedProject].title}</h2>
+            <p>{/* Add content specific to the selected project */}</p>
+            {/* Additional content for the modal */}
+            <button onClick={closeModal}>Close</button>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
