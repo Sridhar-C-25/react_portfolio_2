@@ -85,7 +85,7 @@ const Projects = () => {
           <div
             style={{
               backgroundColor: "white",
-              padding: "20px",
+              padding: "40px", // Increased padding
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
