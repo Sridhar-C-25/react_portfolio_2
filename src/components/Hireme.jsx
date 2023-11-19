@@ -28,7 +28,7 @@ const Hireme = () => {
           <div
             data-aos="fade-down"
             className={`border-2 border-dark_primary p-6 shadow-sm rounded-xl md:w-[40rem] sm:w-full ${
-              modalIsOpen ? "z-[1001]" : ""
+              modalIsOpen ? "z-[1001] hidden" : ""
             }`}
           >
             <p className="leading-7 text-center">{Hireme.para}</p>
