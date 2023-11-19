@@ -12,10 +12,6 @@ import ExerciseLogo from "/src/assets/images/Services/exercise-logo.svg";
 import project1 from "/src/assets/images/projects/img1.png";
 import project2 from "/src/assets/images/projects/img2.png";
 import project3 from "/src/assets/images/projects/img3.png";
-import person_project from "/src/assets/images/projects/person.png";
-
-import Hireme_person from "/src/assets/images/Hireme/person.png";
-import Hireme_person2 from "/src/assets/images/Hireme/person2.png";
 
 // import icons from react-icons
 import { GrMail } from "react-icons/gr";
@@ -116,7 +112,6 @@ export const content = {
   Projects: {
     title: "Projects",
     subtitle: "MY CREATION",
-    image: person_project,
     project_content: [
       {
         title: "Gym Website",
@@ -136,8 +131,6 @@ export const content = {
   Hireme: {
     title: "Hire Me",
     subtitle: "INTO YOUR COMPANY",
-    image1: Hireme_person,
-    image2: Hireme_person2,
     para: "As a hard working member of the software world I am a prime candidate for any Front-End Development position that may arise. I will always strive to meet and exceed expectations, fueled by my creative energy!",
     btnText: "See my Resume!"
   },
