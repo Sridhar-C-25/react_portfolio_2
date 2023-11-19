@@ -18,9 +18,9 @@ const Navbar = () => {
       </div>
       <nav
         className={`fixed z-[999] flex flex-col items-start bg-slate-200/60 px-6 py-3 backdrop-blur-md rounded-full text-dark_primary duration-300 ${
-          showMenu ? "left-10" : "-top-full"
+          showMenu ? "left-10" : "-left-full"
         }`}
-        style={{ marginTop: '30px', marginLeft: '20px' }}
+        style={{ marginTop: '45px', /*marginLeft: '20px'*/ }}
       >
         {nav.map((item, i) => (
           <a
