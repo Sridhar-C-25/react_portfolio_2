@@ -55,7 +55,7 @@ const Hireme = () => {
               height="600"
               style={{ border: "none" }}
             />
-            <button className="btn bg-dark_primary text-white" onClick={closeModal}>
+            <button className="btn bg-dark_primary text-white mt-4" onClick={closeModal}>
               Close
             </button>
           </div>
