@@ -4,15 +4,12 @@ import { content } from "../Content";
 const Hireme = () => {
   const { Hireme } = content;
 
-  // State to manage modal visibility
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
-  // Function to open the modal
   const openModal = () => {
     setModalIsOpen(true);
   };
 
-  // Function to close the modal
   const closeModal = () => {
     setModalIsOpen(false);
   };
@@ -29,8 +26,10 @@ const Hireme = () => {
         <br />
         <div className="flex items-center justify-center">
           <div
-            data-aos="fade-left"
-            className="border-2 border-dark_primary p-6 shadow-sm rounded-xl md:w-[40rem] sm:w-full"
+            data-aos="fade-down"
+            className={`border-2 border-dark_primary p-6 shadow-sm rounded-xl md:w-[40rem] sm:w-full ${
+              modalIsOpen ? "z-[1001]" : ""
+            }`}
           >
             <p className="leading-7 text-center">{Hireme.para}</p>
             <br />
@@ -41,22 +40,20 @@ const Hireme = () => {
         </div>
       </div>
 
-      {/* Modal for PDF download */}
       {modalIsOpen && (
         <div
-          className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-70"
-          onClick={closeModal} // Close the modal when clicking anywhere outside the content
+          className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-70 z-[1000]"
+          onClick={closeModal}
         >
           <div className="bg-white p-8 rounded-xl">
             <h2 className="text-center">{Hireme.title}</h2>
             <p className="text-center">{Hireme.modalDescription}</p>
-            {/* Display the PDF using iframe */}
             <iframe
-              src="/src/assets/images/Hireme/resume.pdf" // Replace with the actual path
+              src="/src/assets/images/Hireme/resume.pdf"
               title="Resume"
-              width="800" // Increase the width for better readability
-              height="600" // Increase the height for better readability
-              style={{ border: "none" }} // Remove iframe border for cleaner look
+              width="800"
+              height="600"
+              style={{ border: "none" }}
             />
             <button className="btn bg-dark_primary text-white" onClick={closeModal}>
               Close
