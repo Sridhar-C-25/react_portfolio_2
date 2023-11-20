@@ -12,6 +12,7 @@ import ExerciseLogo from "/src/assets/images/Services/exercise-logo.svg";
 import project1 from "/src/assets/images/projects/img1.png";
 import project2 from "/src/assets/images/projects/img2.png";
 import project3 from "/src/assets/images/projects/img3.png";
+/*this is where the import of me will be when i get a picture*/
 
 // import icons from react-icons
 import { GrMail } from "react-icons/gr";
@@ -112,6 +113,7 @@ export const content = {
   Projects: {
     title: "Projects",
     subtitle: "MY CREATION",
+    /*image: "name_of_file"*/
     project_content: [
       {
         title: "Gym Website",

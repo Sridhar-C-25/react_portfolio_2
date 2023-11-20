@@ -17,6 +17,16 @@ const Projects = () => {
     setSelectedProject(null);
   };
 
+  const projectsWithSpline = [...Projects.project_content];
+  // Replace the index below with the index of the project you want to replace with the Spline project
+  const splineProjectIndex = 1;
+
+  projectsWithSpline[splineProjectIndex] = {
+    title: "Spline Mini Keyboard", // Modify as needed
+    image: "path/to/your/image.jpg", // Add a small image for the project
+    splineScene: "https://prod.spline.design/VaWzQnJylRSKhxe8/scene.splinecode",
+  };
+
   return (
     <section className="bg-bg_light_primary" id="projects">
       <div className="md:container px-5 pt-14 min-h-screen flex flex-col justify-between">
@@ -30,12 +40,6 @@ const Projects = () => {
           <br />
         </div>
         <div className="flex items-center lg:flex-row flex-col-reverse gap-5">
-          <img
-            src={Projects.image}
-            alt="..."
-            data-aos="fade-right"
-            className="max-w-[45vw] min-w-[22rem]"
-          />
           <Swiper
             pagination={{
               clickable: true,
@@ -45,7 +49,7 @@ const Projects = () => {
             modules={[Pagination]}
             className="rounded-3xl pb-16 max-w-xs drop-shadow-primary self-start"
           >
-            {Projects.project_content.map((content, i) => (
+            {projectsWithSpline.map((content, i) => (
               <SwiperSlide
                 key={i}
                 className="bg-white rounded-3xl p-5 border-b-8 border-[#FAF9FD] h-fit"
@@ -93,8 +97,17 @@ const Projects = () => {
             }}
             onClick={(e) => e.stopPropagation()}
           >
-            <h2>{Projects.project_content[selectedProject].title}</h2>
+            <h2>{projectsWithSpline[selectedProject].title}</h2>
             <p>{/* Add content specific to the selected project */}</p>
+            {projectsWithSpline[selectedProject].splineScene && (
+              <iframe
+                title="Spline Mini Keyboard"
+                src={projectsWithSpline[selectedProject].splineScene}
+                width="800" // Adjust width as needed
+                height="600" // Adjust height as needed
+                style={{ border: "none" }}
+              />
+            )}
             <button
               onClick={closeModal}
               style={{
