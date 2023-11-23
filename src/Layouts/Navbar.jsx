@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
     <div className="w-full flex flex-col items-start">
       <div
-        className="sm:cursor-pointer fixed top-10 left-10 z-[999] rounded-lg bg-white/40 p-2"
+        className="sm:cursor-pointer fixed top-10 left-10 z-[999] rounded-lg bg-primaryLinear p-2"
         onClick={() => setShowMenu(!showMenu)}
       >
         <HiMenuAlt2 size={34} />

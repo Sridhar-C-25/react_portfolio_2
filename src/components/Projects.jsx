@@ -30,6 +30,7 @@ const Projects = () => {
     title: "Mini Keyboard", // Modify as needed
     image: "src/assets/images/projects/lmao.png",
     splineScene: "https://prod.spline.design/VaWzQnJylRSKhxe8/scene.splinecode",
+    description: "Your project description goes here.", // Add description
   };
 
   return (
@@ -58,9 +59,9 @@ const Projects = () => {
             {projectsWithSpline.map((content, i) => (
               <SwiperSlide
                 key={i}
-                className="bg-white rounded-3xl p-5 border-b-8 border-[#FAF9FD] h-fit"
+                className="bg-white rounded-3xl p-5 border-b-8 border-[#FAF9FD] h-fit relative"
               >
-                <img src={content.image} alt="..." />
+                <img src={content.image} alt="..." className="w-full h-[200px] object-cover mb-4" />
                 <div className="flex flex-col gap-1 mt-2">
                   <h5 className="font-bold font-Poppins">{content.title}</h5>
                   <button
@@ -73,8 +74,8 @@ const Projects = () => {
               </SwiperSlide>
             ))}
           </Swiper>
-          <div className="swiper-button-next absolute top-1/2 -translate-y-1/2"></div>
-          <div className="swiper-button-prev absolute top-1/2 -translate-y-1/2"></div>
+          <div className="swiper-button-next absolute top-1/2 -translate-y-1/2 text-[#3c3c3c] font-bold"></div>
+          <div className="swiper-button-prev absolute top-1/2 -translate-y-1/2 text-[#3c3c3c] font-bold"></div>
         </div>
       </div>
 
@@ -101,8 +102,9 @@ const Projects = () => {
               flexDirection: "column",
               alignItems: "center",
               position: "relative",
-              width: "80%", // Adjusted width
-              height: "80%", // Adjusted height
+              width: "80%",
+              height: "80%",
+              padding: "20px", // Added padding
             }}
             onClick={(e) => e.stopPropagation()}
           >
@@ -113,6 +115,9 @@ const Projects = () => {
                 <Spline scene={projectsWithSpline[selectedProject].splineScene} className="w-full h-full" />
               </div>
             )}
+            <div className="absolute bottom-0 right-0 p-4">
+              <p>{projectsWithSpline[selectedProject].description}</p>
+            </div>
             <button
               onClick={closeModal}
               style={{
