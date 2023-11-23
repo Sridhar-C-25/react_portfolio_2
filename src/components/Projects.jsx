@@ -23,14 +23,13 @@ const Projects = () => {
   };
 
   const projectsWithSpline = [...Projects.project_content];
-  // Replace the index below with the index of the project you want to replace with the Spline project
   const splineProjectIndex = 1;
 
   projectsWithSpline[splineProjectIndex] = {
-    title: "Mini Keyboard", // Modify as needed
+    title: "Mini Keyboard",
     image: "src/assets/images/projects/lmao.png",
     splineScene: "https://prod.spline.design/VaWzQnJylRSKhxe8/scene.splinecode",
-    description: "Your project description goes here.", // Add description
+    description: "This is a keyboard model made in the Spline 3D model workshop that is integrated fully into this react website.",
   };
 
   return (
@@ -54,7 +53,7 @@ const Projects = () => {
             data-aos="fade-left"
             spaceBetween={20}
             modules={[Navigation]}
-            className="rounded-3xl pb-16 max-w-[60vw] w-full drop-shadow-primary self-start relative"
+            className="rounded-3xl pb-16 max-w-[60vw] w-full drop-shadow-primary self-start relative rounded-full bg-primaryLinear"
           >
             {projectsWithSpline.map((content, i) => (
               <SwiperSlide
@@ -104,7 +103,7 @@ const Projects = () => {
               position: "relative",
               width: "80%",
               height: "80%",
-              padding: "20px", // Added padding
+              padding: "20px",
             }}
             onClick={(e) => e.stopPropagation()}
           >
