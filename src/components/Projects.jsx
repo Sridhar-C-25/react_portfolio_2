@@ -30,7 +30,7 @@ const Projects = () => {
 
   projectsWithSpline[splineProjectIndex] = {
     title: "Mini Keyboard", // Modify as needed
-    image: "/src/assets/images/projects/lmao.png", // Corrected image path
+    image: "src/assets/images/projects/lmao.png", // Corrected image path
     splineScene: "https://prod.spline.design/VaWzQnJylRSKhxe8/scene.splinecode",
   };
 
