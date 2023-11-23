@@ -15,7 +15,7 @@ const Hireme = () => {
   };
 
   return (
-    <section className="bg-white flex items-center justify-center h-screen">
+    <section className="bg-white flex items-center justify-center h-[70vh]">
       <div className="container mx-auto px-5 pt-14">
         <h2 className="title text-center" data-aos="fade-down">
           {Hireme.title}
