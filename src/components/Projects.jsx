@@ -4,17 +4,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper";
-import Spline from '@splinetool/react-spline';
+import Spline from '@splinetool/react-spline'; // Make sure to import the Spline component
 
 // Import Swiper styles
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-
-// Import Swiper core and required modules
-import SwiperCore, { Navigation } from 'swiper';
-
-// Install Swiper modules
-SwiperCore.use([Navigation]);
 
 const Projects = () => {
   const { Projects } = content;
@@ -78,9 +72,9 @@ const Projects = () => {
                 </div>
               </SwiperSlide>
             ))}
-            <div className="swiper-button-next absolute top-1/2 -translate-y-1/2 text-[#3c3c3c] font-bold"></div>
-            <div className="swiper-button-prev absolute top-1/2 -translate-y-1/2 text-[#3c3c3c] font-bold"></div>
           </Swiper>
+          <div className="swiper-button-next absolute top-1/2 -translate-y-1/2 text-[#3c3c3c] font-bold"></div>
+          <div className="swiper-button-prev absolute top-1/2 -translate-y-1/2 text-[#3c3c3c] font-bold"></div>
         </div>
       </div>
 
