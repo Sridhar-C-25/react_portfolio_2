@@ -72,8 +72,8 @@ const Projects = () => {
                 </div>
               </SwiperSlide>
             ))}
-            <div className="swiper-button-next absolute top-1/2 text-[#3c3c3c] font-bold bg-primaryLinear"></div>
-            <div className="swiper-button-prev absolute top-1/2 text-[#3c3c3c] font-bold bg-primaryLinear"></div>
+            <div className="swiper-button-next absolute top-1/2 -translate-y-1/2 text-[#3c3c3c] font-bold"></div>
+            <div className="swiper-button-prev absolute top-1/2 -translate-y-1/2 text-[#3c3c3c] font-bold"></div>
           </Swiper>
         </div>
       </div>
