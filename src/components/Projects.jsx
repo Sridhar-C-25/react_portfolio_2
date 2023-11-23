@@ -28,13 +28,13 @@ const Projects = () => {
 
   projectsWithSpline[splineProjectIndex] = {
     title: "Mini Keyboard", // Modify as needed
-    image: "image: src/assets/images/projects/lmao.png",
+    image: "src/assets/images/projects/lmao.png",
     splineScene: "https://prod.spline.design/VaWzQnJylRSKhxe8/scene.splinecode",
   };
 
   return (
     <section className="bg-bg_light_primary" id="projects">
-      <div className="md:container px-5 pt-14 h-full flex flex-col justify-center items-center">
+      <div className="md:container px-5 pt-14 h-full flex flex-col justify-center items-center relative">
         <div>
           <h2 className="title" data-aos="fade-down">
             {Projects.title}
@@ -53,7 +53,7 @@ const Projects = () => {
             data-aos="fade-left"
             spaceBetween={20}
             modules={[Navigation]}
-            className="rounded-3xl pb-16 max-w-[60vw] w-full drop-shadow-primary self-start"
+            className="rounded-3xl pb-16 max-w-[60vw] w-full drop-shadow-primary self-start relative"
           >
             {projectsWithSpline.map((content, i) => (
               <SwiperSlide
@@ -73,8 +73,8 @@ const Projects = () => {
               </SwiperSlide>
             ))}
           </Swiper>
-          <div className="swiper-button-next"></div>
-          <div className="swiper-button-prev"></div>
+          <div className="swiper-button-next absolute top-1/2 -translate-y-1/2"></div>
+          <div className="swiper-button-prev absolute top-1/2 -translate-y-1/2"></div>
         </div>
       </div>
 
