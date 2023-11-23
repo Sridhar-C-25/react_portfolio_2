@@ -44,7 +44,7 @@ const Projects = () => {
           </h4>
           <br />
         </div>
-        <div className="flex items-center lg:flex-row flex-col-reverse gap-5">
+        <div className="flex items-center lg:flex-row flex-col-reverse gap-5 bg-primaryLinear rounded-full">
           <Swiper
             navigation={{
               nextEl: '.swiper-button-next',
@@ -53,7 +53,7 @@ const Projects = () => {
             data-aos="fade-left"
             spaceBetween={20}
             modules={[Navigation]}
-            className="rounded-3xl pb-16 max-w-[60vw] w-full drop-shadow-primary self-start relative rounded-full bg-primaryLinear"
+            className="rounded-3xl pb-16 max-w-[60vw] w-full drop-shadow-primary self-start relative"
           >
             {projectsWithSpline.map((content, i) => (
               <SwiperSlide
