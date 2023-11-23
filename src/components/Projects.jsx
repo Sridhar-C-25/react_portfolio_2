@@ -23,8 +23,8 @@ const Projects = () => {
   const splineProjectIndex = 1;
 
   projectsWithSpline[splineProjectIndex] = {
-    title: "Spline Mini Keyboard", // Modify as needed
-    image: "path/to/your/image.jpg", // Add a small image for the project
+    title: "Mini Keyboard", // Modify as needed
+    image: "path/to/your/lmao.png", // Add a small image for the project
     splineScene: "https://prod.spline.design/VaWzQnJylRSKhxe8/scene.splinecode",
   };
 
