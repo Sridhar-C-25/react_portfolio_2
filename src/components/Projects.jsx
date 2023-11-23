@@ -1,18 +1,31 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { content } from "../Content";
 import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Navigation } from "swiper/core";
 import "swiper/css";
 import "swiper/css/navigation";
-import { Navigation } from "swiper";
+import "swiper/css/pagination";
 import Spline from '@splinetool/react-spline'; // Make sure to import the Spline component
 
 // Import Swiper styles
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
+import 'swiper/css';
+
+// Install Swiper modules
+SwiperCore.use([Navigation]);
 
 const Projects = () => {
   const { Projects } = content;
   const [selectedProject, setSelectedProject] = useState(null);
+
+  useEffect(() => {
+    // Initialize Swiper when the component mounts
+    const swiper = new Swiper(".swiper-container", {
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  }, []);
 
   const openModal = (projectIndex) => {
     setSelectedProject(projectIndex);
@@ -46,29 +59,30 @@ const Projects = () => {
         </div>
         <div className="flex items-center lg:flex-row flex-col-reverse gap-5">
           <Swiper
+            className="swiper-container"
             navigation={{
               nextEl: '.swiper-button-next',
               prevEl: '.swiper-button-prev',
             }}
             data-aos="fade-left"
             spaceBetween={20}
-            modules={[Navigation]}
-            className="rounded-3xl pb-16 max-w-[60vw] w-full drop-shadow-primary self-start relative"
           >
             {projectsWithSpline.map((content, i) => (
               <SwiperSlide
                 key={i}
-                className="bg-white rounded-3xl p-5 border-b-8 border-[#FAF9FD] h-fit relative"
+                className="relative"
               >
-                <img src={content.image} alt="..." className="w-full h-[200px] object-cover mb-4" />
-                <div className="flex flex-col gap-1 mt-2">
-                  <h5 className="font-bold font-Poppins">{content.title}</h5>
-                  <button
-                    className="font-bold text-gray self-end"
-                    onClick={() => openModal(i)}
-                  >
-                    READ MORE
-                  </button>
+                <div className="bg-white rounded-3xl p-5 border-b-8 border-[#FAF9FD] h-fit relative">
+                  <img src={content.image} alt="..." className="w-full h-[200px] object-cover mb-4" />
+                  <div className="flex flex-col gap-1 mt-2">
+                    <h5 className="font-bold font-Poppins">{content.title}</h5>
+                    <button
+                      className="font-bold text-gray self-end"
+                      onClick={() => openModal(i)}
+                    >
+                      READ MORE
+                    </button>
+                  </div>
                 </div>
               </SwiperSlide>
             ))}
