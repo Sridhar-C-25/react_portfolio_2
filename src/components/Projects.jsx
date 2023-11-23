@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper";
+import Spline from '@splinetool/react-spline'; // Make sure to import the Spline component
 
 const Projects = () => {
   const { Projects } = content;
@@ -29,7 +30,7 @@ const Projects = () => {
 
   return (
     <section className="bg-bg_light_primary" id="projects">
-      <div className="md:container px-5 pt-14 min-h-screen flex flex-col justify-between">
+      <div className="md:container px-5 pt-14 h-full flex flex-col justify-center items-center">
         <div>
           <h2 className="title" data-aos="fade-down">
             {Projects.title}
@@ -47,7 +48,7 @@ const Projects = () => {
             data-aos="fade-left"
             spaceBetween={20}
             modules={[Pagination]}
-            className="rounded-3xl pb-16 max-w-xs drop-shadow-primary self-start"
+            className="rounded-3xl pb-16 max-w-[60vw] w-full drop-shadow-primary self-start"
           >
             {projectsWithSpline.map((content, i) => (
               <SwiperSlide
@@ -89,19 +90,20 @@ const Projects = () => {
           <div
             style={{
               backgroundColor: "white",
-              //padding: "20px", // Increased padding
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
               position: "relative",
+              width: "80%", // Adjusted width
+              height: "80%", // Adjusted height
             }}
             onClick={(e) => e.stopPropagation()}
           >
             <h2>{projectsWithSpline[selectedProject].title}</h2>
             <p>{/* Add content specific to the selected project */}</p>
             {projectsWithSpline[selectedProject].splineScene && (
-              <div>
-                <Spline scene="https://prod.spline.design/VaWzQnJylRSKhxe8/scene.splinecode" className="absolute top-0 left-0 w-full h-full" />
+              <div style={{ width: "100%", height: "100%" }}>
+                <Spline scene={projectsWithSpline[selectedProject].splineScene} className="w-full h-full" />
               </div>
             )}
             <button
