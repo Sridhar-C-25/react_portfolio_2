@@ -100,13 +100,9 @@ const Projects = () => {
             <h2>{projectsWithSpline[selectedProject].title}</h2>
             <p>{/* Add content specific to the selected project */}</p>
             {projectsWithSpline[selectedProject].splineScene && (
-              <iframe
-                title="Spline Mini Keyboard"
-                src={projectsWithSpline[selectedProject].splineScene}
-                width="800" // Adjust width as needed
-                height="600" // Adjust height as needed
-                style={{ border: "none" }}
-              />
+              <div>
+                <Spline scene="https://prod.spline.design/VaWzQnJylRSKhxe8/scene.splinecode" className="absolute top-0 left-0 w-full h-full" />
+              </div>
             )}
             <button
               onClick={closeModal}
