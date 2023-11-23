@@ -12,7 +12,12 @@ const Contact = () => {
         <h4 className="subtitle" data-aos="fade-down">
           {Contact.subtitle}
         </h4>
-        <div className="flex gap-5 justify-center" data-aos="fade-up" data-aos-delay="300">
+        <div
+          className="flex gap-5 justify-center"
+          data-aos="fade-up"
+          data-aos-anchor="#contact" // Set the anchor ID to the section ID
+          data-aos-offset="200" // Adjust the offset value based on your preference
+        >
           <ul className="list-none flex gap-4">
             <li className="bg-gray-800 p-4 rounded-md shadow-md">
               {Contact.social_media[0].text}
