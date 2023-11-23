@@ -2,9 +2,13 @@ import { useState } from "react";
 import { content } from "../Content";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/pagination";
-import { Pagination } from "swiper";
+import "swiper/css/navigation";
+import { Navigation } from "swiper";
 import Spline from '@splinetool/react-spline'; // Make sure to import the Spline component
+
+// Import Swiper styles
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
 const Projects = () => {
   const { Projects } = content;
@@ -42,12 +46,13 @@ const Projects = () => {
         </div>
         <div className="flex items-center lg:flex-row flex-col-reverse gap-5">
           <Swiper
-            pagination={{
-              clickable: true,
+            navigation={{
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
             }}
             data-aos="fade-left"
             spaceBetween={20}
-            modules={[Pagination]}
+            modules={[Navigation]}
             className="rounded-3xl pb-16 max-w-[60vw] w-full drop-shadow-primary self-start"
           >
             {projectsWithSpline.map((content, i) => (
@@ -68,6 +73,8 @@ const Projects = () => {
               </SwiperSlide>
             ))}
           </Swiper>
+          <div className="swiper-button-next"></div>
+          <div className="swiper-button-prev"></div>
         </div>
       </div>
 
