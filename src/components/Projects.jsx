@@ -44,7 +44,7 @@ const Projects = () => {
           </h4>
           <br />
         </div>
-        <div className="flex items-center lg:flex-row flex-col-reverse gap-5 bg-primaryLinear rounded-full">
+        <div className="flex items-center lg:flex-row flex-col-reverse gap-5 relative">
           <Swiper
             navigation={{
               nextEl: '.swiper-button-next',
@@ -72,9 +72,9 @@ const Projects = () => {
                 </div>
               </SwiperSlide>
             ))}
+            <div className="swiper-button-next absolute top-1/2 -translate-y-1/2 text-[#3c3c3c] font-bold bg-primaryLinear rounded-full"></div>
+            <div className="swiper-button-prev absolute top-1/2 -translate-y-1/2 text-[#3c3c3c] font-bold bg-primaryLinear rounded-full"></div>
           </Swiper>
-          <div className="swiper-button-next absolute top-1/2 -translate-y-1/2 text-[#3c3c3c] font-bold"></div>
-          <div className="swiper-button-prev absolute top-1/2 -translate-y-1/2 text-[#3c3c3c] font-bold"></div>
         </div>
       </div>
 
