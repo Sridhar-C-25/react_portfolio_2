@@ -27,7 +27,7 @@ const Hireme = () => {
         <div className="flex items-center justify-center">
           <div
             data-aos="fade-down"
-            className={`border-2 border-dark_primary p-6 shadow-sm rounded-xl md:w-[40rem] sm:w-full ${
+            className={`border-2 border-dark_primary p-6 shadow-sm rounded-xl md:w-[30rem] sm:w-full ${
               modalIsOpen ? "z-[1001] hidden" : ""
             }`}
           >
