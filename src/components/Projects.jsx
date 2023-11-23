@@ -1,14 +1,16 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { content } from "../Content";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/navigation";
-import { Navigation } from "swiper";
-import Spline from '@splinetool/react-spline'; // Make sure to import the Spline component
+import "swiper/css/pagination";
+import { Pagination, Navigation } from "swiper";
+import Spline from '@splinetool/react-spline';
 
 // Import Swiper styles
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
+import "swiper/css";
+import "swiper/css/navigation";
+
+Swiper.use([Pagination, Navigation]);
 
 const Projects = () => {
   const { Projects } = content;
@@ -28,7 +30,7 @@ const Projects = () => {
 
   projectsWithSpline[splineProjectIndex] = {
     title: "Mini Keyboard", // Modify as needed
-    image: "path/to/your/lmao.png", // Add a small image for the project
+    image: "src/assets/images/projects/lmao.png", // Corrected image path
     splineScene: "https://prod.spline.design/VaWzQnJylRSKhxe8/scene.splinecode",
   };
 
@@ -46,13 +48,13 @@ const Projects = () => {
         </div>
         <div className="flex items-center lg:flex-row flex-col-reverse gap-5">
           <Swiper
-            navigation={{
-              nextEl: '.swiper-button-next',
-              prevEl: '.swiper-button-prev',
+            pagination={{
+              clickable: true,
             }}
+            navigation={true} // Enable navigation
             data-aos="fade-left"
             spaceBetween={20}
-            modules={[Navigation]}
+            modules={[Pagination, Navigation]}
             className="rounded-3xl pb-16 max-w-[60vw] w-full drop-shadow-primary self-start"
           >
             {projectsWithSpline.map((content, i) => (
@@ -73,8 +75,6 @@ const Projects = () => {
               </SwiperSlide>
             ))}
           </Swiper>
-          <div className="swiper-button-next"></div>
-          <div className="swiper-button-prev"></div>
         </div>
       </div>
 
