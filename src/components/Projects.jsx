@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { content } from "../Content";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -26,10 +26,10 @@ const Projects = () => {
   const splineProjectIndex = 1;
 
   projectsWithSpline[splineProjectIndex] = {
-    title: "Mini Keyboard",
-    image: "src/assets/images/projects/lmao.png",
-    splineScene: "https://prod.spline.design/VaWzQnJylRSKhxe8/scene.splinecode",
-    description: "This is a keyboard model made in the Spline 3D model workshop that is integrated fully into this react website.",
+    title: "Figma Project",
+    image: "src/assets/images/projects/figma_project_image.jpg",
+    figmaEmbed: '<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FcnMv34pGj142TW6cyj8TZe%2FWireframe%3Ftype%3Ddesign%26node-id%3D0%253A1%26mode%3Ddesign%26t%3DtcaCJIbgd0FgHqV6-1" allowfullscreen></iframe>',
+    description: "Description for the Figma project.",
   };
 
   return (
@@ -70,6 +70,9 @@ const Projects = () => {
                     READ MORE
                   </button>
                 </div>
+                {i === splineProjectIndex && (
+                  <div dangerouslySetInnerHTML={{ __html: content.figmaEmbed }} />
+                )}
               </SwiperSlide>
             ))}
           </Swiper>
@@ -113,6 +116,9 @@ const Projects = () => {
               <div style={{ width: "100%", height: "100%" }}>
                 <Spline scene={projectsWithSpline[selectedProject].splineScene} className="w-full h-full" />
               </div>
+            )}
+            {selectedProject === splineProjectIndex && (
+              <div dangerouslySetInnerHTML={{ __html: projectsWithSpline[selectedProject].figmaEmbed }} />
             )}
             <div className="absolute bottom-0 right-0 p-4">
               <p>{projectsWithSpline[selectedProject].description}</p>
