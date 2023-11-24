@@ -23,18 +23,6 @@ const Projects = () => {
   };
 
   const projectsWithSpline = [...Projects.project_content];
-  const lastSlideIndex = projectsWithSpline.length;
-
-  // Define the Figma project details
-  const figmaProject = {
-    title: "Figma Project",
-    image: "src/assets/images/projects/figma_project_image.jpg",
-    figmaEmbed: '<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FcnMv34pGj142TW6cyj8TZe%2FWireframe%3Ftype%3Ddesign%26node-id%3D0%253A1%26mode%3Ddesign%26t%3DtcaCJIbgd0FgHqV6-1" allowfullscreen></iframe>',
-    description: "Description for the Figma project.",
-  };
-
-  // Integrate the Figma project into the last slide
-  projectsWithSpline[lastSlideIndex - 1] = figmaProject;
 
   return (
     <section className="bg-bg_light_primary" id="projects">
@@ -113,13 +101,10 @@ const Projects = () => {
           >
             <h2>{projectsWithSpline[selectedProject].title}</h2>
             <p>{/* Add content specific to the selected project */}</p>
-            {selectedProject !== lastSlideIndex - 1 && (
+            {projectsWithSpline[selectedProject].splineScene && (
               <div style={{ width: "100%", height: "100%" }}>
                 <Spline scene={projectsWithSpline[selectedProject].splineScene} className="w-full h-full" />
               </div>
-            )}
-            {selectedProject === lastSlideIndex - 1 && (
-              <div dangerouslySetInnerHTML={{ __html: projectsWithSpline[selectedProject].figmaEmbed }} />
             )}
             <div className="absolute bottom-0 right-0 p-4">
               <p>{projectsWithSpline[selectedProject].description}</p>
