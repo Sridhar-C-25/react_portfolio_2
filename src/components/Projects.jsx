@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import { Navigation } from 'swiper';
-import Spline from '@splinetool/react-spline';
+import { useState } from "react";
+import { content } from "../Content";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import { Navigation } from "swiper";
+import Spline from '@splinetool/react-spline'; // Make sure to import the Spline component
 
 // Import Swiper styles
 import 'swiper/css/pagination';
@@ -25,71 +26,11 @@ const Projects = () => {
   const splineProjectIndex = 1;
 
   projectsWithSpline[splineProjectIndex] = {
-    title: 'Mini Keyboard',
-    image: 'src/assets/images/projects/lmao.png',
-    splineScene: 'https://prod.spline.design/VaWzQnJylRSKhxe8/scene.splinecode',
-    description:
-      'This is a keyboard model made in the Spline 3D model workshop that is integrated fully into this react website.',
+    title: "Mini Keyboard",
+    image: "src/assets/images/projects/lmao.png",
+    splineScene: "https://prod.spline.design/VaWzQnJylRSKhxe8/scene.splinecode",
+    description: "This is a keyboard model made in the Spline 3D model workshop that is integrated fully into this react website.",
   };
-
-  // Render the modal if a project is selected
-  if (selectedProject !== null) {
-    return (
-      <div
-        style={{
-          position: 'fixed',
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: '100%',
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          backgroundColor: 'rgba(0, 0, 0, 0.7)',
-          zIndex: 1000,
-        }}
-        onClick={closeModal}
-      >
-        <div
-          style={{
-            backgroundColor: 'white',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            position: 'relative',
-            width: '80%',
-            height: '80%',
-            padding: '20px',
-          }}
-          onClick={(e) => e.stopPropagation()}
-        >
-          <h2>{projectsWithSpline[selectedProject].title}</h2>
-          <p>{/* Add content specific to the selected project */}</p>
-          {projectsWithSpline[selectedProject].splineScene && (
-            <div style={{ width: '100%', height: '100%' }}>
-              <Spline scene={projectsWithSpline[selectedProject].splineScene} className="w-full h-full" />
-            </div>
-          )}
-          <div className="absolute bottom-0 right-0 p-4">
-            <p>{projectsWithSpline[selectedProject].description}</p>
-          </div>
-          <button
-            onClick={closeModal}
-            style={{
-              position: 'absolute',
-              top: '20px',
-              right: '20px',
-              backgroundColor: 'transparent',
-              border: 'none',
-              cursor: 'pointer',
-            }}
-          >
-            <span style={{ fontSize: '24px', fontWeight: 'bold' }}>X</span>
-          </button>
-        </div>
-      </div>
-    );
-  }
 
   return (
     <section className="bg-bg_light_primary" id="projects">
@@ -136,6 +77,62 @@ const Projects = () => {
           <div className="swiper-button-prev absolute top-1/2 -translate-y-1/2 text-[#3c3c3c] font-bold"></div>
         </div>
       </div>
+
+      {selectedProject !== null && (
+        <div
+          style={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            backgroundColor: "rgba(0, 0, 0, 0.7)",
+            zIndex: 1000,
+          }}
+          onClick={closeModal}
+        >
+          <div
+            style={{
+              backgroundColor: "white",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              position: "relative",
+              width: "80%",
+              height: "80%",
+              padding: "20px",
+            }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h2>{projectsWithSpline[selectedProject].title}</h2>
+            <p>{/* Add content specific to the selected project */}</p>
+            {projectsWithSpline[selectedProject].splineScene && (
+              <div style={{ width: "100%", height: "100%" }}>
+                <Spline scene={projectsWithSpline[selectedProject].splineScene} className="w-full h-full" />
+              </div>
+            )}
+            <div className="absolute bottom-0 right-0 p-4">
+              <p>{projectsWithSpline[selectedProject].description}</p>
+            </div>
+            <button
+              onClick={closeModal}
+              style={{
+                position: "absolute",
+                top: "20px",
+                right: "20px",
+                backgroundColor: "transparent",
+                border: "none",
+                cursor: "pointer",
+              }}
+            >
+              <span style={{ fontSize: "24px", fontWeight: "bold" }}>X</span>
+            </button>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
