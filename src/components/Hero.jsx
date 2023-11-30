@@ -1,12 +1,24 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { content } from "../Content";
 import Spline from '@splinetool/react-spline';
 
 const Hero = () => {
   const { hero } = content;
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
 
   useEffect(() => {
-    // Add any additional logic or side effects if needed
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth < 768);
+    };
+
+    // Set initial screen size
+    handleResize();
+
+    // Listen for window resize events
+    window.addEventListener("resize", handleResize);
+
+    // Remove event listener on component unmount
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
@@ -23,7 +35,7 @@ const Hero = () => {
           <h2 className="rotate-90 absolute top-[30%] right-[15%]">{hero.title}</h2>
         </div>
 
-        <div className="pb-16 px-6 pt-5 z-10" data-aos="fade-down">
+        <div className={`pb-16 px-6 pt-5 z-10 ${isSmallScreen ? 'text-center' : ''}`} data-aos="fade-down">
           <br />
           <div className="flex flex-col gap-10 mt-10">
             {hero.hero_content.map((content, i) => (
@@ -33,7 +45,7 @@ const Hero = () => {
                 data-aos-delay={i * 300}
                 className={`flex items-center w-80 gap-5
                   ${i === 1 && " flex-row-reverse text-right"}
-                  ${(window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth) < 768 && i === 1 && "flex-col-reverse"}
+                  ${isSmallScreen && i === 1 && "flex-col-reverse"}
                 `}
               >
                 <h3>{content.count}</h3>
