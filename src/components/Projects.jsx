@@ -27,10 +27,10 @@ const Projects = () => {
       <div className="md:container px-5 pt-14 h-full flex flex-col justify-center items-center relative">
         <div>
           <h2 className="title" data-aos="fade-down">
-            Project Title
+            Handmade
           </h2>
           <h4 className="subtitle" data-aos="fade-down">
-            Project Subtitle
+            Projects
           </h4>
           <br />
         </div>

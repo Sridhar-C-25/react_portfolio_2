@@ -5,6 +5,10 @@ import Spline from '@splinetool/react-spline';
 const Hero = () => {
   const { hero } = content;
 
+  useEffect(() => {
+    // Add any additional logic or side effects if needed
+  }, []);
+
   return (
     <section id="home" className="relative overflow-hidden">
       <div className="min-h-screen relative flex md:flex-row flex-col-reverse md:items-end justify-center items-center">
@@ -28,7 +32,9 @@ const Hero = () => {
                 data-aos="fade-down"
                 data-aos-delay={i * 300}
                 className={`flex items-center w-80 gap-5
-                ${i === 1 && " flex-row-reverse text-right"}  `}
+                  ${i === 1 && " flex-row-reverse text-right"}
+                  ${(window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth) < 768 && i === 1 && "flex-col-reverse"}
+                `}
               >
                 <h3>{content.count}</h3>
                 <p>{content.text}</p>
