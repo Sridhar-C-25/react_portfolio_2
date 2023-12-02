@@ -7,8 +7,19 @@ const Hero = () => {
 
   return (
     <section id="home" className="relative overflow-hidden">
-      {/* Your existing code for Hero section */}
-      {/* ... */}
+      <style>
+        {`
+          @media only screen and (max-width: 767px) {
+            .flex-col-reverse-mobile {
+              flex-direction: column-reverse !important;
+            }
+
+            .text-center-mobile {
+              text-align: center !important;
+            }
+          }
+        `}
+      </style>
 
       <div className="min-h-screen relative flex md:flex-row flex-col-reverse md:items-end justify-center items-center">
         <Spline scene="https://prod.spline.design/HKlfAoUoTv3w35yQ/scene.splinecode" className="absolute top-0 left-0 w-full h-full" />
@@ -34,6 +45,8 @@ const Hero = () => {
                   ${i === 1 && " flex-row-reverse text-right flex-col-reverse-mobile"}
                 `}
               >
+                <h3>{content.count}</h3>
+                <p>{content.text}</p>
               </div>
             ))}
           </div>
@@ -43,9 +56,12 @@ const Hero = () => {
       {/* New section for the moved text */}
       <section className="py-16 text-center">
         <div className="container mx-auto">
-          <h3 className="text-3xl font-bold mb-4">{content.count}</h3>
-          {/* Add your moved text content here */}
-          <p>{content.text}</p>
+          {hero.hero_content.map((content, i) => (
+            <div key={i}>
+              <h3>{content.count}</h3>
+              <p>{content.text}</p>
+            </div>
+          ))}
         </div>
       </section>
     </section>
