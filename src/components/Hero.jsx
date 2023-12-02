@@ -37,17 +37,21 @@ const Hero = () => {
         <div className="pb-16 px-6 pt-5 z-10 text-center-mobile" data-aos="fade-down">
           <br />
           <div className="flex flex-col gap-10 mt-10">
-            {hero.hero_content.slice(1).map((content, i) => (
+            {hero.hero_content.map((content, i) => (
               <div
                 key={i}
                 data-aos="fade-down"
                 data-aos-delay={i * 300}
-                className={`flex items-start w-80 gap-5
-                  ${i === 0 && "flex-row-reverse text-right flex-col-reverse-mobile"}
+                className={`flex items-center w-80 gap-5
+                  ${i === 1 && " flex-row-reverse text-right flex-col-reverse-mobile"}
                 `}
               >
-                <h3 className="align-middle">{content.count}</h3>
-                <p>{content.text}</p>
+                {i !== 0 && (
+                  <>
+                    <h3 className="align-middle">{content.count}</h3>
+                    <p>{content.text}</p>
+                  </>
+                )}
               </div>
             ))}
           </div>
@@ -57,10 +61,16 @@ const Hero = () => {
       {/* New section for the moved text */}
       <section className="py-16 text-center">
         <div className="container mx-auto">
-          <div>
-            <h3>{hero.hero_content[0].count}</h3>
-            <p>{hero.hero_content[0].text}</p>
-          </div>
+          {hero.hero_content.map((content, i) => (
+            <div key={i}>
+              {i === 0 && (
+                <>
+                  <h3>{content.count}</h3>
+                  <p>{content.text}</p>
+                </>
+              )}
+            </div>
+          ))}
         </div>
       </section>
     </section>
