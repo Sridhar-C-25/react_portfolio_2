@@ -34,8 +34,6 @@ const Hero = () => {
                   ${i === 1 && " flex-row-reverse text-right flex-col-reverse-mobile"}
                 `}
               >
-                <h3>{content.count}</h3>
-                <p>{content.text}</p>
               </div>
             ))}
           </div>
@@ -45,9 +43,9 @@ const Hero = () => {
       {/* New section for the moved text */}
       <section className="py-16 text-center">
         <div className="container mx-auto">
-          <h3 className="text-3xl font-bold mb-4">New Section Below Hero</h3>
+          <h3 className="text-3xl font-bold mb-4">{content.count}</h3>
           {/* Add your moved text content here */}
-          <p>Your moved text goes here.</p>
+          <p>{content.text}</p>
         </div>
       </section>
     </section>

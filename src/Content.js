@@ -57,7 +57,7 @@ export const content = {
   },
   skills: {
     title: "Skills",
-    subtitle: "MY TOP SKILLS",
+    subtitle: "AND ABILITIES",
     skills_content: [
       {
         name: "Figma",
