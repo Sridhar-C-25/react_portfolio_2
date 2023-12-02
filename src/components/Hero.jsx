@@ -7,24 +7,13 @@ const Hero = () => {
 
   return (
     <section id="home" className="relative overflow-hidden">
-      <style>
-        {`
-          @media only screen and (max-width: 767px) {
-            .flex-col-reverse-mobile {
-              flex-direction: column-reverse !important;
-            }
-
-            .text-center-mobile {
-              text-align: center !important;
-            }
-          }
-        `}
-      </style>
+      {/* Your existing code for Hero section */}
+      {/* ... */}
 
       <div className="min-h-screen relative flex md:flex-row flex-col-reverse md:items-end justify-center items-center">
         <Spline scene="https://prod.spline.design/HKlfAoUoTv3w35yQ/scene.splinecode" className="absolute top-0 left-0 w-full h-full" />
 
-        {/* Your text content */}
+        {/* Your updated text content */}
         <div
           data-aos="slide-left"
           data-aos-delay="1200"
@@ -52,6 +41,15 @@ const Hero = () => {
           </div>
         </div>
       </div>
+
+      {/* New section for the moved text */}
+      <section className="py-16 text-center">
+        <div className="container mx-auto">
+          <h3 className="text-3xl font-bold mb-4">New Section Below Hero</h3>
+          {/* Add your moved text content here */}
+          <p>Your moved text goes here.</p>
+        </div>
+      </section>
     </section>
   );
 };

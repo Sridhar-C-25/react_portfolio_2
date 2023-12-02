@@ -46,7 +46,7 @@ export const content = {
     title: "Web Developer",
     hero_content: [
       {
-        count: "2+",
+        count: "3+",
         text: "Years of Experience in Software Development",
       },
       {
@@ -86,7 +86,7 @@ export const content = {
       },
       {
         name: "Python",
-        para: "Over 1 years of experience in Python",
+        para: "Over 2 years of experience in Python",
         logo: python,
       },
     ],
