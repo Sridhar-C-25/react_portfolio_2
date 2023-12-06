@@ -1,4 +1,3 @@
-// Hero.jsx
 import { useEffect } from "react";
 import { content } from "../Content";
 import Spline from '@splinetool/react-spline';
@@ -24,8 +23,6 @@ const Hero = () => {
 
       <div className="min-h-screen relative flex md:flex-row flex-col-reverse md:items-end justify-center items-center">
         <Spline scene="https://prod.spline.design/HKlfAoUoTv3w35yQ/scene.splinecode" className="absolute top-0 left-0 w-full h-full" />
-
-        {/* Your updated text content */}
         <div
           data-aos="slide-left"
           data-aos-delay="1200"
@@ -51,8 +48,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-
-      {/* New section for the moved text */}
       <section className="py-16 text-center">
         <div className="container mx-auto">
           {hero.hero_content.map((content, i) => (
