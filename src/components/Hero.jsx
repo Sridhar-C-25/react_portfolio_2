@@ -1,4 +1,6 @@
-import { useEffect } from "react";
+// Hero.jsx
+
+import React from "react";
 import { content } from "../Content";
 import Spline from '@splinetool/react-spline';
 
@@ -43,6 +45,7 @@ const Hero = () => {
                   ${i === 1 && " flex-row-reverse text-right flex-col-reverse-mobile"}
                 `}
               >
+                {/* Add content here if needed */}
               </div>
             ))}
           </div>
@@ -53,6 +56,12 @@ const Hero = () => {
           {hero.hero_content.map((content, i) => (
             <div key={i}>
               {i === 0 && (
+                <>
+                  <h3>{content.count}</h3>
+                  <p>{content.text}</p>
+                </>
+              )}
+              {i === 1 && (
                 <>
                   <h3>{content.count}</h3>
                   <p>{content.text}</p>
