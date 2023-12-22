@@ -1,13 +1,13 @@
-import figma from ".src/assets/images/Skills/figma.png";
-import javascript from ".src/assets/images/Skills/javascript.png";
-import html from ".src/assets/images/Skills/html.png";
-import reactjs from ".src/assets/images/Skills/react.png";
-import nodejs from ".src/assets/images/Skills/node.png";
-import python from ".src/assets/images/Skills/python.png";
+import figma from "./src/assets/images/Skills/figma.png";
+import javascript from "./src/assets/images/Skills/javascript.png";
+import html from "./src/assets/images/Skills/html.png";
+import reactjs from "./src/assets/images/Skills/react.png";
+import nodejs from "./src/assets/images/Skills/node.png";
+import python from "./src/assets/images/Skills/python.png";
 
-import WoodworkingLogo from ".src/assets/images/Services/woodworking-logo.svg";
-import AIEvolutionLogo from ".src/assets/images/Services/ai-evolution-logo.svg";
-import ExerciseLogo from ".src/assets/images/Services/exercise-logo.svg";
+import WoodworkingLogo from "./src/assets/images/Services/woodworking-logo.svg";
+import AIEvolutionLogo from "./src/assets/images/Services/ai-evolution-logo.svg";
+import ExerciseLogo from "./src/assets/images/Services/exercise-logo.svg";
 
 import { GrMail } from "react-icons/gr";
 import { MdArrowForward, MdCall } from "react-icons/md";
