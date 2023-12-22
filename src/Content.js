@@ -9,10 +9,6 @@ import WoodworkingLogo from "../assets/images/Services/woodworking-logo.svg";
 import AIEvolutionLogo from "../assets/images/Services/ai-evolution-logo.svg";
 import ExerciseLogo from "../assets/images/Services/exercise-logo.svg";
 
-// Add other imports as needed
-
-
-// import icons from react-icons
 import { GrMail } from "react-icons/gr";
 import { MdArrowForward, MdCall } from "react-icons/md";
 import { BsInstagram, BsLinkedin } from "react-icons/bs";
