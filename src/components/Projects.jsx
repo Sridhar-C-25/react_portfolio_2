@@ -157,7 +157,7 @@ import 'swiper/css/navigation';
 import { Navigation } from 'swiper';
 
 // Use a relative import for Spline
-import Spline from '../path/to/your/src/@splinetool/react-spline';
+import Spline from './path/to/your/src/@splinetool/react-spline';
 
 // Import Swiper styles
 import 'swiper/css/pagination';
