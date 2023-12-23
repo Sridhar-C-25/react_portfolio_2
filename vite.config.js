@@ -7,10 +7,11 @@ export default defineConfig({
   plugins: [react()],
   build: {
     rollupOptions: {
-      external: [], // Remove any entries from this array
+      external: ['@splinetool/react-spline'],
     },
   },
 });
+
 
 
 
