@@ -49,19 +49,17 @@ const Hero = () => {
         </div>
       </div>
       <section className="py-16 text-center">
-        <div className=" bg-primaryLinear bottom-0 bg-primaryLinear">
+        <div className="bottom-0">
           {hero.hero_content.map((content, i) => (
             <div key={i}>
               {i === 0 && (
                 <>
-                  <h3>{content.count}</h3>
-                  <p>{content.text}</p>
+                  <h3>{content.count} {content.text}</h3>
                 </>
               )}
               {i === 1 && (
                 <>
-                  <h3>{content.count}</h3>
-                  <p>{content.text}</p>
+                  <h3>{content.count} {content.text}</h3>
                 </>
               )}
             </div>
