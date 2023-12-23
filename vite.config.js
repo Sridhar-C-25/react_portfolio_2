@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      '@splinetool/react-spline': '/path/to/your/src/@splinetool/react-spline',
+      '@splinetool/react-spline': '/actual/relative/path/to/your/src/@splinetool/react-spline',
     },
   },
   optimizeDeps: {
