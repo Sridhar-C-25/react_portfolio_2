@@ -1,13 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, lazy, Suspense } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation } from 'swiper';
-import Spline from '@splinetool/react-spline';  // Static import
 
 // Import Swiper styles
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+
+// Use React.lazy for dynamic import
+const Spline = lazy(() => import('@splinetool/react-spline'));
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -107,10 +109,12 @@ const Projects = () => {
               into this react website.
             </p>
             <div style={{ width: '100%', height: '100%' }}>
-              <Spline
-                scene="https://prod.spline.design/VaWzQnJylRSKhxe8/scene.splinecode"
-                className="w-full h-full"
-              />
+              <Suspense fallback={<div>Loading...</div>}>
+                <Spline
+                  scene="https://prod.spline.design/VaWzQnJylRSKhxe8/scene.splinecode"
+                  className="w-full h-full"
+                />
+              </Suspense>
             </div>
             <div className="absolute bottom-0 right-0 p-4">
               <p>
