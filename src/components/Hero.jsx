@@ -8,7 +8,6 @@ const Hero = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Adjust the threshold as needed
       const threshold = window.innerHeight / 2;
       const isScrolled = window.scrollY > threshold;
       setShowContent(isScrolled);
@@ -64,7 +63,7 @@ const Hero = () => {
         </div>
       </div>
       <section className="py-16 text-center relative">
-        <div className={`bottom-0 left-0 p-4 bg-white ${showContent ? 'visible' : 'hidden'} absolute opacity-0 transition-opacity duration-500 ease-in-out delay-500`}>
+        <div className={`bottom-0 left-0 p-4 bg-white ${showContent ? 'opacity-100' : 'opacity-0 transition-opacity duration-500 ease-in-out delay-500' } absolute`}>
           {hero.hero_content.map((content, i) => (
             <div key={i}>
               {i === 0 && (
