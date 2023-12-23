@@ -81,11 +81,6 @@ export default Hero;
 
 import React, { useState, useEffect, useRef } from "react";
 import { content } from "../Content";
-import dynamic from "next/dynamic";
-
-const Spline = dynamic(() => import("@splinetool/react-spline"), {
-  ssr: false,
-});
 
 const Hero = () => {
   const { hero } = content;
@@ -105,28 +100,19 @@ const Hero = () => {
     };
   }, []);
 
+  useEffect(() => {
+    import("@splinetool/react-spline").then((module) => {
+      const Spline = module.default;
+      const scene = "https://prod.spline.design/HKlfAoUoTv3w35yQ/scene.splinecode";
+      const splineInstance = new Spline({ scene });
+      splineRef.current.appendChild(splineInstance.domElement);
+    });
+  }, []);
+
   return (
     <section id="home" className="relative overflow-hidden">
-      <style>
-        {`
-          @media only screen and (max-width: 767px) {
-            .flex-col-reverse-mobile {
-              flex-direction: column-reverse !important;
-            }
-
-            .text-center-mobile {
-              text-align: center !important;
-            }
-          }
-        `}
-      </style>
-
       <div className="min-h-screen relative flex md:flex-row flex-col-reverse md:items-end justify-center items-center">
-        <Spline
-          scene="https://prod.spline.design/HKlfAoUoTv3w35yQ/scene.splinecode"
-          className="absolute top-0 left-0 w-full h-full"
-          ref={splineRef}
-        />
+        <div ref={splineRef} className="absolute top-0 left-0 w-full h-full" />
         <div
           data-aos="slide-left"
           data-aos-delay="1200"
