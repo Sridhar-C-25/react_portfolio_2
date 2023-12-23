@@ -52,6 +52,12 @@
   body {
     @apply transition-colors duration-500 ease-in-out;
   }
+
+  /* Dark mode styling */
+  .dark-mode {
+    background-color: #1a202c; /* Set your dark mode background color */
+    color: #ffffff; /* Set your dark mode text color */
+  }
 }
 
 @layer utilities {
