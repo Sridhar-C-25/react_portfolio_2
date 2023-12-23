@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation } from 'swiper';
+import Spline from '@splinetool/react-spline';  // Static import
 
 // Import Swiper styles
 import 'swiper/css/pagination';
@@ -10,17 +11,6 @@ import 'swiper/css/navigation';
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
-  const [ReactSpline, setReactSpline] = useState(null);  // Dynamic import state
-
-  useEffect(() => {
-    // Dynamic import of Spline when the component mounts
-    const importSpline = async () => {
-      const module = await import('@splinetool/react-spline');
-      setReactSpline(module.default);
-    };
-
-    importSpline();
-  }, []);
 
   const openModal = (projectIndex) => {
     setSelectedProject(projectIndex);
@@ -117,12 +107,10 @@ const Projects = () => {
               into this react website.
             </p>
             <div style={{ width: '100%', height: '100%' }}>
-              {ReactSpline && (
-                <ReactSpline
-                  scene="https://prod.spline.design/VaWzQnJylRSKhxe8/scene.splinecode"
-                  className="w-full h-full"
-                />
-              )}
+              <Spline
+                scene="https://prod.spline.design/VaWzQnJylRSKhxe8/scene.splinecode"
+                className="w-full h-full"
+              />
             </div>
             <div className="absolute bottom-0 right-0 p-4">
               <p>
