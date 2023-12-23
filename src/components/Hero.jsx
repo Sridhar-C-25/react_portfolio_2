@@ -54,12 +54,12 @@ const Hero = () => {
             <div key={i}>
               {i === 0 && (
                 <>
-                  <h3>{content.count} {content.text}</h3>
+                  <p><h3>{content.count}</h3> {content.text}</p>
                 </>
               )}
               {i === 1 && (
                 <>
-                  <h3>{content.count} {content.text}</h3>
+                  <p><h3>{content.count}</h3> {content.text}</p>
                 </>
               )}
             </div>
