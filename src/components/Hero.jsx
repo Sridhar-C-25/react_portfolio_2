@@ -78,7 +78,7 @@ export default Hero;
 */
 
 
-
+import { Application } from '@splinetool/runtime';
 import React, { useState, useEffect, useRef } from "react";
 import { content } from "../Content";
 
@@ -109,9 +109,6 @@ const Hero = () => {
     });
   }, []);
 
-  /*const canvas = document.getElementById('canvas3d');
-  const app = new Application(canvas);
-  app.load('https://prod.spline.design/HKlfAoUoTv3w35yQ/scene.splinecode');*/
 
 
   return (
@@ -125,8 +122,10 @@ const Hero = () => {
         >
           <h2 className="rotate-90 absolute top-[30%] right-[15%]">{hero.title}</h2>
         </div>
-        <div>
-        <Spline scene="https://prod.spline.design/HKlfAoUoTv3w35yQ/scene.splinecode" className="absolute top-0 left-0 w-full h-full" />
+        <div className="absolute top-0 left-0 w-full h-full">
+          const canvas = document.getElementById('canvas3d');
+          const app = new Application(canvas);
+          app.load('https://prod.spline.design/HKlfAoUoTv3w35yQ/scene.splinecode');
         </div>
         <div className="pb-16 px-6 pt-12 z-10 text-center-mobile" data-aos="fade-down">
           <br />
