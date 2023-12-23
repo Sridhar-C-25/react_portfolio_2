@@ -86,6 +86,8 @@ const Hero = () => {
   const { hero } = content;
   const [showContent, setShowContent] = useState(false);
   const splineRef = useRef(null);
+  const canvas = document.getElementById('canvas3d');
+  const app = new Application(canvas);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -98,15 +100,6 @@ const Hero = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
-
-  useEffect(() => {
-    import("@splinetool/react-spline").then((module) => {
-      const Spline = module.default;
-      const scene = "https://prod.spline.design/HKlfAoUoTv3w35yQ/scene.splinecode";
-      const splineInstance = new Spline({ scene });
-      splineRef.current.appendChild(splineInstance.domElement);
-    });
   }, []);
 
 
@@ -123,8 +116,6 @@ const Hero = () => {
           <h2 className="rotate-90 absolute top-[30%] right-[15%]">{hero.title}</h2>
         </div>
         <div className="absolute top-0 left-0 w-full h-full">
-          const canvas = document.getElementById('canvas3d');
-          const app = new Application(canvas);
           app.load('https://prod.spline.design/HKlfAoUoTv3w35yQ/scene.splinecode');
         </div>
         <div className="pb-16 px-6 pt-12 z-10 text-center-mobile" data-aos="fade-down">
