@@ -1,11 +1,15 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
+import dynamic from "next/dynamic";
+
+const Spline = dynamic(() => import("@splinetool/react-spline"), {
+  ssr: false, // This line is important for Next.js to avoid server-side rendering
+});
+
 import { content } from "../Content";
-import { Application } from '@splinetool/runtime';
 
 const Hero = () => {
   const { hero } = content;
   const [showContent, setShowContent] = useState(false);
-  const splineRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,16 +24,24 @@ const Hero = () => {
     };
   }, []);
 
-  useEffect(() => {
-    const canvas = splineRef.current;
-    const app = new Application(canvas);
-    app.load('https://prod.spline.design/HKlfAoUoTv3w35yQ/scene.splinecode');
-  }, []);
-
   return (
     <section id="home" className="relative overflow-hidden">
+      <style>
+        {`
+          @media only screen and (max-width: 767px) {
+            .flex-col-reverse-mobile {
+              flex-direction: column-reverse !important;
+            }
+
+            .text-center-mobile {
+              text-align: center !important;
+            }
+          }
+        `}
+      </style>
+
       <div className="min-h-screen relative flex md:flex-row flex-col-reverse md:items-end justify-center items-center">
-        <div ref={splineRef} className="absolute top-0 left-0 w-full h-full" />
+        <Spline scene="https://prod.spline.design/HKlfAoUoTv3w35yQ/scene.splinecode" className="absolute top-0 left-0 w-full h-full" />
         <div
           data-aos="slide-left"
           data-aos-delay="1200"
