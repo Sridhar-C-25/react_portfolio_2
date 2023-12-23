@@ -78,15 +78,14 @@ export default Hero;
 */
 
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { content } from "../Content";
-import { Spline } from "@splinetool/react-spline"; // Import Spline from the package
-
-const ReactSpline = import("@splinetool/react-spline");
+import { Spline } from "@splinetool/react-spline";
 
 const Hero = () => {
   const { hero } = content;
   const [showContent, setShowContent] = useState(false);
+  const splineRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -118,7 +117,11 @@ const Hero = () => {
       </style>
 
       <div className="min-h-screen relative flex md:flex-row flex-col-reverse md:items-end justify-center items-center">
-        <Spline scene="https://prod.spline.design/HKlfAoUoTv3w35yQ/scene.splinecode" className="absolute top-0 left-0 w-full h-full" />
+        <Spline
+          scene="https://prod.spline.design/HKlfAoUoTv3w35yQ/scene.splinecode"
+          className="absolute top-0 left-0 w-full h-full"
+          ref={splineRef}
+        />
         <div
           data-aos="slide-left"
           data-aos-delay="1200"
@@ -139,7 +142,9 @@ const Hero = () => {
                   ${i === 1 && " flex-row-reverse text-right flex-col-reverse-mobile"}
                 `}
               >
-                <p><h3>{content.count}</h3> {content.text}</p>
+                <p>
+                  <h3>{content.count}</h3> {content.text}
+                </p>
               </div>
             ))}
           </div>
