@@ -1,12 +1,20 @@
+// Navbar.jsx
+
 import { useState } from "react";
 import { content } from "../Content";
 import { HiMenuAlt2 } from "react-icons/hi";
-import { createElement } from "react";
+import { FiMoon, FiSun } from "react-icons/fi"; // Assuming FiMoon and FiSun are dark and light mode icons
 
 const Navbar = () => {
   const { nav } = content;
   const [showMenu, setShowMenu] = useState(false);
   const [active, setActive] = useState(0);
+  const [darkMode, setDarkMode] = useState(false);
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+    // You can add logic to save the dark mode state to localStorage if you want to persist it.
+  };
 
   return (
     <div className="w-full flex flex-col items-start">
@@ -19,7 +27,7 @@ const Navbar = () => {
       <nav
         className={`fixed z-[999] flex flex-col items-start bg-slate-200/60 px-6 py-3 backdrop-blur-md rounded-full text-dark_primary duration-300 ${
           showMenu ? "left-5" : "-left-full"
-        }`}
+        } ${darkMode ? 'dark-mode' : ''}`}
         style={{ marginTop: '100px'}}
       >
         {nav.map((item, i) => (
@@ -32,11 +40,15 @@ const Navbar = () => {
             {createElement(item.icon)}
           </a>
         ))}
+        <button
+          onClick={toggleDarkMode}
+          className="text-xl p-2.5 rounded-full sm:cursor-pointer"
+        >
+          {darkMode ? <FiSun /> : <FiMoon />}
+        </button>
       </nav>
     </div>
   );
 };
 
 export default Navbar;
-
-
