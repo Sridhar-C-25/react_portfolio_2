@@ -8,9 +8,11 @@ import { Navigation } from 'swiper';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
+// Directly import Spline from the library
+import Spline from '@splinetool/react-spline';
+
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
-  const [Spline, setSpline] = useState(null);
 
   const openModal = (projectIndex) => {
     setSelectedProject(projectIndex);
@@ -18,11 +20,6 @@ const Projects = () => {
 
   const closeModal = () => {
     setSelectedProject(null);
-  };
-
-  const loadSpline = async () => {
-    const splineModule = await import('@splinetool/react-spline');
-    setSpline(() => splineModule.default);
   };
 
   const projectsCount = 3; // Change this to the number of slides you want
@@ -64,10 +61,7 @@ const Projects = () => {
                   <h5 className="font-bold font-Poppins">Mini Keyboard</h5>
                   <button
                     className="font-bold text-gray self-end"
-                    onClick={() => {
-                      openModal(i);
-                      loadSpline();
-                    }}
+                    onClick={() => openModal(i)}
                   >
                     READ MORE
                   </button>
@@ -80,7 +74,7 @@ const Projects = () => {
         </div>
       </div>
 
-      {selectedProject !== null && Spline && (
+      {selectedProject !== null && (
         <div
           style={{
             position: 'fixed',
