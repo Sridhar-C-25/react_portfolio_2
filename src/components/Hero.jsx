@@ -78,10 +78,9 @@ export default Hero;
 */
 
 
-
 import React, { useState, useEffect } from "react";
 import { content } from "../Content";
-import { Spline } from "@splinetool/react-spline"; // Import Spline from the package
+//import { Spline } from "@splinetool/react-spline";
 
 const ReactSpline = import("@splinetool/react-spline");
 
