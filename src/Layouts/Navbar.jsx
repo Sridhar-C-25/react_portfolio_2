@@ -1,4 +1,6 @@
-import { useState } from "react";
+// Navbar.jsx
+
+import { useState, useEffect } from "react";
 import { content } from "../Content";
 import { HiMenuAlt2 } from "react-icons/hi";
 import { FiMoon, FiSun } from "react-icons/fi";
@@ -7,12 +9,29 @@ const Navbar = () => {
   const { nav } = content;
   const [showMenu, setShowMenu] = useState(false);
   const [active, setActive] = useState(0);
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(getInitialDarkModeState);
+
+  useEffect(() => {
+    // Save the initial dark mode state to localStorage
+    localStorage.setItem("darkMode", darkMode);
+  }, [darkMode]);
+
+  function getInitialDarkModeState() {
+    // Check if dark mode is stored in localStorage, use that value
+    const storedDarkMode = localStorage.getItem("darkMode");
+    if (storedDarkMode !== null) {
+      return JSON.parse(storedDarkMode);
+    }
+
+    // If not found in localStorage, use the system preference
+    return (
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    );
+  }
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
-    document.body.classList.toggle('dark-mode', darkMode);
-    // You can add logic to save the dark mode state to localStorage if you want to persist it.
   };
 
   return (
@@ -26,22 +45,21 @@ const Navbar = () => {
       <nav
         className={`fixed z-[999] flex flex-col items-start bg-slate-200/60 px-6 py-3 backdrop-blur-md rounded-full text-dark_primary duration-300 ${
           showMenu ? "left-5" : "-left-full"
-        } ${darkMode ? 'dark-mode' : ''}`}
-        style={{ marginTop: '100px'}}
+        } ${darkMode ? "dark-mode" : ""}`}
+        style={{ marginTop: "100px" }}
       >
-        {nav.map((item, i) => {
-          const IconComponent = item.icon; // Assume item.icon is the React component
-          return (
-            <a
-              key={i}
-              href={item.link}
-              onClick={() => setActive(i)}
-              className={`text-xl p-2.5 rounded-full cursor-pointer ${i === active ? "bg-dark_primary text-white" : ""} `}
-            >
-              <IconComponent size={24} /> {/* Adjust the size as needed */}
-            </a>
-          );
-        })}
+        {nav.map((item, i) => (
+          <a
+            key={i}
+            href={item.link}
+            onClick={() => setActive(i)}
+            className={`text-xl p-2.5 rounded-full cursor-pointer ${
+              i === active ? "bg-dark_primary text-white" : ""
+            } `}
+          >
+            {item.icon()}
+          </a>
+        ))}
         <button
           onClick={toggleDarkMode}
           className="text-xl p-2.5 rounded-full cursor-pointer"
