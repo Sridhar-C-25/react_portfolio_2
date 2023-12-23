@@ -1,11 +1,8 @@
-import React, { useState, useEffect } from "react";
-import dynamic from "next/dynamic";
-
-const Spline = dynamic(() => import("@splinetool/react-spline"), {
-  ssr: false, // This line is important for Next.js to avoid server-side rendering
-});
-
+import React, { useState, useEffect, useRef } from "react";
 import { content } from "../Content";
+
+// Import Spline using Vite's dynamic import
+const Spline = () => import("@splinetool/react-spline");
 
 const Hero = () => {
   const { hero } = content;
@@ -41,6 +38,7 @@ const Hero = () => {
       </style>
 
       <div className="min-h-screen relative flex md:flex-row flex-col-reverse md:items-end justify-center items-center">
+        {/* Load Spline dynamically */}
         <Spline scene="https://prod.spline.design/HKlfAoUoTv3w35yQ/scene.splinecode" className="absolute top-0 left-0 w-full h-full" />
         <div
           data-aos="slide-left"
