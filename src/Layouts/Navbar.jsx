@@ -1,6 +1,4 @@
-// Navbar.jsx
-
-import React, { createElement, useState } from "react";
+import { useState } from "react";
 import { content } from "../Content";
 import { HiMenuAlt2 } from "react-icons/hi";
 import { FiMoon, FiSun } from "react-icons/fi";
@@ -13,6 +11,7 @@ const Navbar = () => {
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
+    document.body.classList.toggle('dark-mode', darkMode);
     // You can add logic to save the dark mode state to localStorage if you want to persist it.
   };
 
@@ -30,16 +29,19 @@ const Navbar = () => {
         } ${darkMode ? 'dark-mode' : ''}`}
         style={{ marginTop: '100px'}}
       >
-        {nav.map((item, i) => (
-          <a
-            key={i}
-            href={item.link}
-            onClick={() => setActive(i)}
-            className={`text-xl p-2.5 rounded-full cursor-pointer ${i === active ? "bg-dark_primary text-white" : ""} `}
-          >
-            {createElement(item.icon)}
-          </a>
-        ))}
+        {nav.map((item, i) => {
+          const IconComponent = item.icon; // Assume item.icon is the React component
+          return (
+            <a
+              key={i}
+              href={item.link}
+              onClick={() => setActive(i)}
+              className={`text-xl p-2.5 rounded-full cursor-pointer ${i === active ? "bg-dark_primary text-white" : ""} `}
+            >
+              <IconComponent size={24} /> {/* Adjust the size as needed */}
+            </a>
+          );
+        })}
         <button
           onClick={toggleDarkMode}
           className="text-xl p-2.5 rounded-full cursor-pointer"
