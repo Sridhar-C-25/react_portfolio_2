@@ -1,4 +1,4 @@
-/*
+
 
 import React, { useState, useEffect, useRef } from "react";
 import { content } from "../Content";
@@ -83,11 +83,9 @@ const Hero = () => {
 
 export default Hero;
 
-*/
 
 
-// Hero.jsx
-
+/*
 import React, { useState, useEffect } from "react";
 import { content } from "../Content";
 
@@ -145,8 +143,7 @@ const Hero = () => {
                   ${i === 1 && " flex-row-reverse text-right flex-col-reverse-mobile"}
                 `}
               >
-                {/* Use div or other suitable container instead of p for the parent element */}
-                <div>
+                <div className="padding:none ">
                   <h3>{content.count}</h3>
                   <p>{content.text}</p>
                 </div>
@@ -160,3 +157,5 @@ const Hero = () => {
 };
 
 export default Hero;
+*/
+
