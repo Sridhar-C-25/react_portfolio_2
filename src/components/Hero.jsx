@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { content } from "../Content";
 
-import ReactSpline from "@splinetool/react-spline";
+const ReactSpline = import("@splinetool/react-spline");
+//import ReactSpline from "@splinetool/react-spline";
 
 
 const Hero = () => {
