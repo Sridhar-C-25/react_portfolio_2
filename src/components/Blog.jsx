@@ -19,6 +19,11 @@ const Blog = () => {
             }
           `}
         </style>
+        <div>
+            <h1>
+                Hello this is blog!
+            </h1>
+        </div>
       </section>
     );
 },
