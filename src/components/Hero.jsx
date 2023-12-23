@@ -1,5 +1,3 @@
-// Hero.jsx
-
 import React, { useState, useEffect } from "react";
 import { content } from "../Content";
 import Spline from '@splinetool/react-spline';
@@ -47,7 +45,7 @@ const Hero = () => {
           <h2 className="rotate-90 absolute top-[30%] right-[15%]">{hero.title}</h2>
         </div>
 
-        <div className="pb-16 px-6 pt-5 z-10 text-center-mobile" data-aos="fade-down">
+        <div className="pb-16 px-6 pt-12 z-10 text-center-mobile" data-aos="fade-down">
           <br />
           <div className="flex flex-col gap-10 mt-10">
             {hero.hero_content.map((content, i) => (
