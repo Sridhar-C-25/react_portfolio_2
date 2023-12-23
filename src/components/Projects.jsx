@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation } from 'swiper';
-import Spline from '@splinetool/react-spline';
+import Spline from '@splinetool/react-spline';  // Updated import statement
 
 // Import Swiper styles
 import 'swiper/css/pagination';
