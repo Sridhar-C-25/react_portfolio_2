@@ -109,6 +109,11 @@ const Hero = () => {
     });
   }, []);
 
+  /*const canvas = document.getElementById('canvas3d');
+  const app = new Application(canvas);
+  app.load('https://prod.spline.design/HKlfAoUoTv3w35yQ/scene.splinecode');*/
+
+
   return (
     <section id="home" className="relative overflow-hidden">
       <div className="min-h-screen relative flex md:flex-row flex-col-reverse md:items-end justify-center items-center">
@@ -120,7 +125,9 @@ const Hero = () => {
         >
           <h2 className="rotate-90 absolute top-[30%] right-[15%]">{hero.title}</h2>
         </div>
-
+        <div>
+        <Spline scene="https://prod.spline.design/HKlfAoUoTv3w35yQ/scene.splinecode" className="absolute top-0 left-0 w-full h-full" />
+        </div>
         <div className="pb-16 px-6 pt-12 z-10 text-center-mobile" data-aos="fade-down">
           <br />
           <div className="flex flex-col gap-10 mt-10">
