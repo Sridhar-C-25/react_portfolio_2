@@ -124,6 +124,14 @@ export const content = {
     ],
   },
 
+  Blog: {
+    title: "Blog",
+    subtitle: "CURRENT",
+    blog_content: [
+      {/*something here set up with dad*/}
+    ],
+  },
+
   Hireme: {
     title: "Hire Me",
     subtitle: "INTO YOUR COMPANY",
