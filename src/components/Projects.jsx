@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -10,6 +10,12 @@ import 'swiper/css/navigation';
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
+  const [Spline, setSpline] = useState(null);
+
+  useEffect(() => {
+    // Dynamically import the Spline component during the build process
+    import('@splinetool/react-spline').then((module) => setSpline(() => module.default));
+  }, []);
 
   const openModal = (projectIndex) => {
     setSelectedProject(projectIndex);
@@ -21,13 +27,55 @@ const Projects = () => {
 
   const projectsCount = 3; // Change this to the number of slides you want
 
-  // Dynamic import for Spline
-  const Spline = React.lazy(() => import('@splinetool/react-spline'));
-
   return (
     <section className="bg-bg_light_primary" id="projects">
-      {/* rest of the component */}
-      {/* ... */}
+      <div className="md:container px-5 pt-14 h-full flex flex-col justify-center items-center relative">
+        <div>
+          <h2 className="title" data-aos="fade-down">
+            Handmade
+          </h2>
+          <h4 className="subtitle" data-aos="fade-down">
+            Projects
+          </h4>
+          <br />
+        </div>
+        <div className="flex items-center lg:flex-row flex-col-reverse gap-5">
+          <Swiper
+            navigation={{
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            }}
+            data-aos="fade-left"
+            spaceBetween={20}
+            modules={[Navigation]}
+            className="rounded-3xl pb-16 max-w-[60vw] w-full drop-shadow-primary self-start relative"
+          >
+            {[...Array(projectsCount)].map((_, i) => (
+              <SwiperSlide
+                key={i}
+                className="bg-white rounded-3xl p-5 border-b-8 border-[#FAF9FD] h-fit relative"
+              >
+                <img
+                  src="src/assets/images/projects/lmao.png"
+                  alt="..."
+                  className="w-full h-[200px] object-cover mb-4"
+                />
+                <div className="flex flex-col gap-1 mt-2">
+                  <h5 className="font-bold font-Poppins">Mini Keyboard</h5>
+                  <button
+                    className="font-bold text-gray self-end"
+                    onClick={() => openModal(i)}
+                  >
+                    READ MORE
+                  </button>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          <div className="swiper-button-next absolute top-1/2 -translate-y-1/2 text-[#3c3c3c] font-bold"></div>
+          <div className="swiper-button-prev absolute top-1/2 -translate-y-1/2 text-[#3c3c3c] font-bold"></div>
+        </div>
+      </div>
 
       {selectedProject !== null && (
         <div
@@ -63,14 +111,14 @@ const Projects = () => {
               This is a keyboard model made in the Spline 3D model workshop that is integrated fully
               into this react website.
             </p>
-            <React.Suspense fallback={<div>Loading...</div>}>
-              <div style={{ width: '100%', height: '100%' }}>
+            <div style={{ width: '100%', height: '100%' }}>
+              {Spline && (
                 <Spline
                   scene="https://prod.spline.design/VaWzQnJylRSKhxe8/scene.splinecode"
                   className="w-full h-full"
                 />
-              </div>
-            </React.Suspense>
+              )}
+            </div>
             <div className="absolute bottom-0 right-0 p-4">
               <p>
                 This is a keyboard model made in the Spline 3D model workshop that is integrated
