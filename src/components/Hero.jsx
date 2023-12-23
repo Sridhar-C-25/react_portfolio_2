@@ -49,7 +49,7 @@ const Hero = () => {
         </div>
       </div>
       <section className="py-16 text-center">
-        <div className="container mx-auto absolute h-full md:w-4/12 w-8/12 top-0 right-0 bg-primaryLinear bottom-0 -z-10 bg-primaryLinear">
+        <div className=" bg-primaryLinear bottom-0 bg-primaryLinear">
           {hero.hero_content.map((content, i) => (
             <div key={i}>
               {i === 0 && (
