@@ -1,5 +1,3 @@
-// Hero.jsx
-
 import React from "react";
 import { content } from "../Content";
 import Spline from '@splinetool/react-spline';
@@ -45,20 +43,25 @@ const Hero = () => {
                   ${i === 1 && " flex-row-reverse text-right flex-col-reverse-mobile"}
                 `}
               >
-                {/* Add content here if needed */}
               </div>
             ))}
           </div>
         </div>
       </div>
       <section className="py-16 text-center">
-        <div className="container mx-auto absolute h-full md:w-4/12 w-8/12 top-0 right-0 bg-primaryLinear bottom-0 -z-10 bg-primaryLinear">
+        <div className="container mx-auto absolute h-full md:w-4/12 w-8/12 top-0 right-0 bg-primaryLinear bottom-0 -z-10 bg-primaryLinear padding-top:20px padding-bottom:20px">
           {hero.hero_content.map((content, i) => (
-            <div key={i} className="py-4">
-              <div className="flex justify-between">
-                <h3>{content.count}</h3>
-                <p>{content.text}</p>
-              </div>
+            <div key={i}>
+              {i === 0 && (
+                <>
+                  <h3>{content.count} {content.text}</h3>
+                </>
+              )}
+              {i === 1 && (
+                <>
+                  <h3>{content.count} {content.text}</h3>
+                </>
+              )}
             </div>
           ))}
         </div>
