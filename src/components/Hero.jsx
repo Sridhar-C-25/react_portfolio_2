@@ -59,31 +59,12 @@ const Hero = () => {
                   ${i === 1 && " flex-row-reverse text-right flex-col-reverse-mobile"}
                 `}
               >
-                {/* Include any content you want to display here */}
-                {/* Example: <p>{content.text}</p> */}
+                <p><h3>{content.count}</h3> {content.text}</p>
               </div>
             ))}
           </div>
         </div>
       </div>
-      <section className="py-16 text-center relative">
-        <div className={`bottom-0 left-0 p-4 bg-white absolute`}>
-          {hero.hero_content.map((content, i) => (
-            <div key={i}>
-              {i === 0 && (
-                <>
-                  <p><h3>{content.count}</h3> {content.text}</p>
-                </>
-              )}
-              {i === 1 && (
-                <>
-                  <p><h3>{content.count}</h3> {content.text}</p>
-                </>
-              )}
-            </div>
-          ))}
-        </div>
-      </section>
     </section>
   );
 };
