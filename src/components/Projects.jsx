@@ -1,4 +1,4 @@
-import React, { useState, useEffect, lazy, Suspense } from 'react';
+import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -8,11 +8,9 @@ import { Navigation } from 'swiper';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-// Use React.lazy for dynamic import
-const Spline = lazy(() => import('@splinetool/react-spline'));
-
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
+  const [Spline, setSpline] = useState(null);
 
   const openModal = (projectIndex) => {
     setSelectedProject(projectIndex);
@@ -20,6 +18,11 @@ const Projects = () => {
 
   const closeModal = () => {
     setSelectedProject(null);
+  };
+
+  const loadSpline = async () => {
+    const splineModule = await import('@splinetool/react-spline');
+    setSpline(() => splineModule.default);
   };
 
   const projectsCount = 3; // Change this to the number of slides you want
@@ -61,7 +64,10 @@ const Projects = () => {
                   <h5 className="font-bold font-Poppins">Mini Keyboard</h5>
                   <button
                     className="font-bold text-gray self-end"
-                    onClick={() => openModal(i)}
+                    onClick={() => {
+                      openModal(i);
+                      loadSpline();
+                    }}
                   >
                     READ MORE
                   </button>
@@ -74,7 +80,7 @@ const Projects = () => {
         </div>
       </div>
 
-      {selectedProject !== null && (
+      {selectedProject !== null && Spline && (
         <div
           style={{
             position: 'fixed',
@@ -109,12 +115,10 @@ const Projects = () => {
               into this react website.
             </p>
             <div style={{ width: '100%', height: '100%' }}>
-              <Suspense fallback={<div>Loading...</div>}>
-                <Spline
-                  scene="https://prod.spline.design/VaWzQnJylRSKhxe8/scene.splinecode"
-                  className="w-full h-full"
-                />
-              </Suspense>
+              <Spline
+                scene="https://prod.spline.design/VaWzQnJylRSKhxe8/scene.splinecode"
+                className="w-full h-full"
+              />
             </div>
             <div className="absolute bottom-0 right-0 p-4">
               <p>
