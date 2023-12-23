@@ -1,3 +1,5 @@
+/* index.css */
+
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
@@ -8,74 +10,64 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
   }
-
-  body {
-    @apply transition-colors duration-500 ease-in-out;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  span {
+    @apply text-dark_primary;
   }
-
   h1 {
     @apply font-Poppins lg:text-6xl text-3xl font-extrabold;
   }
-
   h2 {
     @apply font-Inria text-5xl font-bold;
   }
-
   h3 {
     @apply font-Paprika text-5xl;
   }
-
   h4 {
     @apply md:text-4xl text-3xl !leading-relaxed font-Paprika;
   }
-
   h6 {
     @apply font-Paprika font-bold text-[#253D57] leading-8;
   }
 
   p {
-    @apply font-Poppins text-[1.5rem]; /* Adjust the font size for paragraphs */
+    @apply font-Poppins text-[0.95rem];
   }
-
   button {
     @apply font-Poppins;
   }
-
   input,
   textarea {
     @apply bg-transparent outline-none font-Poppins;
   }
-}
-
-@layer components {
-  .dark-mode {
-    background-color: #1a202c; /* Set your dark mode background color */
-    color: #ffffff; /* Set your dark mode text color */
-  }
-
-  /* Add a dark mode variant for text colors */
-  .dark-mode .text-dark_primary {
-    @apply text-white;
-  }
-
-  .dark-mode .bg-light_primary {
-    background-color: #1a202c; /* Set your dark mode background color for light_primary */
+  body {
+    @apply transition-colors duration-500 ease-in-out;
   }
 }
 
 @layer utilities {
   .btn {
-    @apply py-2 px-9 border-2 rounded-md border-dark_primary rounded-br-3xl font-medium;
+    @apply py-2 px-9 border-2 rounded-md
+     border-dark_primary rounded-br-3xl font-medium;
   }
   .title {
-    @apply md:text-4xl text-3xl; /* Adjust the font size for titles */
+    @apply md:text-3xl text-2xl;
   }
   .subtitle {
-    @apply text-gray text-lg; /* Adjust the font size for subtitles */
+    @apply text-gray;
   }
-}
-.swiper-pagination-bullet {
-  @apply w-3 h-3 bg-dark_primary;
+  .dark-mode {
+    background-color: #1a202c; /* Set your dark mode background color */
+    color: #ffffff; /* Set your dark mode text color */
+  }
+  .swiper-pagination-bullet {
+    @apply w-3 h-3 bg-dark_primary;
+  }
 }

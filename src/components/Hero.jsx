@@ -1,3 +1,5 @@
+// Hero.jsx
+
 import React, { useState, useEffect } from "react";
 import { content } from "../Content";
 import Spline from '@splinetool/react-spline';
@@ -57,6 +59,8 @@ const Hero = () => {
                   ${i === 1 && " flex-row-reverse text-right flex-col-reverse-mobile"}
                 `}
               >
+                {/* Include any content you want to display here */}
+                {/* Example: <p>{content.text}</p> */}
               </div>
             ))}
           </div>
