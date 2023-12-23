@@ -1,9 +1,24 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { content } from "../Content";
 import Spline from '@splinetool/react-spline';
 
 const Hero = () => {
   const { hero } = content;
+  const [showContent, setShowContent] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Adjust the threshold as needed
+      const threshold = window.innerHeight / 2;
+      const isScrolled = window.scrollY > threshold;
+      setShowContent(isScrolled);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <section id="home" className="relative overflow-hidden">
@@ -48,8 +63,8 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <section className="py-16 text-center">
-        <div className="bottom-0">
+      <section className={`py-16 text-center ${showContent ? 'visible' : 'hidden'}`}>
+        <div className="bottom-0 left-0 fixed p-4 bg-white">
           {hero.hero_content.map((content, i) => (
             <div key={i}>
               {i === 0 && (
