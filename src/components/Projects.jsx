@@ -149,15 +149,11 @@ const Projects = () => {
 export default Projects;
 */
 
-// src/components/Projects.jsx
 import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation } from 'swiper';
-
-// Use a relative import for Spline
-import Spline from './path/to/your/src/@splinetool/react-spline';
 
 // Import Swiper styles
 import 'swiper/css/pagination';
@@ -261,10 +257,7 @@ const Projects = () => {
               into this react website.
             </p>
             <div style={{ width: '100%', height: '100%' }}>
-              <Spline
-                scene="https://prod.spline.design/VaWzQnJylRSKhxe8/scene.splinecode"
-                className="w-full h-full"
-              />
+              {/* Spline component was here */}
             </div>
             <div className="absolute bottom-0 right-0 p-4">
               <p>
