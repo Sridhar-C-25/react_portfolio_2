@@ -7,12 +7,10 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      '@splinetool/react-spline': './src/@splinetool/react-spline/index.js',
+      '@splinetool/react-spline': 'splinetool/react-spline',
     },
   },
 });
-
-
 
 
 
