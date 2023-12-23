@@ -63,7 +63,7 @@ const Hero = () => {
         </div>
       </div>
       <section className="py-16 text-center relative">
-        <div className={`bottom-0 left-0 p-4 bg-white ${showContent ? 'opacity-100' : 'opacity-0 transition-opacity duration-500 ease-in-out delay-500' } absolute`}>
+        <div className={`bottom-0 left-0 p-4 bg-white absolute`}>
           {hero.hero_content.map((content, i) => (
             <div key={i}>
               {i === 0 && (
