@@ -1,12 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
 import { content } from "../Content";
 
-// Import Spline using Vite's dynamic import
-const Spline = () => import("@splinetool/react-spline");
-
 const Hero = () => {
   const { hero } = content;
   const [showContent, setShowContent] = useState(false);
+  const [SplineComponent, setSplineComponent] = useState(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,6 +12,11 @@ const Hero = () => {
       const isScrolled = window.scrollY > threshold;
       setShowContent(isScrolled);
     };
+
+    // Dynamically load Spline component
+    import("@splinetool/react-spline").then((module) => {
+      setSplineComponent(() => module.default);
+    });
 
     window.addEventListener("scroll", handleScroll);
     return () => {
@@ -38,8 +41,13 @@ const Hero = () => {
       </style>
 
       <div className="min-h-screen relative flex md:flex-row flex-col-reverse md:items-end justify-center items-center">
-        {/* Load Spline dynamically */}
-        <Spline scene="https://prod.spline.design/HKlfAoUoTv3w35yQ/scene.splinecode" className="absolute top-0 left-0 w-full h-full" />
+        {/* Render Spline component when it's loaded */}
+        {SplineComponent && (
+          <SplineComponent
+            scene="https://prod.spline.design/HKlfAoUoTv3w35yQ/scene.splinecode"
+            className="absolute top-0 left-0 w-full h-full"
+          />
+        )}
         <div
           data-aos="slide-left"
           data-aos-delay="1200"
