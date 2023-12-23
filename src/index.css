@@ -1,3 +1,6 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 @import url("https://fonts.googleapis.com/css2?family=Inria+Serif:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Paprika&display=swap");
@@ -48,8 +51,6 @@
   }
   body {
     @apply transition-colors duration-500 ease-in-out;
-    background-color: var(--background-color);
-    color: var(--text-color);
   }
 }
 
@@ -65,8 +66,8 @@
     @apply text-gray;
   }
   .dark-mode {
-    --background-color: #1a202c; /* Set your dark mode background color */
-    --text-color: #ffffff; /* Set your dark mode text color */
+    background-color: #1a202c; /* Set your dark mode background color */
+    color: #ffffff; /* Set your dark mode text color */
   }
 }
 .swiper-pagination-bullet {
