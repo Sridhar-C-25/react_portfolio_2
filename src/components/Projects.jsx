@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation } from 'swiper';
+import lmaoImage from '../../assets/images/projects/lmao.png';
 
 // Import Swiper styles
 import 'swiper/css/pagination';
@@ -50,7 +51,7 @@ const Projects = () => {
                 className="bg-white rounded-3xl p-5 border-b-8 border-[#FAF9FD] h-fit relative"
               >
                 <img
-                  src="src/assets/images/projects/lmao.png"
+                  src={lmaoImage}
                   alt="..."
                   className="w-full h-[200px] object-cover mb-4"
                   data-aos="fade-up"
