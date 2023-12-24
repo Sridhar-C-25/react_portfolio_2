@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -11,6 +11,25 @@ import 'swiper/css/navigation';
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
+  const [hasAnimated, setHasAnimated] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const projectsSection = document.getElementById('projects');
+      if (projectsSection && !hasAnimated) {
+        const rect = projectsSection.getBoundingClientRect();
+        const isVisible = rect.top <= window.innerHeight - rect.height / 2;
+        if (isVisible) {
+          setHasAnimated(true);
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [hasAnimated]);
 
   const openModal = (projectIndex) => {
     setSelectedProject(projectIndex);
@@ -23,13 +42,13 @@ const Projects = () => {
   const projectsCount = 3; // Change this to the number of slides you want
 
   return (
-    <section className="bg-bg_light_primary" id="projects" data-aos="fade-up">
+    <section className={`bg-bg_light_primary ${hasAnimated ? 'fade-in' : ''}`} id="projects">
       <div className="md:container px-5 pt-14 h-full flex flex-col justify-center items-center relative">
         <div>
-          <h2 className="title" data-aos="fade-down">
+          <h2 className="title" data-aos={hasAnimated ? 'fade-down' : ''}>
             Handmade
           </h2>
-          <h4 className="subtitle" data-aos="fade-down">
+          <h4 className="subtitle" data-aos={hasAnimated ? 'fade-down' : ''}>
             Projects
           </h4>
           <br />
@@ -40,7 +59,7 @@ const Projects = () => {
               nextEl: '.swiper-button-next',
               prevEl: '.swiper-button-prev',
             }}
-            data-aos="fade-left"
+            data-aos={hasAnimated ? 'fade-left' : ''}
             spaceBetween={20}
             modules={[Navigation]}
             className="rounded-3xl pb-16 max-w-[60vw] w-full drop-shadow-primary self-start relative"
@@ -49,21 +68,21 @@ const Projects = () => {
               <SwiperSlide
                 key={i}
                 className="bg-white rounded-3xl p-5 border-b-8 border-[#FAF9FD] h-fit relative"
+                data-aos={hasAnimated ? 'fade-up' : ''}
               >
                 <img
                   src={lmaoImage}
                   alt="..."
                   className="w-full h-[200px] object-cover mb-4"
-                  data-aos="fade-up"
                 />
                 <div className="flex flex-col gap-1 mt-2">
-                  <h5 className="font-bold font-Poppins" data-aos="fade-up">
+                  <h5 className="font-bold font-Poppins" data-aos={hasAnimated ? 'fade-up' : ''}>
                     Mini Keyboard
                   </h5>
                   <button
                     className="font-bold text-gray self-end"
                     onClick={() => openModal(i)}
-                    data-aos="fade-up"
+                    data-aos={hasAnimated ? 'fade-up' : ''}
                   >
                     READ MORE
                   </button>
