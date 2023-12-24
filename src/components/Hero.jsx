@@ -21,24 +21,6 @@ const Hero = () => {
 
   return (
     <section id="home" className="relative overflow-hidden">
-      <style>
-        {`
-          @media only screen and (max-width: 767px) {
-            .flex-col-reverse-mobile {
-              flex-direction: column-reverse !important;
-            }
-
-            .text-center-mobile {
-              text-align: center !important;
-            }
-
-            .flex .items-center .w-80 {
-              margin-bottom: 20px;
-            }
-          }
-        `}
-      </style>
-
       <div className="min-h-screen relative flex md:flex-row flex-col-reverse md:items-end justify-center items-center">
         <Spline
           scene="https://prod.spline.design/HKlfAoUoTv3w35yQ/scene.splinecode"
