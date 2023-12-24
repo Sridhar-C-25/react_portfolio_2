@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation } from 'swiper';
-import lmaoImage from '../../assets/images/projects/lmao.png';
+import lmaoImage from './assets/images/projects/lmao.png';
 
 // Import Swiper styles
 import 'swiper/css/pagination';
@@ -19,7 +19,8 @@ const Projects = () => {
       if (projectsSection && !hasAnimated) {
         const rect = projectsSection.getBoundingClientRect();
         const isVisible = rect.top <= window.innerHeight - rect.height / 2;
-        if (isVisible) {
+        const isAboveViewport = rect.bottom < 0;
+        if (isVisible && !isAboveViewport) {
           setHasAnimated(true);
         }
       }
@@ -42,7 +43,14 @@ const Projects = () => {
   const projectsCount = 3; // Change this to the number of slides you want
 
   return (
-    <section className={`bg-bg_light_primary ${hasAnimated ? 'fade-in' : ''}`} id="projects">
+    <section
+      className={`bg-bg_light_primary ${hasAnimated ? 'fade-in' : ''}`}
+      id="projects"
+      style={{
+        opacity: hasAnimated ? 1 : 0,
+        transition: 'opacity 1s ease-in-out',
+      }}
+    >
       <div className="md:container px-5 pt-14 h-full flex flex-col justify-center items-center relative">
         <div>
           <h2 className="title" data-aos={hasAnimated ? 'fade-down' : ''}>
