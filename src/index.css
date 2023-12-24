@@ -98,11 +98,14 @@ body {
   color: #ffffff;
   --background: #1a202c;
   --text-dark-primary: #ffffff;
+  --bg-white: #2d3748; /* Set a new background color for bg-white in dark mode */
+  --bg-light-primary: #2d3748; /* Set a new background color for bg-light-primary in dark mode */
 }
 
 .bg-dark-primary {
   background-color: #1a202c;
 }
+
 
 
 /*
