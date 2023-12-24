@@ -8,8 +8,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Paprika&display=swap");
 
 :root {
-  --background: #fff; /* Default background color */
   --text-dark-primary: #06223F;
+  --bg-white: #ffffff;
+  --bg-light-primary: #F5F9FD;
+  --bg-dark-primary: #1a202c;
 }
 
 html {
@@ -74,8 +76,13 @@ textarea {
 
 body {
   transition: background-color 0.5s ease-in-out;
-  background-color: var(--background);
+  background-color: var(--bg-white);
   color: var(--text-dark-primary);
+}
+
+.dark-mode body {
+  background-color: var(--bg-dark-primary);
+  color: #ffffff;
 }
 
 .btn {
@@ -96,15 +103,20 @@ body {
 .dark-mode {
   background-color: #1a202c;
   color: #ffffff;
-  --background: #1a202c;
-  --text-dark-primary: #ffffff;
-  --bg-white: #2d3748; /* Set a new background color for bg-white in dark mode */
-  --bg-light-primary: #2d3748; /* Set a new background color for bg-light-primary in dark mode */
 }
 
 .bg-dark-primary {
   background-color: #1a202c;
 }
+
+.bg-light-primary {
+  background-color: var(--bg-light-primary);
+}
+
+.dark-mode .bg-light-primary {
+  background-color: var(--bg-dark-primary);
+}
+
 
 
 
