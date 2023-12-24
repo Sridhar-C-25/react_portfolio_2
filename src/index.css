@@ -18,6 +18,25 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  transition: background-color 0.5s ease-in-out;
+  background-color: var(--bg-white);
+  color: var(--text-dark-primary);
+}
+
+.dark-mode body {
+  background-color: var(--bg-dark-primary);
+  color: #ffffff;
+}
+
+.bg-light-primary {
+  background-color: var(--bg-light-primary);
+}
+
+.dark-mode .bg-light-primary {
+  background-color: var(--bg-dark-primary);
+}
+
 h1,
 h2,
 h3,
@@ -73,50 +92,6 @@ textarea {
   outline: none;
   font-family: 'Poppins', sans-serif;
 }
-
-body {
-  transition: background-color 0.5s ease-in-out;
-  background-color: var(--bg-white);
-  color: var(--text-dark-primary);
-}
-
-.dark-mode body {
-  background-color: var(--bg-dark-primary);
-  color: #ffffff;
-}
-
-.btn {
-  padding: 0.5rem 1.5rem;
-  border-width: 2px;
-  border-radius: 0 0 1.5rem 0;
-  font-weight: medium;
-}
-
-.title {
-  font-size: 2rem;
-}
-
-.subtitle {
-  color: #B7C5D3;
-}
-
-.dark-mode {
-  background-color: #1a202c;
-  color: #ffffff;
-}
-
-.bg-dark-primary {
-  background-color: #1a202c;
-}
-
-.bg-light-primary {
-  background-color: var(--bg-light-primary);
-}
-
-.dark-mode .bg-light-primary {
-  background-color: var(--bg-dark-primary);
-}
-
 
 
 
