@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { content } from "../Content";
-import Spline from '@splinetool/react-spline';
 
 const Hero = () => {
   const { hero } = content;
@@ -22,10 +21,6 @@ const Hero = () => {
   return (
     <section id="home" className="relative overflow-hidden">
       <div className="min-h-screen relative flex md:flex-row flex-col-reverse md:items-end justify-center items-center">
-        <Spline
-          scene="https://prod.spline.design/HKlfAoUoTv3w35yQ/scene.splinecode"
-          className="absolute top-0 left-0 w-full h-full"
-        />
         <div
           data-aos="slide-left"
           data-aos-delay="1200"
