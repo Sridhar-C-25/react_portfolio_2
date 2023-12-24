@@ -1,11 +1,11 @@
 import React from 'react';
-import { content } from "/src/Content";
+import { content } from '/src/Content';
 
 const Services = () => {
   const { services } = content;
 
   return (
-    <section id="services">
+    <section id="services" data-aos="fade-up">
       <div className="md:container px-5 py-14">
         <h2 className="title" data-aos="fade-down">
           {services.title}

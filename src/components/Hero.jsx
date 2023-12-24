@@ -9,7 +9,8 @@ const Hero = () => {
     const handleScroll = () => {
       const threshold = window.innerHeight / 2;
       const isScrolled = window.scrollY > threshold;
-      setShowContent(isScrolled);
+      // Always set showContent to true if scrolled down
+      setShowContent((prev) => (isScrolled ? true : prev));
     };
 
     window.addEventListener("scroll", handleScroll);

@@ -15,7 +15,7 @@ const Hireme = () => {
   };
 
   return (
-    <section className="bg-white flex items-center justify-center h-[70vh]">
+    <section className="bg-white flex items-center justify-center h-[70vh]" data-aos="fade-up">
       <div className="container mx-auto px-5 pt-14">
         <h2 className="title text-center" data-aos="fade-down">
           {Hireme.title}
@@ -31,9 +31,9 @@ const Hireme = () => {
               modalIsOpen ? "z-[1001] hidden" : ""
             }`}
           >
-            <p className="leading-7 text-center">{Hireme.para}</p>
+            <p className="leading-7 text-center" data-aos="fade-down">{Hireme.para}</p>
             <br />
-            <button className="btn bg-dark_primary text-white" onClick={openModal}>
+            <button className="btn bg-dark_primary text-white" onClick={openModal} data-aos="fade-up">
               {Hireme.btnText}
             </button>
           </div>
@@ -45,7 +45,7 @@ const Hireme = () => {
           className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-70 z-[1000]"
           onClick={closeModal}
         >
-          <div className="bg-white p-8 rounded-xl">
+          <div className="bg-white p-8 rounded-xl" data-aos="fade-up">
             <h2 className="text-center">{Hireme.title}</h2>
             <p className="text-center">{Hireme.modalDescription}</p>
             <iframe

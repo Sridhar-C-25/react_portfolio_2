@@ -1,10 +1,11 @@
-import { content } from "../Content";
+import React from 'react';
+import { content } from '../Content';
 
 const Skills = () => {
   const { skills } = content;
 
   return (
-    <section className="min-h-fit bg-bg_light_primary" id="skills">
+    <section className="min-h-fit bg-bg_light_primary" id="skills" data-aos="fade-up">
       <div className="md:container px-5 py-14">
         <h2 className="title" data-aos="fade-down">
           {skills.title}

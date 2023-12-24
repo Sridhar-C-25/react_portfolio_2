@@ -5,7 +5,7 @@ const Blog = () => {
   const { blog } = content;
 
   return (
-    <section id="home" className="relative overflow-hidden">
+    <section id="blog" className="relative overflow-hidden" data-aos="fade-up">
       <style>
         {`
           @media only screen and (max-width: 767px) {

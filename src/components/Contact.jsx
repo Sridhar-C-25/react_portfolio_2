@@ -15,17 +15,17 @@ const Contact = () => {
         <div
           className="flex gap-5 justify-center"
           data-aos="fade-up"
-          data-aos-anchor="#contact" // Set the anchor ID to the section ID
-          data-aos-offset="200" // Adjust the offset value based on your preference
+          data-aos-anchor="#contact"
+          data-aos-offset="200"
         >
           <ul className="list-none flex gap-4">
-            <li className="bg-gray-800 p-4 rounded-md shadow-md">
+            <li className="bg-gray-800 p-4 rounded-md shadow-md" data-aos="fade-up">
               {Contact.social_media[0].text}
             </li>
-            <li className="bg-gray-800 p-4 rounded-md shadow-md">
+            <li className="bg-gray-800 p-4 rounded-md shadow-md" data-aos="fade-up" data-aos-delay="300">
               {Contact.social_media[1].text}
             </li>
-            <li className="bg-gray-800 p-4 rounded-md shadow-md">
+            <li className="bg-gray-800 p-4 rounded-md shadow-md" data-aos="fade-up" data-aos-delay="600">
               <a
                 className="font-Poppins text-white"
                 href={Contact.social_media[2].link}
