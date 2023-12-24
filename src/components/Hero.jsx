@@ -41,9 +41,8 @@ const Hero = () => {
                   ${i === 1 && " flex-row-reverse text-right flex-col-reverse-mobile"}
                 `}
               >
-                <p>
-                  <h3>{content.count}</h3> {content.text}
-                </p>
+                <h3>{content.count}</h3>
+                <p>{content.text}</p>
               </div>
             ))}
           </div>
