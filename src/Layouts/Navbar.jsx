@@ -1,6 +1,6 @@
 // Navbar.jsx
 
-import { useState, createElement } from "react"; // Import createElement
+import { useState, useEffect, createElement } from "react"; // Import createElement and useEffect
 import { content } from "../Content";
 import { HiMenuAlt2 } from "react-icons/hi";
 import { FiMoon, FiSun } from "react-icons/fi";
@@ -10,6 +10,11 @@ const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [active, setActive] = useState(0);
   const [darkMode, setDarkMode] = useState(false);
+
+  // Add useEffect to apply dark mode class to body
+  useEffect(() => {
+    document.body.classList.toggle('dark-mode', darkMode);
+  }, [darkMode]);
 
   const toggleDarkMode = () => {
     setDarkMode((prevDarkMode) => !prevDarkMode);
