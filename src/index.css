@@ -75,6 +75,7 @@ textarea {
 body {
   transition: background-color 0.5s ease-in-out;
   background-color: var(--background);
+  color: var(--text-dark-primary);
 }
 
 .btn {
@@ -96,8 +97,109 @@ body {
   background-color: #1a202c;
   color: #ffffff;
   --background: #1a202c;
+  --text-dark-primary: #ffffff;
 }
 
 .bg-dark-primary {
   background-color: #1a202c;
 }
+
+
+/*
+
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import url("https://fonts.googleapis.com/css2?family=Inria+Serif:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Paprika&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+  color: var(--text-dark-primary);
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+h2 {
+  font-family: 'Inria Serif', serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+h3 {
+  font-family: 'Paprika', sans-serif;
+  font-size: 2.5rem;
+}
+
+h4 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+h6 {
+  font-family: 'Paprika', sans-serif;
+  font-weight: bold;
+  color: #253D57;
+  line-height: 1.6;
+}
+
+p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+}
+
+button {
+  font-family: 'Poppins', sans-serif;
+}
+
+input,
+textarea {
+  background-color: transparent;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  transition: background-color 0.5s ease-in-out;
+}
+
+.btn {
+  padding: 0.5rem 1.5rem;
+  border-width: 2px;
+  border-radius: 0 0 1.5rem 0;
+  font-weight: medium;
+}
+
+.title {
+  font-size: 2rem;
+}
+
+.subtitle {
+  color: #B7C5D3;
+}
+
+.dark-mode {
+  background-color: #1a202c;
+  color: #ffffff;
+}
+
+.bg-dark-primary {
+  background-color: #1a202c;
+}
+*/
