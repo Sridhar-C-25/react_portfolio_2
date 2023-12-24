@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation } from 'swiper';
-import lmaoImage from './assets/images/projects/lmao.png';
+import lmaoImage from './src/assets/images/projects/lmao.png';
 
 // Import Swiper styles
 import 'swiper/css/pagination';
@@ -82,6 +82,7 @@ const Projects = () => {
                   src={lmaoImage}
                   alt="..."
                   className="w-full h-[200px] object-cover mb-4"
+                  data-aos={hasAnimated ? 'fade-up' : ''}
                 />
                 <div className="flex flex-col gap-1 mt-2">
                   <h5 className="font-bold font-Poppins" data-aos={hasAnimated ? 'fade-up' : ''}>
