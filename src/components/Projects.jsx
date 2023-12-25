@@ -1,9 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation } from 'swiper';
-import lmaoImage from './src/assets/images/lmao.png';
 
 // Import Swiper styles
 import 'swiper/css/pagination';
@@ -11,8 +10,6 @@ import 'swiper/css/navigation';
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
-  const [isVisible, setIsVisible] = useState(false); // Track component visibility
-  const sectionRef = useRef(null);
 
   const openModal = (projectIndex) => {
     setSelectedProject(projectIndex);
@@ -22,32 +19,10 @@ const Projects = () => {
     setSelectedProject(null);
   };
 
-  useEffect(() => {
-    const handleIntersection = (entries) => {
-      const [entry] = entries;
-      setIsVisible(entry.isIntersecting);
-    };
-
-    const observer = new IntersectionObserver(handleIntersection, {
-      threshold: 0.5,
-    });
-
-    observer.observe(sectionRef.current);
-
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
-
   const projectsCount = 3;
 
   return (
-    <section
-      ref={sectionRef}
-      className={`bg-bg_light_primary`}
-      id="projects"
-      data-aos={isVisible ? 'fade-up' : ''}
-    >
+    <section className="bg-bg_light_primary" id="projects" data-aos="fade-up">
       <div className="md:container px-5 pt-14 h-full flex flex-col justify-center items-center relative">
         <div>
           <h2 className="title" data-aos="fade-down">
@@ -75,7 +50,7 @@ const Projects = () => {
                 className="bg-white rounded-3xl p-5 border-b-8 border-[#FAF9FD] h-fit relative"
               >
                 <img
-                  src={lmaoImage}
+                  src={'./src/assets/images/Projects/lmao.png'}
                   alt="..."
                   className="w-full h-[200px] object-cover mb-4"
                   data-aos="fade-up"
@@ -99,6 +74,66 @@ const Projects = () => {
           <div className="swiper-button-prev absolute top-1/2 -translate-y-1/2 text-[#3c3c3c] font-bold"></div>
         </div>
       </div>
+
+      {selectedProject !== null && (
+        <div
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            backgroundColor: 'rgba(0, 0, 0, 0.7)',
+            zIndex: 1000,
+          }}
+          onClick={closeModal}
+        >
+          <div
+            style={{
+              backgroundColor: 'white',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              position: 'relative',
+              width: '80%',
+              height: '80%',
+              padding: '20px',
+            }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h2>Mini Keyboard</h2>
+            <p>
+              This is a keyboard model made in the Spline 3D model workshop that is integrated fully
+              into this react website.
+            </p>
+            <div style={{ width: '100%', height: '100%' }}>
+              {/* Spline component was here */}
+            </div>
+            <div className="absolute bottom-0 right-0 p-4">
+              <p>
+                This is a keyboard model made in the Spline 3D model workshop that is integrated
+                fully into this react website.
+              </p>
+            </div>
+            <button
+              onClick={closeModal}
+              style={{
+                position: 'absolute',
+                top: '20px',
+                right: '20px',
+                backgroundColor: 'transparent',
+                border: 'none',
+                cursor: 'pointer',
+              }}
+            >
+              <span style={{ fontSize: '24px', fontWeight: 'bold' }}>X</span>
+            </button>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
