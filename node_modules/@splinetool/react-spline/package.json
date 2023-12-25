@@ -1,0 +1,53 @@
+{
+  "name": "@splinetool/react-spline",
+  "version": "2.2.6",
+  "packageManager": "yarn@3.3.0",
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "types": "./dist/Spline.d.ts",
+  "main": "./dist/react-spline.cjs",
+  "module": "./dist/react-spline.js",
+  "react-native": "./dist/react-spline.js",
+  "exports": {
+    ".": {
+      "types": "./dist/Spline.d.ts",
+      "import": "./dist/react-spline.js",
+      "require": "./dist/react-spline.cjs"
+    }
+  },
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "serve": "vite preview",
+    "build": "vite build && yarn build-types",
+    "build-types": "tsc --skipLibCheck --isolatedModules false --noEmit false --emitDeclarationOnly --declaration --outDir dist/",
+    "publish": "yarn build && np"
+  },
+  "peerDependencies": {
+    "@splinetool/runtime": "*",
+    "react": ">=17.0.0",
+    "react-dom": ">=17.0.0"
+  },
+  "devDependencies": {
+    "@splinetool/runtime": "^0.9.232",
+    "@types/animejs": "^3.1.7",
+    "@types/lodash.debounce": "^4.0.7",
+    "@types/node": "^18.14.1",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@vitejs/plugin-react": "^3.1.0",
+    "animejs": "^3.2.1",
+    "modern-normalize": "^1.1.0",
+    "np": "^7.6.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^4.9.5",
+    "vite": "^4.1.4"
+  },
+  "dependencies": {
+    "lodash.debounce": "^4.0.8",
+    "react-merge-refs": "^2.0.1"
+  }
+}
