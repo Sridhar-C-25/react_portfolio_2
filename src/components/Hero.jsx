@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { content } from "../Content";
-import Spline from '../../../node_modules/@splinetool/react-spline';
+import Spline from './src/node_modules/@splinetool/react-spline';
 
 const Hero = () => {
   const { hero } = content;
