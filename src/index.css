@@ -111,3 +111,22 @@ body {
   transform: translate(0, 20px);
   visibility: hidden;
 }
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #F5F9FD; /* Light background color */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #3C3C3C; /* Scroll bar handle color */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Scroll bar handle color on hover */
+}
