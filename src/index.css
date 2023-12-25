@@ -112,21 +112,42 @@ body {
   visibility: hidden;
 }
 
-::-webkit-scrollbar {
+/* Scroll bar styles */
+body.dark-mode ::-webkit-scrollbar {
   width: 12px;
 }
 
 /* Track */
-::-webkit-scrollbar-track {
+body.dark-mode ::-webkit-scrollbar-track {
+  background: #1a202c; /* Dark background color */
+}
+
+/* Handle */
+body.dark-mode ::-webkit-scrollbar-thumb {
+  background: #ffffff; /* Scroll bar handle color in dark mode */
+}
+
+/* Handle on hover */
+body.dark-mode ::-webkit-scrollbar-thumb:hover {
+  background: #B7C5D3; /* Scroll bar handle color on hover in dark mode */
+}
+
+/* Light mode styles */
+body:not(.dark-mode) ::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+body:not(.dark-mode) ::-webkit-scrollbar-track {
   background: #F5F9FD; /* Light background color */
 }
 
 /* Handle */
-::-webkit-scrollbar-thumb {
-  background: #1a202c; /* Scroll bar handle color */
+body:not(.dark-mode) ::-webkit-scrollbar-thumb {
+  background: #1a202c; /* Scroll bar handle color in light mode */
 }
 
 /* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #253D57; /* Scroll bar handle color on hover */
+body:not(.dark-mode) ::-webkit-scrollbar-thumb:hover {
+  background: #253D57; /* Scroll bar handle color on hover in light mode */
 }
