@@ -123,10 +123,10 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #3C3C3C; /* Scroll bar handle color */
+  background: #1a202c; /* Scroll bar handle color */
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555; /* Scroll bar handle color on hover */
+  background: #253D57; /* Scroll bar handle color on hover */
 }
