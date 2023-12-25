@@ -20,6 +20,7 @@ const Skills = () => {
               key={i}
               data-aos="fade-up"
               data-aos-delay={i * 400}
+              data-aos-once="true" // Add this line to make the animation occur only once
               className="bg-white sm:cursor-default
                relative group w-full flex items-center
                 gap-5 p-5 max-w-sm rounded-md border-2 border-slate-200"
