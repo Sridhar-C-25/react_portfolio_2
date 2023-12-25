@@ -1,10 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { content } from "../Content";
 
 const Hireme = () => {
   const { Hireme } = content;
-
   const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [showContent, setShowContent] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const threshold = window.innerHeight / 2;
+      const isScrolled = window.scrollY > threshold;
+      // Always set showContent to true if scrolled down
+      setShowContent((prev) => (isScrolled ? true : prev));
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const openModal = () => {
     setModalIsOpen(true);
@@ -15,8 +29,8 @@ const Hireme = () => {
   };
 
   return (
-    <section className="bg-white flex items-center justify-center h-[70vh]" data-aos="fade-up">
-      <div className="container mx-auto px-5 pt-14">
+    <section className="bg-white flex items-center justify-center h-[70vh] relative" data-aos="fade-up">
+      <div className={`container mx-auto px-5 pt-14 opacity-0 translate-y-10 ${showContent ? "opacity-100 translate-y-0" : ""}`} data-aos="fade-up">
         <h2 className="title text-center" data-aos="fade-down">
           {Hireme.title}
         </h2>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -10,6 +10,21 @@ import 'swiper/css/navigation';
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
+  const [showContent, setShowContent] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const threshold = window.innerHeight / 2;
+      const isScrolled = window.scrollY > threshold;
+      // Always set showContent to true if scrolled down
+      setShowContent((prev) => (isScrolled ? true : prev));
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   const openModal = (projectIndex) => {
     setSelectedProject(projectIndex);
@@ -23,7 +38,7 @@ const Projects = () => {
 
   return (
     <section className="bg-bg_light_primary" id="projects" data-aos="fade-up">
-      <div className="md:container px-5 pt-14 h-full flex flex-col justify-center items-center relative">
+      <div className={`md:container px-5 pt-14 h-full flex flex-col justify-center items-center relative opacity-0 translate-y-10 ${showContent ? "opacity-100 translate-y-0" : ""}`} data-aos="fade-up">
         <div>
           <h2 className="title" data-aos="fade-down">
             Handmade
