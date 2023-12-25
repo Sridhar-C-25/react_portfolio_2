@@ -1,22 +1,17 @@
-
-
+/* Import Tailwind CSS */
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+/* Import Inter font from Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
+/* Global styles */
 html {
   scroll-behavior: smooth;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-span {
+h1, h2, h3, h4, h5, h6, p, span {
   color: var(--text-dark-primary);
 }
 
@@ -59,8 +54,7 @@ button {
   font-family: 'Inter', sans-serif;
 }
 
-input,
-textarea {
+input, textarea {
   background-color: transparent;
   outline: none;
   font-family: 'Inter', sans-serif;
@@ -68,7 +62,7 @@ textarea {
 
 body {
   transition: background-color 0.5s ease-in-out;
-  background-color: var(--bg-light-primary); /* Added background-color property */
+  background-color: var(--bg-light-primary);
 }
 
 .btn {
@@ -96,13 +90,14 @@ body {
 }
 
 .bg-white {
-  background-color: #ffffff; /* Change the background color for light mode */
+  background-color: #ffffff;
 }
 
 .bg-light-primary {
-  background-color: #F5F9FD; /* Change the background color for light mode */
+  background-color: #F5F9FD;
 }
 
+/* Fading animation */
 .fade-in {
   opacity: 1 !important;
   transform: translate(0, 0) !important;
