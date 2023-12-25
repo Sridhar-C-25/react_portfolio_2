@@ -1,34 +1,17 @@
-// import images
-import Hero_person from "./assets/images/Hero/person.png";
-
 import figma from "./assets/images/Skills/figma.png";
-import sketch from "./assets/images/Skills/sketch.png";
-import ps from "./assets/images/Skills/ps.png";
+import javascript from "./assets/images/Skills/javascript.png";
+import html from "./assets/images/Skills/html.png";
 import reactjs from "./assets/images/Skills/react.png";
 import nodejs from "./assets/images/Skills/node.png";
 import python from "./assets/images/Skills/python.png";
 
-import services_logo1 from "./assets/images/Services/logo1.png";
-import services_logo2 from "./assets/images/Services/logo2.png";
-import services_logo3 from "./assets/images/Services/logo3.png";
+import WoodworkingLogo from "./assets/images/Services/woodworking-logo.svg";
+import AIEvolutionLogo from "./assets/images/Services/ai-evolution-logo.svg";
+import ExerciseLogo from "./assets/images/Services/exercise-logo.svg";
 
-import project1 from "./assets/images/projects/img1.png";
-import project2 from "./assets/images/projects/img2.png";
-import project3 from "./assets/images/projects/img3.png";
-import person_project from "./assets/images/projects/person.png";
-
-import avatar1 from "./assets/images/Testimonials/avatar1.png";
-import avatar2 from "./assets/images/Testimonials/avatar2.png";
-import avatar3 from "./assets/images/Testimonials/avatar3.png";
-import avatar4 from "./assets/images/Testimonials/avatar4.png";
-
-import Hireme_person from "./assets/images/Hireme/person.png";
-import Hireme_person2 from "./assets/images/Hireme/person2.png";
-
-// import icons from react-icons
 import { GrMail } from "react-icons/gr";
 import { MdArrowForward, MdCall } from "react-icons/md";
-import { BsInstagram } from "react-icons/bs";
+import { BsInstagram, BsLinkedin } from "react-icons/bs";
 import { TbSmartHome } from "react-icons/tb";
 import { BiUser } from "react-icons/bi";
 import { RiServiceLine, RiProjectorLine } from "react-icons/ri";
@@ -52,161 +35,124 @@ export const content = {
       link: "#projects",
       icon: RiProjectorLine,
     },
-    {
-      link: "#contact",
-      icon: MdOutlinePermContactCalendar,
-    },
   ],
   hero: {
     title: "Web Developer",
-    firstName: "JOHN",
-    LastName: "ALEX",
-    btnText: "Hire Me",
-    image: Hero_person,
     hero_content: [
       {
-        count: "8+",
-        text: "Years of Experinse in Web development",
+        count: " 3+ ",
+        text: "Years of Experience in Software Development",
       },
       {
-        count: "20+",
-        text: "Projects Worked in my career",
+        count: " 4+ ",
+        text: "Coding Languages Under the Belt",
       },
     ],
   },
   skills: {
     title: "Skills",
-    subtitle: "MY TOP SKILLS",
+    subtitle: "AND ABILITIES",
     skills_content: [
       {
         name: "Figma",
-        para: "Lorem ipsum text  dummy",
+        para: "Mastered one of the biggest tools of Web Design",
         logo: figma,
       },
       {
-        name: "Node js",
-        para: "Lorem ipsum text  dummy",
+        name: "Node.js",
+        para: "Accompanying Front-End Web Development with Back-End",
         logo: nodejs,
       },
       {
-        name: "Adobe Photoshop",
-        para: "Lorem ipsum text  dummy",
-        logo: ps,
+        name: "HTML",
+        para: "Using one of the center blocks of Front-End Development",
+        logo: html,
       },
       {
-        name: "React js",
-        para: "Lorem ipsum text  dummy",
+        name: "React",
+        para: "Strong grasp on the staple of designing Web Applications",
         logo: reactjs,
       },
       {
-        name: "Sketch",
-        para: "Lorem ipsum text  dummy",
-        logo: sketch,
+        name: "Javascript",
+        para: "Conquered the true language of Web Design",
+        logo: javascript,
       },
       {
         name: "Python",
-        para: "Lorem ipsum text  dummy",
+        para: "Over 2 years of experience in Python",
         logo: python,
       },
     ],
-    icon: MdArrowForward,
+
   },
   services: {
-    title: "Services",
-    subtitle: "WHAT I OFFER",
+    title: "Hobbies",
+    subtitle: "AND INTERESTS",
     service_content: [
       {
-        title: "Web Development",
-        para: "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document elying on mean",
-        logo: services_logo1,
+        title: "Woodworking",
+        para: "I have a big interest in hands-on work and creating things for people, giving me insight on UX and UI as I have to conform to the standards of my customers.",
       },
       {
-        title: "ui / ux DESIGNING",
-        para: "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document elying on mean",
-        logo: services_logo2,
+        title: "AI Evolution",
+        para: "In order to keep up with the ever-evolving software world, and indulge in my nerdy interests, I keep up with the growth of AI in the new Modern World",
       },
       {
-        title: "PhotoShop Editing",
-        para: "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document elying on mean",
-        logo: services_logo3,
+        title: "Exercise",
+        para: "I have dedicated myself to the gym for the past 6 years, and I believe no matter what consistency and persistence yield results!",
       },
     ],
   },
   Projects: {
     title: "Projects",
     subtitle: "MY CREATION",
-    image: person_project,
+    /*image: "name_of_file"*/
     project_content: [
       {
         title: "Gym Website",
-        image: project1,
       },
       {
         title: "Social Media web",
-        image: project2,
       },
       {
         title: "Creative Website",
-        image: project3,
       },
     ],
   },
-  Testimonials: {
-    title: "Testimonials",
-    subtitle: "MY CLIENT REVIEWS",
-    testimonials_content: [
-      {
-        review:
-          "“In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstra”",
-        img: avatar1,
-        name: "JOHN DOE",
-      },
-      {
-        review:
-          "“In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstra”",
-        img: avatar2,
-        name: "Tom Alex",
-      },
-      {
-        review:
-          "“In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstra”",
-        img: avatar3,
-        name: "Johnny",
-      },
-      {
-        review:
-          "“In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstra”",
-        img: avatar4,
-        name: "ROBBIN",
-      },
+
+  Blog: {
+    title: "Blog",
+    subtitle: "CURRENT",
+    blog_content: [
+      {/*something here set up with dad*/}
     ],
   },
+
   Hireme: {
     title: "Hire Me",
-    subtitle: "FOR YOUR PROJECTS",
-    image1: Hireme_person,
-    image2: Hireme_person2,
-    para: "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document elying on mean",
-    btnText: "Hire Me",
+    subtitle: "INTO YOUR COMPANY",
+    para: "As a hard working member of the software world I am a prime candidate for any Front-End Development position that may arise. I will always strive to meet and exceed expectations, fueled by my creative energy!",
+    btnText: "See my Resume!"
   },
   Contact: {
     title: "Contect Me",
     subtitle: "GET IN TOUCH",
     social_media: [
       {
-        text: "codeaprogram@gmail.com",
+        text: "mripekci@gmail.com",
         icon: GrMail,
-        link: "mailto:codeaprogram@gmail.com",
+        link: "mailto:mripekci@gmail.com",
       },
       {
-        text: "+91 1234 56778",
+        text: "408 338 8954",
         icon: MdCall,
-        link: "https://wa.me/1234567890",
+        link: "https://wa.me/4083388954",
       },
       {
-        text: "codeaprogram",
-        icon: BsInstagram,
-        link: "https://www.instagram.com/codeaprogram/",
+        text: "LinkedIn: Mustafa Ipekci",
+        icon: BsLinkedin,
+        link: "https://www.linkedin.com/in/mustafa-ipekci-96a98925b/",
       },
     ],
   },

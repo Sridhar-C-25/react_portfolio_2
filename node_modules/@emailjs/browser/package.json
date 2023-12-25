@@ -1,0 +1,72 @@
+{
+  "name": "@emailjs/browser",
+  "version": "3.11.0",
+  "description": "Official EmailJS SDK for browsers",
+  "private": false,
+  "author": "EmailJS",
+  "contributors": [
+    "Sergey Khomushin <sergey@emailjs.com> (https://www.emailjs.com)"
+  ],
+  "homepage": "https://www.emailjs.com",
+  "license": "BSD-3-Clause",
+  "main": "cjs/index.js",
+  "types": "es/index.d.ts",
+  "module": "es/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/emailjs-com/emailjs-sdk.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "scripts": {
+    "_clean": "rm -rf es && rm -rf cjs && rm -rf dist",
+    "_set-version": "./set-version.sh $npm_package_version",
+    "_build-ts": "tsc --declaration && npm run _set-version es",
+    "_build-cjs": "tsc --module commonjs --outDir cjs && npm run _set-version cjs",
+    "_build-bundle": "webpack --env production",
+    "build": "npm run _clean && npm run _build-ts && npm run _build-cjs && npm run _build-bundle",
+    "test": "jest --coverage",
+    "lint": "tsc --noEmit && eslint src"
+  },
+  "keywords": [
+    "js email",
+    "es6 email",
+    "ts email",
+    "javascript email",
+    "typescript email",
+    "emailjs",
+    "email templates",
+    "send email",
+    "send email from js",
+    "emailjs-com"
+  ],
+  "devDependencies": {
+    "@babel/preset-env": "^7.21.4",
+    "@babel/preset-typescript": "^7.21.4",
+    "@types/jest": "^29.5.0",
+    "@typescript-eslint/eslint-plugin": "^5.57.1",
+    "@typescript-eslint/parser": "^5.57.1",
+    "babel-jest": "^29.5.0",
+    "babel-loader": "^9.1.2",
+    "core-js": "^3.30.0",
+    "eslint": "^8.37.0",
+    "eslint-import-resolver-typescript": "^3.5.5",
+    "eslint-plugin-import": "^2.27.5",
+    "jest": "^29.5.0",
+    "jest-environment-jsdom": "^29.5.0",
+    "prettier": "^2.8.7",
+    "terser-webpack-plugin": "^5.3.7",
+    "typescript": "^5.0.3",
+    "webpack": "^5.78.0",
+    "webpack-cli": "^5.0.1"
+  },
+  "prettier": {
+    "trailingComma": "all",
+    "singleQuote": true,
+    "printWidth": 100
+  }
+}
