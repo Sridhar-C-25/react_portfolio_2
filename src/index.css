@@ -3,61 +3,70 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-/* Import Inter font from Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+/* Import Roboto and Merriweather fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap');
 
 /* Global styles */
 html {
   scroll-behavior: smooth;
 }
 
-h1, h2, h3, h4, h5, h6, p, span {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
   color: var(--text-dark-primary);
 }
 
 h1 {
-  font-family: 'Inter', Helvetica;
+  font-family: 'Roboto', sans-serif;
   font-size: 3rem;
   font-weight: 800;
 }
 
 h2 {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 2.5rem;
   font-weight: bold;
 }
 
 h3 {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 2.5rem;
 }
 
 h4 {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 3rem;
   font-weight: bold;
 }
 
 h6 {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: bold;
   color: #253D57;
   line-height: 1.6;
 }
 
 p {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Merriweather', serif;
   font-size: 0.95rem;
 }
 
 button {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
-input, textarea {
+input,
+textarea {
   background-color: transparent;
   outline: none;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -112,42 +121,21 @@ body {
   visibility: hidden;
 }
 
-/* Scroll bar styles */
-body.dark-mode ::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 12px;
 }
 
 /* Track */
-body.dark-mode ::-webkit-scrollbar-track {
-  background: #1a202c; /* Dark background color */
-}
-
-/* Handle */
-body.dark-mode ::-webkit-scrollbar-thumb {
-  background: #ffffff; /* Scroll bar handle color in dark mode */
-}
-
-/* Handle on hover */
-body.dark-mode ::-webkit-scrollbar-thumb:hover {
-  background: #B7C5D3; /* Scroll bar handle color on hover in dark mode */
-}
-
-/* Light mode styles */
-body:not(.dark-mode) ::-webkit-scrollbar {
-  width: 12px;
-}
-
-/* Track */
-body:not(.dark-mode) ::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
   background: #F5F9FD; /* Light background color */
 }
 
 /* Handle */
-body:not(.dark-mode) ::-webkit-scrollbar-thumb {
-  background: #1a202c; /* Scroll bar handle color in light mode */
+::-webkit-scrollbar-thumb {
+  background: #1a202c; /* Scroll bar handle color */
 }
 
 /* Handle on hover */
-body:not(.dark-mode) ::-webkit-scrollbar-thumb:hover {
-  background: #253D57; /* Scroll bar handle color on hover in light mode */
+::-webkit-scrollbar-thumb:hover {
+  background: #253D57; /* Scroll bar handle color on hover */
 }
