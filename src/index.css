@@ -103,3 +103,16 @@ body {
   background-color: #F5F9FD; /* Change the background color for light mode */
 }
 
+.fade-in {
+  opacity: 1 !important;
+  transform: translate(0, 0) !important;
+  visibility: visible !important;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Set initial state to hidden */
+.fade-in:not(.in) {
+  opacity: 0;
+  transform: translate(0, 20px);
+  visibility: hidden;
+}
