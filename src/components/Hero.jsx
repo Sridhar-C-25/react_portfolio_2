@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { content } from "../Content";
+import Spline from '@splinetool/react-spline'; // Make sure to install this package
 
 const Hero = () => {
   const { hero } = content;
@@ -47,6 +48,21 @@ const Hero = () => {
             ))}
           </div>
         </div>
+
+        {showContent && (
+          <div
+            style={{
+              position: 'absolute',
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
+              zIndex: 1000,
+            }}
+          >
+            {/* Include your Spline 3D model component here */}
+            <Spline scene="https://prod.spline.design/HKlfAoUoTv3w35yQ/scene.splinecode" />
+          </div>
+        )}
       </div>
     </section>
   );
