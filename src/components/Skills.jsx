@@ -1,29 +1,17 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import { content } from '../Content';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const Skills = () => {
   const { skills } = content;
-  const skillsRef = useRef(null);
 
   useEffect(() => {
-    AOS.init({ once: true });
+    AOS.init({ once: true, mirror: false });
   }, []);
 
-  useEffect(() => {
-    if (skillsRef.current) {
-      AOS.refresh();
-    }
-  }, [skills]);
-
   return (
-    <section
-      ref={skillsRef}
-      className="min-h-fit bg-bg_light_primary"
-      id="skills"
-      data-aos="fade-up"
-    >
+    <section className="min-h-fit bg-bg_light_primary" id="skills" data-aos="fade-up">
       <div className="md:container px-5 py-14">
         <h2 className="title" data-aos="fade-down">
           {skills.title}
@@ -38,7 +26,9 @@ const Skills = () => {
               key={i}
               data-aos="fade-up"
               data-aos-delay={i * 400}
-              className="bg-white sm:cursor-default relative group w-full flex items-center gap-5 p-5 max-w-sm rounded-md border-2 border-slate-200"
+              className="bg-white sm:cursor-default
+               relative group w-full flex items-center
+                gap-5 p-5 max-w-sm rounded-md border-2 border-slate-200"
             >
               <div>
                 <img
