@@ -40,11 +40,11 @@ export const content = {
     title: "Web Developer",
     hero_content: [
       {
-        count: "3+",
+        count: " 3+ ",
         text: "Years of Experience in Software Development",
       },
       {
-        count: "4+",
+        count: " 4+ ",
         text: "Coding Languages Under the Belt",
       },
     ],
