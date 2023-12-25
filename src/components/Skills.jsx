@@ -1,43 +1,15 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import { content } from '../Content';
+import { useInView } from 'react-intersection-observer';
 
 const Skills = () => {
   const { skills } = content;
-  const [isVisible, setIsVisible] = useState(false);
-  const skillsSectionRef = useRef(null);
-
-  const handleIntersection = (entries, observer) => {
-    const [entry] = entries;
-    if (entry.isIntersecting) {
-      setIsVisible(true);
-      observer.unobserve(entry.target);
-    }
-  };
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(handleIntersection, {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.3, // Adjust this threshold as needed
-    });
-
-    if (skillsSectionRef.current) {
-      observer.observe(skillsSectionRef.current);
-    }
-
-    return () => {
-      if (skillsSectionRef.current) {
-        observer.unobserve(skillsSectionRef.current);
-      }
-    };
-  }, []);
+  const [ref, inView] = useInView({ triggerOnce: true });
 
   return (
     <section
-      ref={skillsSectionRef}
-      className={`min-h-fit bg-bg_light_primary ${
-        isVisible ? 'fade-in' : 'invisible'
-      }`}
+      ref={ref}
+      className={`min-h-fit bg-bg_light_primary ${inView ? 'fade-in' : 'invisible'}`}
       id="skills"
     >
       <div className="md:container px-5 py-14">
@@ -49,7 +21,7 @@ const Skills = () => {
             <div
               key={i}
               className={`bg-white sm:cursor-default relative group w-full flex items-center gap-5 p-5 max-w-sm rounded-md border-2 border-slate-200 ${
-                isVisible ? 'fade-in' : 'invisible'
+                inView ? 'fade-in' : 'invisible'
               }`}
             >
               <div>
